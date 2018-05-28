@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<form class="form" id="contactForm" method="post" novalidate action="send-script.php">
+    <div class="form-row">
+        <label for="field-name">Name*</label>
+        <input value="marcin" type="text" name="name" required id="field-name" data-error="Wypełnij to pole" pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+">
+    </div>
+    <div class="form-row">
+        <label for="field-email">Email*</label>
+        <input value="email@wp.plp" type="email" name="email" required id="field-email" data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+    </div>
+    <div class="form-row">
+        <label for="field-message">Message*</label>
+        <textarea name="message" required data-error="Musisz wypełnić pole" id="field-message" pattern=".+">dasdasdsad</textarea>
+    </div>
+    <div class="form-row">
+        <label class="checkbox-cnt">
+            <input type="checkbox" required data-error="Musisz wypełnić pole" name="regulation">
+            <i class="state" aria-hidden="true"></i>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In libero arcu, vulputate sit amet mattis sit amet, ultrices in erat. Aenean suscipit arcu ac lorem lacinia ut scelerisque turpis commodo.</span>
+        </label>
+    </div>
+    <div class="form-row">
+        <button type="submit" class="submit-btn">
+            Wyślij
+        </button>
+    </div>
+</form>
+
+<script src="./scripts.js"></script>
+</body>
+</html>
