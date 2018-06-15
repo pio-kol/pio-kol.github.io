@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 
-$mailToSend = 'info@happy.ovh';
+$mailToSend = 'info@nauka-programowania-na-godziny.pl';
 
 if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 	$name       = $_POST['name'];
