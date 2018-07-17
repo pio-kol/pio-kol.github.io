@@ -1,0 +1,994 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+    max-width: 100%;
+}
+
+.bold{
+    font-weight: bold;
+    color: #138496;
+}
+
+
+#home, #learn, #mentors, #faq, #price, #contact{
+    position: relative;
+    top: -75px
+}
+
+
+/*-----  MENU  -----*/
+
+header{    
+    margin: 0 auto;
+    z-index: 100;
+    background-color: #f8f9fa;  
+    min-height: 76px;
+    border-bottom: 1px solid #138496; 
+    width: 100%;
+}
+
+.logo{    
+    max-width: 36vw;
+}
+
+.navbar{    
+    max-width: 1200px;
+    margin: 0 auto;    
+    min-height: 75px;        
+    padding: 0 16px;        
+    z-index: 10000;
+}
+
+.navbar-nav{
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.navbar-nav li{
+    height: 75px;
+    line-height: 58px;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-item:hover{
+    background: #138496;        
+    transition: 0.3s;
+}
+
+.nav-link{
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-item:hover .nav-link{
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+/*-------  SEKCJA POWITALNA  -------*/
+
+.welcome{
+    margin-top: 75px;
+    background-image: url(../img/background1.jpg);    
+    background-image: url(../img/background2.jpg);    
+    background-size: cover;        
+    height: 80vh;        
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction:column;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;  
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.welcome-text{
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    background-color: rgba(19, 132, 150, 0.7);    
+    height: 70vh;            
+    width: 90%;
+    text-align: center;    
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;    
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction:column;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;    
+    margin: 0 auto;
+}
+
+.welcome-text h1{
+    font-size: 2.8vw;    
+    line-height: 3.6vw;
+    color: #ffffff;
+    font-weight: bold
+}
+
+.welcome-text h3{
+    height: 20%;
+    font-size: 1.8vw;    
+    line-height: 3.6vw;
+    color: #ffffff;
+}
+
+.button-welcome{
+    margin: 0 auto;    
+    text-align: center;
+    min-width: 200px;
+    width: 20%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #fec601;
+    border: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #138496;      
+    transition: 0.2s;    
+}
+
+.button-welcome:hover{        
+    background-color:#138496;    
+    color: #fec601;    
+    border: 2px solid #fec601;    
+    transition: 0.2s;    
+}
+
+
+/*   -----  JAK UCZYMY  ------*/
+
+.learn{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.learn-topic{
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #138496;
+    margin-bottom: 30px;
+}
+
+.learn-topic h2{    
+    font-weight: bold;
+    color: #138496;
+    margin: 0;
+}
+
+.learn-topic h6{
+    color: #138496;
+    margin: 0;
+}
+
+
+.learn-description .fas, 
+.learn-description .far 
+{
+    color: #fec601;    
+    font-size: 50px;         
+}
+
+
+.learn-description{
+    font-size: 16px;
+    color: #7b7b7b;    
+}
+
+.flex-center{
+    display: flex;
+    align-items: center;    
+}
+
+.learn-description .col-md-1{
+    padding: 10px;
+    justify-content: center;    
+}
+
+.learn-description .col-md-11{
+    padding: 10px 0;
+    margin: 0;
+    padding-left: 10px;
+    text-align: justify;
+}
+
+.learn-description .col-md-11 p{
+    margin: 0;
+}
+
+/*   -----  MENTORZY  -----*/
+
+.team {
+    width: 100%;    
+    margin: 0 auto;    
+    background-color: #ebebeb;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.mentors-box{    
+    width: 100%;    
+    margin: 0 auto;                
+}
+
+.mentors-topic{             
+    width: 90%;    
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #138496;        
+    margin-bottom: 30px;
+}
+
+.mentors-topic h2{
+    font-weight: bold;
+    color: #138496;
+    margin: 0;
+}
+
+.mentors-topic h6{
+    color: #138496;
+    margin: 0;
+}
+
+.mentor {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mentor .row{    
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;       
+}
+
+.person {        
+    margin: 0px 10px;    
+    transition: 0.5s;
+    border: 1px solid #ffffff;
+    position: relative;
+    top:0;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.person:hover {
+/*    box-shadow: 0px 0px 20px #c6cacc;*/
+    box-shadow: 0px 0px 20px #555d66;    
+    transition: 0.5s;
+/*    transform: scale(1.05);*/
+    background-color: #ffffff;    
+}
+
+.mentor img{
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.person h3 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #2d3033; 
+}
+
+.person h6{
+    color: #fec601;    
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.ment-ico2{
+    display: inline-block;
+    color: #fec601;        
+    margin-left: 10px;
+    font-size: 18px; 
+    transition: 0.3s;
+}
+
+.person .ment-ico2:hover {
+    color: #138496;    
+    transition: 0.3s;
+}
+
+.ment-ico3{
+    display: inline-block;
+    color: #fec601;        
+    margin-left: 10px;
+    font-size: 18px; 
+    transition: 0.3s;
+}
+
+.person .ment-ico3:hover {
+    color: #138496;    
+    transition: 0.3s;
+}
+
+.person p {
+    font-size: 14px;
+    color: #6c7279;
+    line-height: 21px; 
+    padding-bottom: 50px
+}
+
+.person .ment-ico {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    color: #c6cacc;
+    border: 1px solid #c6cacc;
+    padding: 5px;
+    text-align: center; 
+    margin-bottom: 15px;    
+    transition: 0.3s;  
+    position: absolute;    
+    bottom: 0;
+    border-radius: 5px;
+}
+
+.person .fa-calendar-alt{
+    left: 60px;
+}
+
+.person:hover .ment-ico {
+    color:  #fec601;
+    border: 1px solid  #fec601;
+    transition: 0.3s;
+}
+
+.person .ment-ico:hover {
+    color: #138496;
+    border: 1px solid #138496;
+    transition: 0.3s;
+}
+
+.mentor .col-md-3{
+    width: 18%;
+}
+
+/*-----  POZIOMY MENTORÓW  -----*/
+
+.level{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.level-topic{
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #138496;    
+    margin-bottom: 50px;    
+}
+
+.level-topic h2{
+    font-weight: bold;
+    color: #138496;     
+    margin: 0;    
+}
+
+.level-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;        
+    margin-bottom: 30px;
+}
+
+.level-icons i{
+    font-size: 80px;
+    color:  #fec601;        
+}
+
+.level-junior{
+    margin-right: 70px;
+    font-size: 30px;
+    color:  #fec601;    
+    display: flex;
+    align-items: center;
+}
+
+.level-name{
+    font-size: 30px;
+    color:  #fec601;    
+}
+
+.level-lead{    
+    font-size: 30px;
+    color:  #fec601;    
+    display: flex;
+    align-items: center;
+}
+
+.level-span{
+    padding: 0 25px
+}
+
+.mentors-description{
+    width: 100%;
+    margin: 0 auto;    
+    margin-bottom: 50px;
+}
+
+.mentors-description h3{
+    font-size: 30px;
+    color:  #fec601;    
+    text-align: center;
+    padding: 20px 0;    
+}
+
+.mentors-description p{
+/*    margin: 0 50px;*/
+    font-size: 1em;  
+    text-align: justify;
+}
+
+
+/*-----  FAQ  -----*/
+
+.faq{ 
+    background-color: #fcf1cf;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.faq-topic{
+    width: 95%;
+    margin: 0 auto;        
+    text-align: center;    
+    padding-bottom: 20px;
+    border-bottom: 1px solid #505860;
+    margin-bottom: 30px;    
+}
+
+.faq-boxes{
+    margin: 0 auto;    
+    justify-content: center;
+    padding-bottom: 30px;    
+}
+
+.faq-topic h2{
+    font-weight: bold;    
+    color: #505860;
+    margin: 0;        
+}
+
+.faq-topic h6{
+    color: #505860;
+    margin: 0;
+}
+
+.faq-box i{
+    font-size: 60px;
+    padding-right: 15px;
+    float: left;
+    padding-bottom: 15px
+}
+    
+.faq-box h4{
+    font-size: 18px;    
+    font-weight: bold;
+}
+
+.faq-box{    
+    text-align: justify;
+    max-width: 30%;
+    width: 100%;
+    padding: 25px;    
+    background-color: #ffffff;
+    margin: 1%;
+    border: 2px solid  #fec601; 
+    border-radius: 25px;    
+    font-size: 13px;        
+    transition: 0.2s;
+    color: #6c7279;
+}
+
+.faq-box:hover{
+    box-shadow: 0 0 15px #fec601;
+    transition: 0.2s;
+    color: #2c3238;
+}
+
+/*-----  PRICE  -----*/
+
+.price{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.price-topic{
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #138496;    
+    margin-bottom: 50px;
+}
+
+.price-topic h2{
+    font-weight: bold;
+    color: #138496;
+    margin: 0;    
+}
+
+.price table{
+    margin-bottom: 50px;
+}
+
+.table-price thead tr{
+    background: #dee2e6;
+}
+
+.table-price{
+    text-align: center;
+}
+
+
+.price-description p{
+    text-align: justify;
+}
+
+/*  -----  FORMULARZ KONTAKTOWY  -----  */
+
+.contact{
+    background-color: #138496;
+/*    margin: 0 auto;*/
+/*    width: 100%;*/
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.contact-box{
+    width: 90%;
+    margin: 0 auto;  
+}
+
+.contact-topic{            
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5fbff;    
+    margin-bottom: 30px;
+}
+
+.contact-topic h2{
+    font-weight: bold;
+    color: #e5fbff;    
+    margin: 0;
+}
+
+.contact-box h6{
+    color: #e5fbff;
+    margin: 0;
+}
+
+.address{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px
+}
+
+.address-description{
+    margin: 0 auto;
+    border: 2px solid #0d5c68;
+    border-radius: 25px;
+    background: #ffffff;
+    padding: 50px;
+    max-width: 45%;
+    font-size: 14px; 
+    color: #2c3238;
+}
+
+.address-description i{    
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: #fec601;
+    width: 35px;
+}
+
+.contact-box h4{
+    font-size: 24px;        
+    color: #138496;
+    margin-bottom: 30px;
+}
+
+.fa-a{
+    margin: 0 10px;
+    font-size: 1.07vw;
+    color: #2c3238;     
+    line-height: 2;
+}
+
+.fa-a:hover{            
+    color: #138496;       
+    text-decoration: none;
+}
+
+#contactForm{
+    color: #138496;
+    max-width: 45%;
+}
+
+.answer{
+    text-align: center;
+    padding-top: 50px;
+    display: none;
+    font-size: 24px;
+    color: #652666;
+}
+
+.answer h4{
+    font-size: 20px;
+    color: #652666;    
+}
+
+/* -----  STOPKA  -----*/
+
+footer {    
+    background-color: #252424;
+    width: 100%;
+    text-align: center;        
+}
+
+footer h3{    
+    color: #ffffff;
+    line-height: 4em;
+    font-size: 1em;
+    margin: 0;
+}
+
+@media screen and (max-width: 1199px){
+
+    /*  -----  MENTORZY  -----  */
+    
+    .mentor {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    /*      -----  FAQ  -----  */
+    
+    .faq-boxes{
+        padding-left: 0px;    
+        padding-right: 0px;
+    }
+
+    
+    /*  -----  FORMULARZ KONTAKTOWY  -----  */
+    
+    .address-description{        
+        padding: 35px;        
+    }
+    
+    .fa-a{        
+        font-size: 1.2vw;        
+    }
+    
+}
+
+@media screen and (max-width: 991px){
+    
+/*      -----  MENU  -----  */
+    
+    .navbar-nav li{
+        height: 45px;
+        line-height: 2;
+        transition: 0.3s;
+        padding: 0 10px;
+        border-bottom: 1px solid #dee2e6;        
+    }
+
+    .navbar{
+        line-height: 4.7;
+    }
+ 
+    
+/*      -----  WELCOME  -----  */
+ 
+    .welcome-text h1{
+        font-size: 5vw;    
+        line-height: 5vw;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .welcome-text h3{
+        height: 20%;
+        font-size: 2.3vw;    
+        line-height: 3.6vw;
+        color: #ffffff;
+    }
+    
+/*   -----  FAQ  -----     */
+ 
+    .faq-box{    
+        text-align: justify;
+        max-width: 100%;
+        width: 100%;
+        padding: 25px;    
+        background-color: #ffffff;
+        margin: 1%;
+        border: 2px solid  #fec601; 
+        border-radius: 25px;    
+        font-size: 13px;        
+        transition: 0.2s;
+        color: #6c7279;
+    }
+
+    .faq-boxes .col-md-6{
+        max-width: 48%;
+    }
+    
+    .faq-boxes .col-md-12{
+        max-width: 98%;        
+    }
+ 
+    /*  -----  FORMULARZ KONTAKTOWY  -----  */
+
+    
+    .contact-box{
+        width: 95%;        
+    }
+
+    .address-description{        
+        padding: 30px 15px;
+        max-width: 45%;        
+    }
+    
+    .address-description i{    
+        display: block;
+        padding-bottom: 0px;
+    }
+
+    .fa-a{
+        margin: 0 5px;
+        font-size: 1.6vw;        
+        padding-bottom: 20px;
+    }
+        
+    .answer{        
+        font-size: 16px;        
+    }
+
+    .answer h4{
+        font-size: 14px;        
+    }   
+    
+/*      -----  FORMULARZ  (FORM) -----*/
+    
+    .form .submit-btn {        
+        padding: 10px;
+        width: 170px;        
+    }
+    
+}
+
+@media screen and (max-width: 767px){
+ 
+    /*      -----  MENU  -----  */
+    
+    .logo{    
+        max-width: 100%;
+    }
+    
+    /*      -----  WELCOME  -----  */
+
+    .welcome-text h1{
+        text-align: center;
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 0 20px;
+        font-size: 5.5vw;    
+        line-height: 6.5vw;        
+    }
+
+    .welcome-text h3{
+        margin-top: 10px;        
+        font-size: 2.5vw;            
+    }
+
+/*      -----  FORMULARZ  -----  */
+    
+    .address-description{        
+        padding: 30px 15px;
+        max-width: 90%;        
+        margin-bottom: 30px;
+    }
+    
+    .address-description i{    
+        display: inline-block;        
+    }
+
+    .fa-a{
+        margin: 0 10px;
+        font-size: 2.5vw;        
+        padding-bottom: 20px;
+    }    
+}
+
+@media screen and (max-width: 575px){
+    
+    /*      -----  MENU  -----  */
+
+    .logo{    
+        max-width: 60vw;
+    }
+
+    /*      -----  WELCOME  -----  */
+    
+    .welcome-text h1{                
+        font-size: 7vw;    
+        line-height: 10vw;        
+    }
+
+    .welcome-text h3{
+        margin-top: 10px;        
+        font-size: 3.5vw;            
+    }
+
+    .button-welcome{        
+        min-width: 170px;        
+        height: 45px;        
+        line-height: 1.2;
+        font-size: 1em;        
+    }
+    
+/*      -----  JAK UCZYMY  -----  */
+
+    .learn-box{        
+        padding: 0 20px;
+    }
+        
+    .learn-topic h2{    
+        font-size: 28px;
+    }
+
+    .learn-topic h6{
+        font-size: 14px
+    }
+
+    .learn-description{
+        padding-left: 0;
+    }
+    
+/*      -----  MENTORZY  -----  */
+    
+    .mentors-topic{
+        width: 100%;
+    }
+    
+    .mentors-topic h2{    
+        font-size: 28px;
+    }
+
+    .mentors-topic h6{
+        font-size: 14px
+    }
+    
+    .mentor .col-md-3{
+        width: 90%;
+    }
+    
+    /*-----  POZIOMY MENTORÓW  -----*/
+
+    .level-topic h2{
+        font-size: 28px;        
+    }
+
+    .level-icons i{
+        font-size: 15vw;        
+    }
+
+    .level-junior{
+        margin-right: 8vw;
+        font-size: 7vw;
+    }
+
+    .level-lead{            
+        font-size: 7vw;
+    }
+
+    .level-span{
+        padding: 0 15px
+    }
+    
+/*      -----  FAQ  -----  */
+
+    .faq-topic{
+        width: 100%;         
+    }
+
+    .faq-topic h2{
+        font-size: 28px;
+    }
+
+    .faq-topic h6{
+        font-size: 14px;
+    }
+   
+    .faq-box{
+        margin-bottom: 15px;
+    }
+    
+    .faq-box i{        
+        font-size: 10.5vw;        
+    }
+
+    .faq-box h4{        
+        font-size: 16px;   
+        line-height: 1.4;
+    }
+        
+    .faq-box{
+        font-size: 15px;
+    }
+    
+    .faq-boxes .col-xs-12{
+        max-width: 98%;        
+    }
+ 
+    /*-----  PRICE  -----*/
+
+    .price-topic h2{
+        font-size: 28px;        
+    }
+
+    .price table{
+        font-size: 3.1vw;
+    }
+    
+    .price-description p{
+        text-align: justify;
+    }
+    
+    /*      -----  FORMULARZ  -----  */
+
+    .contact-topic h2{
+        font-size: 28px;
+    }
+
+    .contact-topic h6{
+        font-size: 14px;
+    }
+    
+    .address-description{        
+        max-width: 100%;        
+    }
+
+    .address-description i{            
+        display: inline;                    
+    }
+
+    .fa-a{
+        margin: 0 5px;
+        font-size: 3.1vw;                                
+    }    
+
+    .phone{
+        font-size: 17px
+    }
+    
+}
+    

@@ -3,419 +3,498 @@
 <head>
    
     <meta charset="UTF-8">
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <title>Nauka programowania na godziny</title>             
     
     <meta name="description" content="Nauka programowania na godziny dla początkujacych i zaawansowanych">
     <meta name="keywords" content="Java, kurs programowania, szkoła IT, nauka programowania">
-    <meta name="author" content="Stanisław Romek">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">      
-    <link rel="stylesheet" href="css/form.css">      
-    <link rel="stylesheet" href="css/style.css">      
+    <meta name="author" content="Stanisław Romek - www.happy.ovh">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/style-new.css">     
       
 </head>
 <body>
-  <div id="home"></div>
+    <div id="home"></div>
    
-<!--   -----  MENU  ------->
-   
- <header>
-   
-     <nav>
-        
-        <div id="logo">
-            <a href="#home"><img src="img/logo.png" class="logo"></a>
-        </div>
-        
-         <input type="checkbox" id="css-toggle-menu" name="css-toggle-menu"> 
-         <ul class="main">
-               <li><a href="#learn" class="smoothScroll">JAK UCZYMY</a></li>
-                <li><a href="#mentors" class="smoothScroll">MENTORZY</a></li>
-               <li><a href="#price" class="smoothScroll">CENNIK</a></li>            
-            <li><a href="#faq" class="smoothScroll">FAQ</a></li>
-                <li><a href="#contact" class="smoothScroll">KONTAKT</a></li>
-                <li><a target="_blank" href="https://programming-in-practice.github.io/" class="smoothScroll">BLOG</a></li>
-         </ul> 
-         <label for="css-toggle-menu" id="css-toggle-menu"></label> 
-   </nav>
-     
+<!--  -----  MENU  -----  -->
       
-        
-</header>
-
-<!--   -----  SEKCJA POWITALNA  ------->
-
-<section class="welcome">
+    <header class="fixed-top">   
+        <nav class="navbar navbar-expand-lg navbar-light bg-light  ">             
+            <button class="navbar-toggler" type="button" data-toggle="dropdown" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="#home"><img src="img/logo3.png" class="logo img-fluid"></a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">START</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#learn">JAK UCZYMY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mentors">MENTORZY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>                      
+                    <li class="nav-item">
+                        <a class="nav-link" href="#price">CENNIK</a>
+                    </li>                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">KONTAKT</a>
+                    </li>
+<!--
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://programming-in-practice.github.io/">BLOG</a>
+                    </li>
+-->
+                </ul>            
+            </div>
+        </nav>
+    </header>
    
-    <div class="welcome-text">
-        <h1>NAUKA PROGRAMOWANIA NA GODZINY</h1>
-        <h3>...ponieważ każdy uczy się inaczej.</h3>
-        <button class="button-welcome">ZOBACZ WIĘCEJ</button>
-    </div>
-    
-</section>
+<!--  -----  SEKCJA POWITALNA  -----  -->
+
+    <section class="welcome jumbotron">
+
+        <div class="welcome-text">
+            <h1>NAUKA PROGRAMOWANIA NA GODZINY</h1>
+            <h3>...ponieważ każdy uczy się inaczej.</h3>
+            <a href="#learn">
+                <button class="button-welcome">ZOBACZ WIĘCEJ</button>
+            </a>
+        </div>
+
+    </section>
 
 <!--   -----  SEKCJA JAK UCZYMY  ------->
 
 <div id="learn"></div>
-<section class="learn">
-      
-    <div class="row learn-box">
-       
-        <div class="col-md-12 learn-topic">
-            <h2>JAK UCZYMY</h2>
-        </div>    
+   
+    <section class="learn container">
 
-        <div class="col-md-12 learn-description" >
-            <p>Nauka online - bez wychodzenia z domu, bez stania w korkach. Wybierasz mentora, rezerwujesz czas w jego kalendarzu a o ustalonej godzinie klikasz w link i łączysz się z mentorem. </p>
+        <div class="row learn-box">       
+            <div class="col-md-12 learn-topic">
+                <h2>JAK UCZYMY</h2>
+                <h6>co nas wyróżnia na tle konkurencji</h6>
+            </div>    
 
-            <p>Proste zasady rozliczeń - płacisz tylko za odbyte konsultacje. Elastyczne formy płatności - jednorazowe konsultacje, regularne spotkania, pełny kurs programowania. Im więcej korzystasz, tym tańsze stają się Twoje spotkania.</p>
+            <div class="col-md-12 learn-description">
+               <div class="row">
+                   <div class="col-md-1 flex-center"><i class="fas fa-globe-americas"></i></div>
+                   <div class="col-md-11 flex-center">
+                        <p>Nauka online - bez wychodzenia z domu, bez stania w korkach. Wybierasz mentora, rezerwujesz czas w jego kalendarzu, a o ustalonej godzinie klikasz w link i łączysz się z mentorem. </p>       
+                   </div>
 
-            <p>Wykorzystaj swoje godziny na dowolny cel - jesteśmy do Twojej dyspozycji 7 dni w tygodniu. Nauka programowania od zera, zaawansowane zagadnienia, pomoc w rozwoju prywatnego projektu, code review, wsparcie w procesie rekrutacji.</p>
-          
-           <p>Gwarancja satysfakcji - nie jesteś zadowolony z udzielonego wsparcia? Opowiedz nam o tym a my zwrócimy Ci pieniądze.</p>
-          
-          <p>Darmowa pierwsza lekcja - pierwsze konsultacje (15 minut) zupełnie za darmo. Wypróbuj już dzisiaj.</p>
+                   <div class="col-md-1 flex-center"><i class="fas fa-hand-holding-usd"></i></div>
+                   <div class="col-md-11 flex-center">
+                        <p>Proste zasady rozliczeń - płacisz tylko za odbyte konsultacje. Elastyczne formy płatności - jednorazowe konsultacje, regularne spotkania, pełny kurs programowania. Im więcej korzystasz, tym tańsze stają się Twoje spotkania.</p>       
+                   </div>
 
-            <p class="pricelist">zobacz nasz cennik >></p>
+                  <div class="col-md-1 flex-center"><i class="far fa-clock"></i></div>
+                  <div class="col-md-11 flex-center">
+                        <p>Wykorzystaj swoje godziny na dowolny cel - jesteśmy do Twojej dyspozycji 7 dni w tygodniu. Nauka programowania od zera, zaawansowane zagadnienia, pomoc w rozwoju prywatnego projektu, code review, wsparcie w procesie rekrutacji.</p>       
+                  </div>
 
+                  <div class="col-md-1 flex-center"><i class="far fa-handshake"></i></div>
+                  <div class="col-md-11 flex-center">
+                        <p>Gwarancja satysfakcji - nie jesteś zadowolony z udzielonego wsparcia? Opowiedz nam o tym, a my zwrócimy Ci pieniądze.</p>       
+                  </div>
+
+                  <div class="col-md-1 flex-center"><i class="fas fa-chalkboard-teacher"></i></div>
+                  <div class="col-md-11 flex-center">
+                        <p>Darmowa pierwsza lekcja - pierwsze konsultacje zupełnie za darmo. Wypróbuj już dzisiaj.</p>       
+                  </div>                      
+                </div>
+            </div>        
         </div>
-        
-    </div>
 
-</section>
+    </section>
 
-<!--   -----  NASI MENTORZY  ------->
+<!--  -----  NASI MENTORZY  ----- -->
 
 <div id="mentors"></div>
-<section class="team">
-   
-    <div class="row mentors-box">
-               
-        <div class="col-xs-12 col-sm-12 col-md-12 mentors-topic">
-            <h2>NASI MENTORZY</h2>
+
+    <section class="team container-fluid">
+
+        <div class="row mentors-box">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mentors-topic">
+                <h2>MENTORZY</h2>
+                <h6>nasz zespół mentorów</h6>
+            </div>
+
+            <div class="mentor col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                <div class="row">            
+                    <div class="col-lg-3 col-md-3 col-sm-5 col-xs-10 col-xxs-10 person">
+                         <img src="img/piotr_big.jpg" class="img-responsive">
+                         <h3 class="name">Piotr</h3>
+                        <h6 class="function">Mentor Java</h6><i class="fas fa-user-tie ment-ico2 d-inline-block" tabindex="0" data-toggle="tooltip"   data-placement="top" title="Mentor LEAD"></i>
+                         <p>Człowiek który pokazuje, że limity nie istnieją: zostanie wysoko cenionym specjalistą zajęło mu tylko 6 lat. Pasjonat zdalnej pracy i nauki. Od 2 lat zajmuje sie szkoleniem przyszłych programistów.
+                         </p>                                              
+                         <a target="_blank" href="https://www.linkedin.com/in/piotr- ko%C5%82acz/"><i class="fab fa-linkedin-in ment-ico d-inline-block" tabindex="0" data-toggle="tooltip" data-placement="bottom" title="Zobacz profil mentora"></i></a>
+                        <a target="_blank" href="https://calendly.com/kolacz-piotrek/konsultacje"><i class="fas ment-ico fa-calendar-alt d-inline-block" tabindex="0" data-toggle="tooltip"   data-placement="top" title="Zarezerwuj spotkanie"></i></a> 
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-5 col-xs-10 col-xxs-10 person">
+                        <img src="img/aniabw.jpg" class="img-responsive">
+                        <h3 class="name">Ania</h3>
+                        <h6 class="function">Mentor Java</h6>
+                        <i class="fas fa-user-tie ment-ico2 d-inline-block" tabindex="0" data-toggle="tooltip" data-placement="top" title="Mentor LEAD"></i>
+                        <i class="fas fa-user-graduate ment-ico3 d-inline-block" tabindex="0" data-toggle="tooltip" data-placement="top" title="Mentor JUNIOR"></i>
+                        <p>Najbardziej cierpliwy mentor pod słońcem: jeśli trzeba wytłumaczy to samo po raz 20-ty wykorzystując do tego kotki, pieski i słonie :)
+                        </p>     
+                        <a target="_blank" href="https://www.linkedin.com/in/anna-ko%C5%82acz-lewicka-4164a33/"><i class="fab fa-linkedin-in ment-ico d-inline-block" tabindex="0" data-toggle="tooltip" data-placement="bottom"  title="Zobacz profil mentora"></i></a>
+                        <a target="_blank" href="https://calendly.com/annamaria-lewicka/15min"><i class="fas fa-calendar-alt ment-ico d-inline-block" tabindex="0" data-toggle="tooltip"   data-placement="top" title="Zarezerwuj spotkanie"></i></a>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-3 col-sm-5 col-xs-4 col-xxs-10 person">
+                        <img src="img/seba.jpg" class="img-responsive">
+                        <h3 class="name">Sebastian</h3>
+                        <h6 class="function">Mentor Java</h6>
+                        <i class="fas fa-user-graduate ment-ico3 d-inline-block" tabindex="0" data-toggle="tooltip" data-placement="top" title="Mentor JUNIOR"></i>
+                        <p>Kiedyś zawodowy gracz w pokera, dzisiaj postanowił zostać programistą - jeden z najbardziej ambitnych uczestników kursów Piotra.
+                        </p>                   
+                        <a target="_blank" href="https://www.linkedin.com/in/sebastian-pacuk/"><i class="fab fa-linkedin-in ment-ico d-inline-block" tabindex="0" data-toggle="tooltip" data-placement="bottom" title="Zobacz profil mentora"></i></a>
+                        <a target="_blank" href="https://calendly.com/spacuk/15min"><i class="fas fa-calendar-alt ment-ico d-inline-block" tabindex="0" data-toggle="tooltip"   data-placement="top" title="Zarezerwuj spotkanie"></i></a>                       
+                    </div>              
+                </div>
+            </div>
+
+        </div>  
+
+    </section>
+
+<!--  -----  POZIOMY MENTORÓW  ----- -->
+                        
+    <section class="container level">
+
+        <div class="row">       
+            <div class="col-xs-12 col-sm-12 col-md-12 level-topic">
+                <h2>2 POZIOMY MENTORÓW</h2>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 level-icons">           
+                <div class="level-junior">
+                    <span class="level-span">Junior</span>
+                    <i class="fas fa-user-graduate"></i>    
+                </div>
+                <div class="level-lead">
+                    <i class="fas fa-user-tie"></i>
+                    <span class="level-span">Lead</span>
+                </div>                      
+            </div>              
         </div>
-        
-        <div class="mentor">
-        
-            <div class="col-md-3 col-sm-3 col-xs-4 col-xxs-10 person">
-                 <img src="img/piotr_big.jpg" class="img-responsive">
-                 <h3 class="name">Piotr</h3>
-                 <h6 class="function">Mentor Java</h6>
-                 <p>Człowiek który pokazuje, że limity nie istnieją: zostanie wysoko cenionym specjalistą zajęło mu tylko 6 lat. Pasjonat zdalnej pracy i nauki. Od 2 lat zajmuje sie szkoleniem przyszłych programistów.
-                 </p>     
 
-                <!-- <i class="fa fa-facebook fa-team" aria-hidden="true"></i>
-                 <i class="fa fa-twitter fa-team" aria-hidden="true"></i> -->
-                 <a target="_blank" href="https://www.linkedin.com/in/piotr-ko%C5%82acz/"><i class="fa fa-linkedin fa-team" aria-hidden="true"></i></a>
-              <a target="_blank" href="https://calendly.com/kolacz-piotrek/konsultacje"><i>zarezerwuj spotkanie</i></a>
-            </div>
+        <div class="mentors-description">        
 
-            <div class="col-md-3 col-sm-3 col-xs-4 col-xxs-10 person">
-                 <img src="img/aniabw.jpg" class="img-responsive">
-                 <h3 class="name">Ania</h3>
-                 <h6 class="function">Mentor Java</h6>
-                 <p>Najbardziej cierpliwy mentor pod słońcem: jeśli trzeba wytłumaczy to samo po raz 20-ty wykorzystując do tego kotki, pieski i słonie :)
-                 </p>     
- <a target="_blank" href="https://www.linkedin.com/in/anna-ko%C5%82acz-lewicka-4164a33/"><i class="fa fa-linkedin fa-team" aria-hidden="true"></i></a>
-              <a target="_blank" href="https://calendly.com/annamaria-lewicka/15min"><i>zarezerwuj spotkanie</i></a>
-                <!-- <i class="fa fa-facebook fa-team" aria-hidden="true"></i>
-                 <i class="fa fa-twitter fa-team" aria-hidden="true"></i>
-                 <i class="fa fa-linkedin fa-team" aria-hidden="true"></i>  -->             
-            </div>
+            <p><span class="bold">Junior</span> - niedawno zaczynał i dzięki temu doskonale wie przez co przechodzisz - świetny towarzysz na początku Twojej przygody z programowaniem.</p>
 
-            <div class="col-md-3 col-sm-3 col-xs-4 col-xxs-10 person">
-                 <img src="img/adrian_bw_medium.jpg" class="img-responsive">
-                 <h3 class="name">Adrian</h3>
-                 <h6 class="function">Mentor Java</h6>
-                 <p>Kilkanaście lat doświadczenia w branży, ogromna wiedza, prowadził wiele kursów, z pasja opowie Ci o najbardziej zawiłych dziedzinach z życia programisty.
-                 </p>     
-
-              <!--   <i class="fa fa-facebook fa-team" aria-hidden="true"></i>
-                 <i class="fa fa-twitter fa-team" aria-hidden="true"></i>
-                 <i class="fa fa-linkedin fa-team" aria-hidden="true"></i>               -->
-               <a target="_blank" href="https://www.linkedin.com/in/astachurski/"><i class="fa fa-linkedin fa-team" aria-hidden="true"></i></a>
-              <a target="_blank" href="https://calendly.com/astachurski"><i>zarezerwuj spotkanie</i></a>
-            </div>
-
-            <div class="col-md-3 col-sm-3 col-xs-4 col-xxs-10 person">
-                 <img src="img/julia-md.jpg" class="img-responsive">
-                 <h3 class="name">Julia</h3>
-                 <h6 class="function">Mentor Java</h6>
-                 <p>Kobieta która udowodniła, że można: w kilka miesięcy została programistką i teraz chce uczyć innych, aby i im pomóc odmienić swoje życie. Jedna z pierwszych absolwentek kursów Piotra.
-                 </p>     
-
-             <!--    <i class="fa fa-facebook fa-team" aria-hidden="true"></i>
-                 <i class="fa fa-twitter fa-team" aria-hidden="true"></i>
-                 <i class="fa fa-linkedin fa-team" aria-hidden="true"></i>    -->     
-               <a target="_blank" href="https://www.linkedin.com/in/julia-mykhailovych-2b25bab1"><i class="fa fa-linkedin fa-team" aria-hidden="true"></i></a>
-              <a target="_blank" href="https://calendly.com/jmykhailovych"><i>zarezerwuj spotkanie</i></a>
-            </div>
-
-            <div class="col-md-3 col-sm-3 col-xs-4 col-xxs-10 person">
-                 <img src="img/seba.jpg" class="img-responsive">
-                 <h3 class="name">Sebastian</h3>
-                 <h6 class="function">Mentor Java</h6>
-                 <p>Kiedyś zawodowy gracz w pokera, dzisiaj postanowił zostać programistą - jeden z najbardziej ambitnych uczestników kursów Piotra.
-                 </p>     
-
-              <!--    <i class="fa fa-facebook fa-team" aria-hidden="true"></i>
-                 <i class="fa fa-twitter fa-team" aria-hidden="true"></i>
-                 <i class="fa fa-linkedin fa-team" aria-hidden="true"></i>  -->   
-               <a target="_blank" href="https://www.linkedin.com/in/sebastian-pacuk/"><i class="fa fa-linkedin fa-team" aria-hidden="true"></i></a>
-              <a target="_blank" href="https://calendly.com/spacuk/15min"><i>zarezerwuj spotkanie</i></a>
-            </div>
-        
-        </div>
-               
-        <div class="mentors-description">
-        
-            <h3>2 poziomy mentorów:</h3>
-
-            <p><span class="bold">Lead</span> - wiele lat doświadczenia, zajmuje leaderskie stanowiska w firmach, potrafi prowadzić zespoły, prowadził kursy programowania, świetna osoba kiedy chcecie rozwiązać naprawdę trudny problem, prowadził wiele procesów rekrutacyjnych, doskonale wie co zrobić aby być jednym z najlepiej opłacanych programistów.</p>
-
-            <p><spam class="bold">Junior</spam> - niedawno zaczynał i dzięki temu doskonale wie przez co przechodzisz - świetny towarzysz na początku Twojej przygody z programowaniem.</p>
+            <p><span class="bold">Lead</span> - wiele lat doświadczenia, zajmuje leaderskie stanowiska w firmach, potrafi prowadzić zespoły, prowadził kursy programowania, prowadził wiele procesów rekrutacyjnych, świetna osoba kiedy chcecie rozwiązać naprawdę trudny problem, doskonale wie co zrobić aby być jednym z najlepiej opłacanych programistów.</p>
 
             <h3>Którego mentora wybrać?</h3>
 
-            <p>Dopiero zaczynasz nauke programowania i nie wiesz, co Cię czeka? Zacznij od jednego z naszych Junior Mentorow - pomoga opanować Ci podstawy programowania a w twojej kieszeni zostanie sporo oszczędności na dalszą naukę. Junior poprowadzi Cię za rękę i rozwiąże Twoje problemy.</p>
+            <p>Dopiero zaczynasz naukę programowania i nie wiesz, co Cię czeka? Zacznij od jednego z naszych <span class="bold">Junior Mentorow</span> - pomogą opanować Ci podstawy programowania, a w twojej kieszeni zostanie sporo oszczędności na dalszą naukę. <span class="bold">Junior</span> poprowadzi Cię za rękę i rozwiąże Twoje problemy.</p>
 
-            <p>Lead - świetny wybór jeżeli zależy Ci na kompleksowej nauce - razem możecie ułożyć plan nauki i realizować go przez kolejne miesiące. Ta kategoria mentorów to świetny wybór jeśli chesz zbudować swoje portfolio, napisać bardziej zaawansowany projekt czy przygotować się do interview. Metoda krótkich odpowiedzi sprawdza sie tutaj najlepiej - jeżeli jesteś bardzo zmotywowany i chcesz nauczyć się więcej niż inni - wybierz naszego Lead’a ;) </p>
-          
-          <p>Jeżeli zależy Ci na kompleksowej nauce i chcesz spędzić z nami kilka miesięcy, to polecamy rozwiązanie hybrydowe. Wybierz Lead mentora, który stworzy dla Ciebie indywidualny plan nauki, a na codzień korzystaj z pomocy Juniora, który pozwoli Ci zrealizować ambitne cele postawione przez naszego eksperta.</p>
-          
+            <p><span class="bold">Lead</span> - świetny wybór jeżeli zależy Ci na kompleksowej nauce - razem możecie ułożyć plan nauki i realizować go przez kolejne miesiące. Ta kategoria mentorów to świetny wybór jeśli chesz zbudować swoje portfolio, napisać bardziej zaawansowany projekt czy przygotować się do interview. Metoda krótkich odpowiedzi sprawdza sie tutaj najlepiej - jeżeli jesteś bardzo zmotywowany i chcesz nauczyć się więcej niż inni - wybierz naszego <span class="bold">Lead’a</span> ;) </p>
+
+            <p>Jeżeli zależy Ci na kompleksowej nauce i chcesz spędzić z nami kilka miesięcy, to polecamy <span class="bold">rozwiązanie hybrydowe</span>. Wybierz Lead mentora, który stworzy dla Ciebie indywidualny plan nauki, a na codzień korzystaj z pomocy Juniora, który pozwoli Ci zrealizować ambitne cele postawione przez naszego eksperta.</p>
+
         </div>                
-                
-    </div>    
-    
-</section>
-   
-<!--   -----  CENNIK  ------->   
 
-<div id="price"></div>
-<section class="price">
+    </section>
    
-    <div class="row price-box">
-    
-        <div class="col-md-12 price-topic">
-            <h2>CENNIK</h2>
-        </div>    
+<!--  -----  FAQ  ------->
+         
+<div id="faq"></div>
+ 
+    <section class="faq container-fluid">
 
-        <div class="col-md-12 price-description" >
-
-            
-          <table style="width:100%">
-  <tr>
-    <th></th>
-    <th>Junior</th> 
-    <th>Lead</th>
-    <th></th>
-  </tr>
-             <tr>
-    <td></td>
-    <td></td> 
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>1 godzina</td>
-    <td>100 zł</td> 
-    <td>150 zł</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>12 godzin</td>
-    <td>1080 zł</td> 
-    <td>1620 zł</td>
-    <td>10% taniej</td>
-  </tr>
-  <tr>
-    <td>24 godziny</td>
-    <td>2040 zł</td> 
-    <td>3060 zł</td>
-    <td>15% taniej</td>
-  </tr>
-  <tr>
-    <td>48 godzin</td>
-    <td>3840 zł</td> 
-    <td>5760 zł</td>
-    <td>20% taniej</td>
-  </tr>
-  <tr>
-    <td>72 godziny</td>
-    <td>5400 zł</td> 
-    <td>8100 zł</td>
-    <td>25% taniej</td>
-  </tr>
-</table>
-
-          <br/>
-             <p> Dlaczego tak drogo? Nie jest drogo - to najtańsza oferta na rynku. Pamiętaj, że płacisz za czas spędzony z mentorem 1:1. Inne szkoły programowania oferują maksymalnie 1,5 h takiego wsparcia na tydzień, a ceny kursów zaczynają się od 10 000 zł. </p>
-          <br/>
-          <p>Wybór należy do Ciebie: jeżeli preferujesz naukę w toku indywidualnym, to zapraszamy do współpracy, jeżeli wolisz uczyć się w grupie, to zapraszamy do konkurencji ;)</p>
-          
-   
-        
-    </div>
-    
-</section>   
-   
-  <div id="faq"></div>
-<section class="team">
-   <div class="col-md-12 price-topic">
-            <h2>FAQ</h2>
+        <div class="faq-topic">       
+                <h2>CZY NAUKA PROGRAMOWANIA NA GODZINY JEST DLA MNIE?</h2>
+                <h6>odpowiedzi na najbardziej nurtujące pytania</h6>
         </div> 
-  
-    <div class="mentors-description">
-        
-            <h4>Czym wyróżniacie się w porównaniu do innych szkół?</h4>
 
-      <p>Indywidualne podejście - dla każdego kursanta ustalamy indywidualny tok nauki na podstawie jego aktualnej wiedzy i tego co chce osiągnąć.</p>
-      
-            <p>Stawiamy na sprawdzonych mentorów. Wszyscy się znamy, napisaliśmy razem wiele projektów i wiemy czego od siebie oczekiwać. Każdy mentor udziela się w sieci i tworzy nowe materiały edukacyjne.</p>
-      
-      <p>Pracujemy bezpośrednio z kursantami, nie znajdziesz u nas biura, sekretarki, specjalisty od PR czy agresywnego marketingu. Wierzymy, że jeżeli ktoś chce zostać programistą to sam do nas trafi - jesteśmy aktywni w sieci i tworzymy darmowe treści, które pomagają Wam w procesie nauki. Napisz do nas a odpisze Ci prawdziwy mentor a nie młodszy specjalista do kontaktu z kursantami :)</p>
-      
-      <p>Nie kupujesz kota w worku. Mentorów możesz wypróbować zanim zapłacisz, materiały udostępniamy publicznie a w przypadku gdy nie będziesz zadowolony z naszego wsparcia po prostu zwrócimy Ci pieniądze</p>
 
-            
+        <div class="row container-fluid faq-boxes">
 
-      <h4>Jak się z Wami skontaktować? </h4>
+            <div class="faq-box col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <h4>
+                <i class="fas fa-laptop"></i>        
+                Czy każdy może zostać programistą?
+                </h4>
 
-            <p>Najprościej dołącz do naszej społeczności na <a target="_blank" href="https://join.slack.com/t/na-godziny/shared_invite/enQtMzgyNTU3MjAzOTg4LTk1ZWZmYTBhNmEwMzE3MDgxZWE1NmI1NjA2MDQzMmYwNGFlZmM3YWI3ZWQ2M2I4Zjg0ZGVhYWI5ZjU3ZGFhZmY">Slack'u</a> i na czacie zadaj pytania bezpośrednio mentorom.</p>
+                <p>Tak, każdy kto jest gotowy poświecić cały swoj wolny czas aby podjąć wyzwanie ma szanse zostać programistą. Dla każdego czas nauki będzie inny i zależy od aktualnych umiejętności i zaangażowania w naukę. U każdego proces nauki przebiega inaczej, dlatego oferujemy unikatowy system, gdzie sam decydujesz jak intensywnie się uczysz, jak wiele chesz wydać na nauke i ile wsparcia oczekujesz.</p>
 
-            <p>Możesz też skorzystać z formularza kontaktowego poniżej, zadzwonić do nas lub napisać maila. W każdym przypadku odpisze Ci bezpośrednio mentor! </p>
-      
-      <p>Masz wiele pytań? Od razu umów się na spotkanie z mentorem. Najedź na zdjęcie mentora i kliknij na 'zarezerwuj spotkanie'. Za pierwsze spotkanie nic nie płacisz. </p>
-          
-               
-      <h4>Dlaczego nie gwarantujecie pracy dla każdego absolwenta po kilku miesiącach kursu?</h4>
+                <p>Czy trzeba być matematycznym ekspertem? Nie nie trzeba. Na studiach informatycznych matematyka to często zmarnowany czas.</p>
 
-              <p>Niestety zostanie programistą nie jest takie proste jak obiecuje konkurencja. Każdy z nas pracuje w tym zawodzie i doskonale wie ile wysiłku wymaga wkroczenie w jego kręgi.</p>
+                <p>Czy wiek jest ograniczeniem? Absolutnie nie - w branży są przykłady osób, które zostały programistami w wieku 60 lat.</p>
 
-<p>Zostanie programistą porównujemy do zdobycia Mount Everest - firmy obiecują, że każdy może zdobyć tą górę - wystarczy zapłacić za taką możliwość i trenować aby nasza kondycja i umiejętności pozwoliły nam zdobyć szczyt. Czy można to wszystko osiągnąć w 6 miesięcy? Tak można. Czy każdy po 6 miesiącach przygotowań zdobędzie szczyt? Niestety nie.</p>
-              
-              <p>Inna świetna analogia to przebiegnięcie maratonu. Każdy to może zrobić ale nie każdy jest gotowy by podporządkować temu celowi swoje życie. W maratonie najtrudniejsze są treningi - kilkadziesiąt kilometrów co tydzień przez co najmniej pół roku. Aby przebiec maraton trzeba wybiegać swoje kilometry i nie ma drogi na skróty.</p>
-             
-              <p>Na koniec zadam pytanie: czy uważasz, że można zostać prawnikiem w 6 miesięcy? Można, ale będzie bardzo trudno. Czy można zostać programistą w 6 miesięcy? Tak można, ale czeka Cię bardzo dużo pracy.</p>
-      
-      <h4>Czy każdy może zostać programistą?</h4>
-      
-
-<p>Tak, każdy kto jest gotowy poświecić cały swoj wolny czas aby podjąć wyzwanie ma szanse zostać programistą. Dla każdego czas nauki będzie inny i zależy od aktualnych umiejętności i zaangażowania w naukę. U każdego proces nauki przebiega inaczej, dlatego oferujemy unikatowy system, gdzie sam decydujesz jak intensywnie się uczysz, jak wiele chesz wydać na nauke i ile wsparcia oczekujesz.</p>
-      
-      <p>Czy trzeba być matematycznym ekspertem? Nie nie trzeba. Na studiach informatycznych matematyka to często zmarnowany czas.</p>
-      
-      <p>Czy wiek jest ograniczeniem? Absolutnie nie - w branży są przykłady osób, które zostały programistami w wieku 60 lat.</p>
-      
-      <p>Czy trzeba znać angielski? Tak trzeba znać angielski na komunikatywnym poziomie, musisz być w stanie czytać dokumentację, pisać emaile i rozmawiać z osobami w zespole po angielsku.</p>
-             
-      
-      <h4>Dlaczego ceny są takie wysokie? Inne szkoły oferują kursy gdzie godzina nauki kosztuje 20-30 zł.</h4>
-      <p>Niestety te szkoły stosują prosty trick - czas nauki jest zdefiniowany jako suma godzin samodzielnej nauki i wsparcia mentora - w praktyce kursant otrzymuje ok 1h bezpośredniego wsparcia mentora tygodniowo. Prosta operacja arytmetyczna pokazuje, że jeżeli kurs trwa 30 tygodni to otrzymujecie tylko 30 godzin wsparcia w trakcie całego kursu. Wystarczy podzielić cenę kursu przez tą ilość godzin i okazuje się, że wsparcie mentora kosztuje 10x więcej niż pokazują to reklamy. </p>
-      <p>Zapytajcie proszę ile czasu możecie spędzić pracując indywidualnie z mentorem na danym kursie.</p>
-      
-         <h4>Ile godzin potrzebuję? Który pakiet wybrać?</h4>
-      <p>Nie ma jednoznacznej odpowiedzi - każdy potrzebuje innej ilości wsparcia. </p>
-      <p>Zacznij od małego pakietu, kiedy zdecydujesz się kontynuować naukę to dopłacisz tylko różnicę a Twoje wcześniejsze godziny zostaną przeliczone po niższej stawce.</p>
-      <p>Sprawdzony pakiet, który wystarcza ambitnym kursantom to 12h lead mentor + 48h junior mentor. W sumie 60 godzin wsparcia (2x więcej niż u konkurencji), pełny kurs według indywidualnego planu a to wszystko za połowę ceny, którą zapłaciłbyś w innych szkołach.</p>
-      <p>Pamiętaj: nie musisz płacić za cały kurs z góry - płać w dogodnych comiesięcznych ratach - dokładnie tak samo jak w telefonie na kartę: kończą Ci się godziny to doładowujesz konto :)</p>
-  
-      
-               <h4>Jak mogę dokonać wpłaty? Czy dostanę umowę?</h4>
-      <p>Wszystkie formalności załatwimy kiedy już zdecydujesz się rozpocząć nauke. Podpiszemy umowę, a Ty otrzymasz nr konta do wpłaty. Na wszystko wystawimy rachunek lub fakturę. </p>
-      
-      <h4>Jak rozliczane są moje godziny?</h4>
-      <p>To bardzo proste: wykupujesz pakiet godzin i umawiasz się na konsultacje. Po każdym spotkaniu od puli twoich godzin odejmujemy czas spędzony z mentorem. Na bieżąco będziesz miał podgląd ilości pozostałych godzin i szczegółowe informacje kiedy korzystałeś z konsultacji. </p>
-      
-       <h4>Ile godzin dziennie powinienem spędzać na nauce?</h4>
-      <p>Wystarczy 1 godzina dzienne! Ale wtedy nauka potrwa co najmniej 2 lata :)</p>
-      <p>2 godziny dziennie to około rok nauki. Poświęcając 3-4 godziny dziennie można zostać programistą już w pół roku. </p>
-      
-           
-    </div>    
-    
-</section>
-  
-<!--   -----  FORMULARZ KONTAKTOWY  ------->   
-   
-<div id="contact"></div>
-<div class="contact">
-   
-    <div class="row contact-box">
-    
-        <div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12 contact-topic">
-            <h2>KONTAKT</h2>
-        </div>    
-
-        <div class="address col-md-12 col-sm-12 col-xs-12 col-xxs-12">
-       
-            <div class="col-md-6 col-sm-6 col-xs-10 col-xxs-12 address-description">
-                <h4><span class="bold">Jeżeli masz pytania, to zadzwoń lub napisz do nas:</span></h4>
-                <p><span class="bold">Nauka programowania na godziny</span></p>
-                <p class="fa-a"><span class="fa fa-phone bold" aria-hidden ="true"></span> <a href="tel:+48531840545" class="fa-a" >Tel.: 531-840-545</a></p>
-                <p class="fa-a"><span class="fa fa-envelope bold" aria-hidden ="true"></span> <a href="mailto:info@nauka-programowania-na-godziny.pl" class="fa-a">e-mail: info@nauka-programowania-na-godziny.pl</a></p>   
-              <p class="fa-a"><span class="fa fa-envelope bold" aria-hidden ="true"></span> <a target="_blank" href="https://join.slack.com/t/na-godziny/shared_invite/enQtMzgyNTU3MjAzOTg4LTk1ZWZmYTBhNmEwMzE3MDgxZWE1NmI1NjA2MDQzMmYwNGFlZmM3YWI3ZWQ2M2I4Zjg0ZGVhYWI5ZjU3ZGFhZmY" class="fa-a">dołącz do naszej społeczności (Slack)</a></p>
-              
+                <p>Czy trzeba znać angielski? Tak trzeba znać angielski na komunikatywnym poziomie, musisz być w stanie czytać dokumentację, pisać emaile i rozmawiać z osobami w zespole po angielsku.</p>
             </div>
 
-           <!-- Customise the Thankyou Message People See when they submit the form: -->
-  <div style="display:none;" id="thankyou_message">
-    <h2><em>Thanks</em> for contacting us!
-      We will get back to you soon!</h2>
-  </div>
-          
-            <form class="form col-md-6 col-sm-6 col-xs-12 col-xxs-12 " id="gform" method="post" novalidate action="https://script.google.com/macros/s/AKfycbxx6pudUv80LY0r_3TzRCZ4WysJLXCbiZ4xA9nbluLVX_gRq50K/exec">
-                <div class="form-row">
-                    <label for="field-name">Twoje imię:</label>
-                    <input value="" type="text" name="name" required id="field-name" data-error="Wypełnij to pole" pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+">
-                </div>
+            <div class="faq-box col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <h4>
+                <i class="fas fa-graduation-cap"></i>        
+                Czym wyróżniacie się w porównaniu do innych szkół?
+                </h4>
 
-                <div class="form-row">
-                    <label for="field-email" >Twój adres e-mail:</label>
-                    <input value="" type="email" name="email" required id="field-email" data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
-                </div>
+                <p>Indywidualne podejście - dla każdego kursanta ustalamy indywidualny tok nauki na podstawie jego aktualnej wiedzy i tego co chce osiągnąć.</p>
 
-                <div class="form-row">
-                    <label for="field-message">Wiadomość do nas:</label>
-                    <textarea name="message" required data-error="Pole wymagane" id="field-message" pattern=".+"></textarea>
-                </div>
+                <p>Stawiamy na sprawdzonych mentorów. Wszyscy się znamy, napisaliśmy razem wiele projektów i wiemy czego od siebie oczekiwać. Każdy mentor udziela się w sieci i tworzy nowe materiały edukacyjne.</p>
 
-                <div class="form-row">
-                    <label class="checkbox-cnt">
-                    <input type="checkbox" required data-error="Pole wymagane" >
-                    <i class="state" aria-hidden="true"></i>
-                        <span>Wyrażam zgodę na kontakt pod podany w wiadomości adres e-mail.</span>
-                    </label>
-                </div>
-              
+                <p>Pracujemy bezpośrednio z kursantami, nie znajdziesz u nas biura, sekretarki, specjalisty od PR czy agresywnego marketingu. Wierzymy, że jeżeli ktoś chce zostać programistą to sam do nas trafi - jesteśmy aktywni w sieci i tworzymy darmowe treści, które pomagają Wam w procesie nauki. Napisz do nas a odpisze Ci prawdziwy mentor a nie młodszy specjalista do kontaktu z kursantami :)</p>
 
-                <div class="form-row">
-                  <br/>
-                    <button type="submit" class="submit-btn">
-                        Wyślij
-                    </button>
-                </div>
-            </form>
+                <p>Nie kupujesz kota w worku. Mentorów możesz wypróbować zanim zapłacisz, materiały udostępniamy publicznie a w przypadku gdy nie będziesz zadowolony z naszego wsparcia po prostu zwrócimy Ci pieniądze</p>
+            </div>
 
+            <div class="faq-box col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <h4>
+                <i class="fas fa-wrench"></i>
+                Dlaczego nie gwarantujecie pracy dla każdego absolwenta po kilku miesiącach kursu?
+                </h4>
+
+                <p>Niestety zostanie programistą nie jest takie proste jak obiecuje konkurencja. Każdy z nas pracuje w tym zawodzie i doskonale wie ile wysiłku wymaga wkroczenie w jego kręgi.</p>
+
+                <p>Zostanie programistą porównujemy do zdobycia Mount Everest - firmy obiecują, że każdy może zdobyć tą górę - wystarczy zapłacić za taką możliwość i trenować aby nasza kondycja i umiejętności pozwoliły nam zdobyć szczyt. Czy można to wszystko osiągnąć w 6 miesięcy? Tak można. Czy każdy po 6 miesiącach przygotowań zdobędzie szczyt? Niestety nie.</p>
+
+                <p>Inna świetna analogia to przebiegnięcie maratonu. Każdy to może zrobić ale nie każdy jest gotowy by podporządkować temu celowi swoje życie. W maratonie najtrudniejsze są treningi - kilkadziesiąt kilometrów co tydzień przez co najmniej pół roku. Aby przebiec maraton trzeba wybiegać swoje kilometry i nie ma drogi na skróty.</p>                
+            </div>
+
+            <div class="faq-box col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <h4>
+                <i class="fas fa-money-bill-alt"></i>
+                Dlaczego ceny są takie wysokie? Inne szkoły oferują kursy gdzie godzina nauki kosztuje 20-30 zł.
+                </h4>
+
+                <p>Niestety te szkoły stosują prosty trick - czas nauki jest zdefiniowany jako suma godzin samodzielnej nauki i wsparcia mentora - w praktyce kursant otrzymuje ok 1h bezpośredniego wsparcia mentora tygodniowo. Prosta operacja arytmetyczna pokazuje, że jeżeli kurs trwa 30 tygodni to otrzymujecie tylko 30 godzin wsparcia w trakcie całego kursu. Wystarczy podzielić cenę kursu przez tą ilość godzin i okazuje się, że wsparcie mentora kosztuje 10x więcej niż pokazują to reklamy. </p>
+
+                <p>Zapytajcie proszę ile czasu możecie spędzić pracując indywidualnie z mentorem na danym kursie.</p>
+            </div>
+
+            <div class="faq-box col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <h4>
+                <i class="far fa-clock"></i>
+                Ile godzin potrzebuję? Który pakiet wybrać?
+                </h4>
+
+                <p>Nie ma jednoznacznej odpowiedzi - każdy potrzebuje innej ilości wsparcia. </p>
+
+                <p>Zacznij od małego pakietu, kiedy zdecydujesz się kontynuować naukę to dopłacisz tylko różnicę, a Twoje wcześniejsze godziny zostaną przeliczone po niższej stawce.</p>
+
+                <p>Sprawdzony pakiet, który wystarcza ambitnym kursantom to 12h lead mentor + 48h junior mentor. W sumie 60 godzin wsparcia (2x więcej niż u konkurencji), pełny kurs według indywidualnego planu a to wszystko za połowę ceny, którą zapłaciłbyś w innych szkołach.</p>
+
+                <p>Pamiętaj: nie musisz płacić za cały kurs z góry - płać w dogodnych comiesięcznych ratach - dokładnie tak samo jak w telefonie na kartę: kończą Ci się godziny to doładowujesz konto :)</p>    
+            </div>
+
+            <div class="faq-box col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <h4>
+                <i class="fas fa-phone-volume"></i>
+                Jak się z Wami skontaktować?
+                </h4>
+
+                <p>Najprościej dołącz do naszej społeczności na <a target="_blank" alt="Link do Slack'a" href="https://join.slack.com/t/na-godziny/shared_invite/enQtMzgyNTU3MjAzOTg4LTk1ZWZmYTBhNmEwMzE3MDgxZWE1NmI1NjA2MDQzMmYwNGFlZmM3YWI3ZWQ2M2I4Zjg0ZGVhYWI5ZjU3ZGFhZmY"><span class="bold">Slack'u</span></a> i na czacie porozmawiaj z mentorem i innymi uczestnikami kursów.</p>
+
+                <p>Możesz też skorzystać z <a href="#form"><span class="bold">formularza kontaktowego</span></a> poniżej, <a href="tel:+48531840545"><span class="bold">zadzwonić</span></a> do nas lub napisać <a href="mailto:info@nauka-programowania-na-godziny.pl"><span class="bold">maila</span></a>. W każdym przypadku odpisze Ci bezpośrednio mentor! </p>
+            
+                <p>Masz wiele pytań? Od razu umów się na spotkanie z mentorem. Najedź na zdjęcie mentora i kliknij na "zarezerwuj spotkanie". Za pierwsze spotkanie nic nie płacisz. </p>                        
+                
+            </div>
+
+            <div class="faq-box col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <h4>
+                <i class="fas fa-file-alt"></i>
+                Jak mogę dokonać wpłaty? Czy dostanę umowę?
+                </h4>
+
+                <p>Wszystkie formalności załatwimy kiedy już zdecydujesz się rozpocząć nauke. Podpiszemy umowę, a Ty otrzymasz nr konta do wpłaty. Na wszystko wystawimy rachunek lub fakturę. </p>        
+            </div>
+
+            <div class="faq-box col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <h4>
+                <i class="fas fa-calculator"></i>
+                Jak rozliczane są moje godziny?
+                </h4>
+
+                <p>To bardzo proste: wykupujesz pakiet godzin i umawiasz się na konsultacje. Po każdym spotkaniu od puli twoich godzin odejmujemy czas spędzony z mentorem. Na bieżąco będziesz miał podgląd ilości pozostałych godzin i szczegółowe informacje kiedy korzystałeś z konsultacji. </p>        
+            </div>
+
+            <div class="faq-box col-lg-4 col-md-12 col-sm-12 col-xs-12">           
+                <h4>
+                <i class="fab fa-leanpub"></i>
+                Ile godzin dziennie powinienem spędzać na nauce?
+                </h4>
+
+                <p>Wystarczy 1 godzina dzienne tylko wtedy nauka potrwa co najmniej 2 lata :)</p>
+
+                <p>2 godziny dziennie to około rok nauki. Poświęcając 3-4 godziny dziennie można zostać programistą już w pół roku. </p>
+            </div>
+            
         </div>
-   
-    </div>
+    </section>
  
-</div>
+<!--  -----  CENNIK  -----  -->   
+
+<div id="price"></div>
+
+    <section class="price container">
+
+        <div class="row price-box">
+
+            <div class="col-md-12 price-topic">
+                <h2>CENNIK</h2>
+            </div>    
+
+            <div class="col-md-12 price-description">
+                <table class="table table-hover table-price">
+                    <thead>
+                        <tr>           
+                            <th></th>
+                            <th>Junior</th> 
+                            <th>Lead</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 godzina</td>
+                            <td>100 zł</td> 
+                            <td>150 zł</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12 godzin</td>
+                            <td>1 080 zł</td> 
+                            <td>1 620 zł</td>
+                            <td>10% taniej</td>
+                        </tr>
+                        <tr>
+                            <td>24 godziny</td>
+                            <td>2 040 zł</td> 
+                            <td>3 060 zł</td>
+                            <td>15% taniej</td>
+                        </tr>
+                        <tr>
+                            <td>48 godzin</td>
+                            <td>3 840 zł</td> 
+                            <td>5 760 zł</td>
+                            <td>20% taniej</td>
+                        </tr>
+                        <tr>
+                            <td>72 godziny</td>
+                            <td>5 400 zł</td> 
+                            <td>8 100 zł</td>
+                            <td>25% taniej</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p> Dlaczego tak drogo? Nie jest drogo - <span class="bold">to najtańsza oferta na rynku</span>. Pamiętaj, że płacisz za czas spędzony z mentorem 1:1. Inne szkoły programowania oferują maksymalnie 1,5 godziny takiego wsparcia na tydzień, a ceny kursów zaczynają się od 10 000 zł. </p>
+
+                <p>Wybór należy do Ciebie: jeżeli preferujesz naukę w toku indywidualnym, to zapraszamy do współpracy, jeżeli wolisz uczyć się w grupie, to zapraszamy do konkurencji ;)</p>                
+            </div>
+            
+        </div>    
+    </section>   
+  
+<!--  -----  FORMULARZ KONTAKTOWY  -----  -->   
+   
+    <div id="contact"></div>
+
+        <div class="contact container-fluid">
+
+            <div class="row contact-box">
+
+                <div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12 contact-topic">
+                    <h2>KONTAKT</h2>
+                    <h6>jeżeli masz pytania, to zadzwoń lub napisz do nas</h6>
+                </div>    
+
+                <div class="address col-md-12 col-sm-12 col-xs-12 col-xxs-12">
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-xxs-12 address-description">
+
+                            <h4><span class="bold">Nauka programowania na godziny</span></h4>                
+
+                            <p class="fa-a"><i class="fas fa-mobile-alt"></i>                
+
+                                <a href="tel:+48531840545" class="fa-a phone" >+48 531-840-545</a></p>
+
+                            <p class="fa-a"><i class="far fa-envelope"></i>
+
+                            <a href="mailto:info@nauka-programowania-na-godziny.pl" class="fa-a">info@nauka-programowania-na-godziny.pl</a></p>   
+
+                            <p class="fa-a"><i class="fab fa-slack"></i>              
+
+                            <a target="_blank" href="https://join.slack.com/t/na-godziny/shared_invite/enQtMzgyNTU3MjAzOTg4LTk1ZWZmYTBhNmEwMzE3MDgxZWE1NmI1NjA2MDQzMmYwNGFlZmM3YWI3ZWQ2M2I4Zjg0ZGVhYWI5ZjU3ZGFhZmY" class="fa-a">Slack - dołącz do naszej społeczności</a></p>
+                            
+                            <!-- Customise the Thankyou Message People See when they submit the form: -->
+                                                        
+                            <div class="answer" id="thankyou_message">
+                                <h3>Wiadomość została wysłana</h3>
+                                <h4>Dziękujemy za kontakt. Postaramy się odpowiedzieć jak najszybciej</h4>
+                            </div>
+
+                        </div>
+
+                        
+                    <div id="form"></div>
+                    <form class="form col-lg-6 col-md-6 col-sm-12 col-xs-12 col-xxs-12 " id="gform" method="post" novalidate action="https://script.google.com/macros/s/AKfycbxx6pudUv80LY0r_3TzRCZ4WysJLXCbiZ4xA9nbluLVX_gRq50K/exec">
+                       
+                        <div class="form-row">
+                            <label for="field-name">Twoje imię:</label>
+                            <input value="" type="text" name="name" required id="field-name" data-error="Wypełnij to pole" pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="field-email" >Twój adres e-mail:</label>
+                            <input value="" type="email" name="email" required id="field-email" data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="field-message">Wiadomość do nas:</label>
+                            <textarea name="message" required data-error="Pole wymagane" id="field-message" pattern=".+"></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <label class="checkbox-cnt">
+                                <input type="checkbox" required data-error="Pole wymagane" >
+                                <i class="state" aria-hidden="true"></i>
+                                <span>Wyrażam zgodę na kontakt pod podany w wiadomości adres e-mail.</span>
+                            </label>
+                        </div>
+
+                        <div class="form-row"><br/>
+                            <button type="submit" class="submit-btn">Wyślij</button>
+                        </div>
+                    </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
   
 <!--   -----  STOPKA  ------->  
    
-<footer>              
-    <h3>Copyright &copy; 2018 Nauka programowania na godziny</h3>
-</footer>
+    <footer>              
+        <h3>Copyright &copy; 2018 Nauka programowania na godziny</h3>
+    </footer>
    
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>   
-   <script type="text/javascript" src="js/scripts.js"></script> 
-   <script src="js/scroll2.js"></script>
-   <!--<script type="text/javascript" src="js/form.js"></script> -->
-  <script type="text/javascript" src="js/form-submission-handler.js"></script>
+       
+    <script type="text/javascript" src="js/form-submission-handler.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/form.js"></script> 
+    <script src="js/scroll2.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>      
 </body>
 </html>
