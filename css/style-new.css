@@ -597,28 +597,43 @@ header{
     padding: 50px;
     max-width: 45%;
     font-size: 14px; 
-    color: #2c3238;
+    color: #2c3238;        
 }
 
 .address-description i{    
     font-size: 30px;
     text-align: center;
-    padding-bottom: 20px;
     color: #fec601;
-    width: 35px;
+    width: 35px;    
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    float: left;
+/*    display: block;*/
 }
 
-.contact-box h4{
+.address-description a{
+    line-height: 3.3;
+    font-size: 0.85vw;
+    font-size: 14px;    
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;        
+    display: block;
+    margin-left: 45px;
+}
+
+.contact-box h4{    
     font-size: 24px;        
     color: #138496;
     margin-bottom: 30px;
 }
 
 .fa-a{
-    margin: 0 10px;
+/*    margin: 0 10px;    */
     font-size: 1.07vw;
     color: #2c3238;     
-    line-height: 2;
+/*    line-height: 2;*/
 }
 
 .fa-a:hover{            
@@ -660,6 +675,12 @@ footer h3{
 }
 
 @media screen and (max-width: 1199px){
+    
+    .address-description a{
+        line-height: 3.5;
+        font-size: 13px;            
+    }
+
 
     /*  -----  MENTORZY  -----  */
     
@@ -760,8 +781,18 @@ footer h3{
     .address-description i{    
         display: block;
         padding-bottom: 0px;
+        line-height: 1;
     }
 
+    .address-description a{
+        line-height: 3;        
+        font-size: 11px;    
+        padding: 0;
+        margin: 0;        
+        margin-left: 45px;
+    }
+
+    
     .fa-a{
         margin: 0 5px;
         font-size: 1.6vw;        
@@ -821,6 +852,14 @@ footer h3{
         display: inline-block;        
     }
 
+    .address-description a{
+        line-height: 2.3;        
+        font-size: 14px;    
+        padding: 0;
+        margin: 0;        
+        margin-left: 45px;
+    }
+    
     .fa-a{
         margin: 0 10px;
         font-size: 2.5vw;        
@@ -977,8 +1016,14 @@ footer h3{
         max-width: 100%;        
     }
 
+    .address-description a{
+        line-height: 6vw;        
+        font-size: 2.7vw;                 
+    }
+    
     .address-description i{            
-        display: inline;                    
+        display: inline;                  
+        font-size: 6vw; 
     }
 
     .fa-a{
@@ -988,6 +1033,12 @@ footer h3{
 
     .phone{
         font-size: 17px
+    }
+    
+/*      -----  FOOT  -----  */
+    
+    footer h3{
+        font-size: 2.5vw;
     }
     
 }
