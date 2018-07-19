@@ -223,10 +223,14 @@ header{
     background: #fec601;
 }
 
+.hours .container-fluid {
+	margin: 0 auto
+}
 
 .hours .far{
     color: #138496;    
     font-size: 70px;         
+    padding-bottom: 20px
 }
 
 .hours p{
@@ -235,9 +239,47 @@ header{
     font-weight: 600;
     margin: 0;
     text-align: justify;
-
 }
 
+.hours .col-md-12{
+    flex-direction: column;    
+}
+
+.hour .flex-center {
+    margin: 0 auto;
+}
+
+.container-box{
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.container-box .fas{
+    color: #138496;    
+    font-size: 50px;         
+    padding-bottom: 10px
+}
+
+.container-box .col-md-3{
+    margin: 0 auto;
+    padding: 20px 20px;
+    color: #138496;    
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.4vw;
+    border: 1px solid #138496;
+    border-radius: 20px;
+    margin: 0px 1%;
+    max-width: 23%;
+    background: #ffd85b;       
+    transition: 0.3s;
+}
+
+
+.container-box .col-md-3:hover{
+    box-shadow: 0 0 15px #138496; 
+    transition: 0.3s;
+}
 
 /*   -----  MENTORZY  -----*/
 
@@ -537,7 +579,7 @@ header{
     margin: 1%;
     border: 2px solid  #fec601; 
     border-radius: 25px;    
-    font-size: 13px;        
+    font-size: 14px;        
     transition: 0.2s;
     color: #6c7279;
 }
@@ -650,7 +692,7 @@ header{
 .address-description a{
     line-height: 3.3;
     font-size: 0.85vw;
-    font-size: 14px;    
+    font-size: 15px;    
     padding: 0;
     margin: 0;
     margin-bottom: 20px;        
@@ -875,6 +917,19 @@ footer h3{
         font-size: 2.5vw;            
     }
 
+
+    .container-box .col-sm-6{    
+        padding: 15px 15px;
+        margin: 1% 1%;
+        max-width: 46%;  
+        font-size: 1.6vw;
+    }
+
+    .container-box .col-sm-6:hover{
+        box-shadow: 0 0 15px #138496; 
+        transition: 0.3s;        
+    }
+    
     /*      -----  FORMULARZ  -----  */
 
     .address-description{        
@@ -963,6 +1018,26 @@ footer h3{
         padding-top: 30px;
         font-size: 16px        
     }
+
+    .container-box .col-xs-12{
+        padding: 15px 15px;
+        color: #138496;    
+        text-align: center;
+        font-weight: 600;
+        border: 1px solid #138496;
+        border-radius: 20px;
+        margin: 2% 1%;
+        max-width: 98%;
+        background: #ffd85b;       
+        transition: 0.3s;
+        font-size: 12px;
+    }
+
+    .container-box .col-xs-12:hover{
+        box-shadow: 0 0 15px #138496; 
+        transition: 0.3s;
+    }
+
     
     /*      -----  MENTORZY  -----  */
 
@@ -1075,7 +1150,7 @@ footer h3{
 
     .address-description a{
         line-height: 6vw;        
-        font-size: 2.7vw;                 
+        font-size: 2.8vw;                 
     }
 
     .address-description i{            
@@ -1083,8 +1158,12 @@ footer h3{
         font-size: 6vw; 
     }
 
+    .address-description p .phone{        
+        font-size: 3.2vw;                                          
+    }
+    
     .fa-a{
-        margin: 0 5px;
+        margin: 0 2px;
         font-size: 3.1vw;                                
     }    
 
