@@ -947,6 +947,23 @@ footer h3{
         padding-left: 0;
     }
 
+    .hours {
+        padding: 50px 15px;
+    }
+    
+    .hours .far{
+        margin: 0 auto
+    }
+    
+    .hours .container-fluid{
+        padding-right: 0;            
+    }
+    
+    .hours .container-fluid p{
+        padding-top: 30px;
+        font-size: 16px        
+    }
+    
     /*      -----  MENTORZY  -----  */
 
     .mentors-topic{
