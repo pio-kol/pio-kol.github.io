@@ -216,6 +216,29 @@ header{
     margin: 0;
 }
 
+/*   -----  HOURS  -----*/
+
+.hours {
+	padding: 50px;
+    background: #fec601;
+}
+
+
+.hours .far{
+    color: #138496;    
+    font-size: 70px;         
+}
+
+.hours p{
+    font-size: 20px;
+    color: #138496;        
+    font-weight: 600;
+    margin: 0;
+    text-align: justify;
+        
+}
+
+
 /*   -----  MENTORZY  -----*/
 
 .team {
