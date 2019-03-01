@@ -1,25 +1,24 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="utf-8">
 </head>
 <body>
 
-<form class="form" id="contactForm" method="post" novalidate action="send-script.php">
+Poniższy formularz ułatwi Ci zamówienie wsparcia w nauce programowania. Zawiera on wszystkie konieczne zgody i informacje.
+	
+<form class="form" id="contactForm" method="post">
     <div class="form-row">
-        <label for="field-name">Name*</label>
-        <input value="marcin" type="text" name="name" required id="field-name" data-error="Wypełnij to pole" pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+">
+        <label for="field-name">Imię i nazwisko</label>
+        <input type="text" name="name" required id="field-name" data-error="Wypełnij to pole">
     </div>
     <div class="form-row">
-        <label for="field-email">Email*</label>
-        <input value="email@wp.plp" type="email" name="email" required id="field-email" data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+        <label for="field-email">Email</label>
+        <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
     </div>
     <div class="form-row">
-        <label for="field-message">Message*</label>
-        <textarea name="message" required data-error="Musisz wypełnić pole" id="field-message" pattern=".+">dasdasdsad</textarea>
+        <label for="field-message">Kwota, którą chcesz przeznaczyć na naukę programowania</label>
+        <input name="message" required data-error="Musisz wypełnić pole" id="field-message">
     </div>
     <div class="form-row">
         <label class="checkbox-cnt">
@@ -30,11 +29,10 @@
     </div>
     <div class="form-row">
         <button type="submit" class="submit-btn">
-            Wyślij
+            Zamawiam wsparcie w procesie nauki programowania.
         </button>
     </div>
 </form>
 
-<script src="./scripts.js"></script>
 </body>
 </html>
