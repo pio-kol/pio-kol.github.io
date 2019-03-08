@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+
+	<br/>
+<form class="form" id="contactForm" method="post">
+    <div class="form-row">
+        <label for="field-name">Imię i nazwisko</label>
+        <input type="text" name="name" required id="field-name" data-error="Wypełnij to pole" value="Jan Kowalski" readonly>
+    </div>
+		<br/>
+    <div class="form-row">
+        <label for="field-email">Email</label>
+        <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" value="jan.kowalski@email.com" readonly>
+    </div>
+		<br/>
+    <div class="form-row">
+        <label for="field-message">Wplacona kwota</label>
+        <input name="message" required data-error="Musisz wypełnić pole" id="field-message" value="1000" readonly>
+    </div>
+	<br>
+	
+	<br/>Koszt jednej godziny konsultacji to:
+	<ul>
+  <li>Junior Mentor - 75 zl</li>
+  <li>Senior Mentor - 100 zl</li>
+  <li>Lead Mentor - 125 zl</li>
+</ul>
+
+    <div class="form-row">
+     <label for="fileToUpload">Faktura</label>
+    <input type="file" name="fileToUpload" id="fileToUpload">
+        </div>
+
+<br/>
+
+		<br/>
+		<br/>
+    <div class="form-row">
+        <button type="submit" class="submit-btn">
+            Potwierdzam dokonanie wplaty
+        </button>
+    </div>
+</form>
+	
+</body>
+</html>
