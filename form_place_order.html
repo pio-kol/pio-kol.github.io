@@ -10,53 +10,114 @@
   Zawiera on wszystkie konieczne zgody i informacje. <br/>
 </p>
 
+<p>
+  Terminy konsultacji mozesz zarezerwowac z gory do konca miesiaca kalendarzowego lub po prostu
+  wplacic kwote i korzystac z niej umawiajac sie na spotkania na biezaco zgodnie z dostepymi
+  terminami.
+  Niewykorzystane srodki zostana Ci zwrocone na koniec miesiaca wiec nic nie ryzukujesz.
+
+  Wplacona kwote mozesz wykorzystac na dowolny cel - wspolne lekcje, code review, przygotowanie do
+  interview, wsparcie na czacie i inne indywidualnie ustalone metody wsparcia.
+</p>
+
 <br/>
 <form class="form" id="contactForm" method="post">
-  <div class="form-row">
-    <label for="field-name">Imię i nazwisko</label>
-    <input type="text" name="name" required id="field-name" data-error="Wypełnij to pole">
-  </div>
-  <br/>
-  <div class="form-row">
-    <label for="field-email">Email</label>
-    <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email"
-           pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
-  </div>
-  <br/>
-  <div class="form-row">
-    <label for="field-message">Kwota, którą chcesz przeznaczyć na naukę programowania</label>
-    <input name="message" required data-error="Musisz wypełnić pole" id="field-message">
-  </div>
-  <br>
-  Powyższa kwote mozesz wykorzystac na dowolny cel - wspolne lekcje, code review, przygotowanie do
-  interview, wsparcie na czacie i inne indywidualnie ustalone metody wsparcia.
-  <br/>Koszt jednej godziny konsultacji to:
-  <ul>
-    <li>Junior Mentor - 75 zl</li>
-    <li>Senior Mentor - 100 zl</li>
-    <li>Lead Mentor - 125 zl</li>
-  </ul>
 
-  <br/>
-  <br/>
   <div class="form-row">
-    <label class="checkbox-cnt">
-      <input type="checkbox" required data-error="Musisz wypełnić pole" name="regulation">
-      <i class="state" aria-hidden="true"></i>
-      <span>Potwierdzam, że akceptuję <a
-          href="https://docs.google.com/document/d/1VKS2Cc6A1NSX39RddMF0czKoT2RPpeHPoybc3W_sCpk/edit?usp=sharing">regulamin</a> usługi oraz <a
-          href="https://docs.google.com/document/d/16wYDSoZAFlKrCWX-Bi0fI-021n06gnwcZS6ZRi0mwQ8/edit?usp=sharing">politykę prywatności<a/></span>
-    </label>
+    <fieldset>
+      <legend>Cennik konsultacji</legend>
+      Koszt jednej godziny zegarowej konsultacji to:
+      <ul>
+        <li>Junior Mentor - 75 zl</li>
+        <li>Senior Mentor - 100 zl</li>
+        <li>Lead Mentor - 125 zl</li>
+      </ul>
+    </fieldset>
   </div>
-
-  <br/>
   <br/>
   <div class="form-row">
-    <button type="submit" class="submit-btn">
-      Zamawiam z obowiazkiem zaplaty.
-    </button>
+    <fieldset>
+      <legend>Krok 1: Konsultacje zarezerwowane z gory</legend>
+      <input type="checkbox" name="favorite_pet"
+             value="Piotr - Lead Mentor - 01.04.2019 18:00-18:30">Piotr - Lead Mentor - 01.04.2019
+      18:00-18:30<br>
+      <input type="checkbox" name="favorite_pet"
+             value="Piotr - Lead Mentor - 01.04.2019 18:30-19:00">Piotr - Lead Mentor - 01.04.2019
+      18:30-19:00<br>
+      <input type="checkbox" name="favorite_pet"
+             value="Ania - Senior Mentor - 04.04.2019 17:00-17:30">Ania - Senior Mentor - 04.04.2019
+      17:00-17:30<br>
+      <input type="checkbox" name="favorite_pet"
+             value="Ania - Senior Mentor - 11.04.2019 19:00-19:30">Ania - Senior Mentor - 11.04.2019
+      19:00-19:30<br>
+      <br>
+    </fieldset>
+  </div>
+  <br/>
+  <div class="form-row">
+    <fieldset>
+      <legend>Krok 2: Kwota ktora chcesz przeznaczyc na spotkania ustalane na biezaco lub
+        konsultacje na czacie
+      </legend>
+      <input name="message" required data-error="Musisz wypełnić pole" id="field-message">
+      <br>
+    </fieldset>
+  </div>
+  <br/>
+  <div class="form-row">
+    <fieldset>
+      <legend>Krok 3: Twoje dane kontaktowe</legend>
+      <div class="form-row">
+        <label for="field-name">Imię i nazwisko</label>
+        <input type="text" name="name" required id="field-name" data-error="Wypełnij to pole">
+      </div>
+      <br/>
+      <div class="form-row">
+        <label for="field-email">Email</label>
+        <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email"
+               pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+      </div>
+      <br/>
+      <div class="form-row">
+        <label for="field-email">Telefon</label>
+        <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email"
+               pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+      </div>
+    </fieldset>
+  </div>
+  <br/>
+  <div class="form-row">
+    <fieldset>
+      <legend>Krok 4: Konieczne zgody</legend>
+      <label class="checkbox-cnt">
+        <input type="checkbox" required data-error="Musisz wypełnić pole" name="regulation">
+        <i class="state" aria-hidden="true"></i>
+        <span>Potwierdzam, że akceptuję <a
+            href="https://docs.google.com/document/d/1VKS2Cc6A1NSX39RddMF0czKoT2RPpeHPoybc3W_sCpk/edit?usp=sharing">regulamin usługi </a> oraz <a
+            href="https://docs.google.com/document/d/16wYDSoZAFlKrCWX-Bi0fI-021n06gnwcZS6ZRi0mwQ8/edit?usp=sharing">politykę prywatności</a>
+      </span>
+      </label>
+    </fieldset>
+  </div>
+  <br/>
+  <div class="form-row">
+    <fieldset>
+      <legend>Krok 5: Potwierdzenie zamowienia</legend>
+      Kwota do wplaty: <b>900 zl</b>
+      <ul>
+        <li>Konsultacje w z gory ustalonych terminach - <b>575 zl</b></li>
+        <li>Kwota przeznaczona na elastyczne konsultacje: <b>325 zl</b></li>
+      </ul>
+      <br/>
+      <div class="form-row">
+        <button type="submit" class="submit-btn">
+          Zamawiam z obowiazkiem zaplaty.
+        </button>
+      </div>
+    </fieldset>
   </div>
 </form>
+
 <div>
   <p>
     Po wypelnieniu formularza otrzymasz potwierdzenie zamowienia wraz z numerem konta na ktore
@@ -80,7 +141,7 @@
       href="https://docs.google.com/document/d/1VKS2Cc6A1NSX39RddMF0czKoT2RPpeHPoybc3W_sCpk/edit?usp=sharing">Regulaminie</a>
     oraz w <a
       href="https://docs.google.com/document/d/16wYDSoZAFlKrCWX-Bi0fI-021n06gnwcZS6ZRi0mwQ8/edit?usp=sharing">Polityce
-    Prywatnosci<a/>
+    Prywatnosci</a>
 
   </p>
 </div>
