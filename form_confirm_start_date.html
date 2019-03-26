@@ -5,88 +5,108 @@
 </head>
 <body>
 
-	<p>
-Poniższy formularz ułatwi Ci ustalenie daty pierwszego dnia wsparcia w nauce programowania. <br>
-	Zawiera on wszystkie konieczne zgody i informacje. <br/>
-	</p>
-	
-	<br/>
+<p>
+  Poniższy formularz ułatwi Ci ustalenie daty pierwszego dnia wsparcia w nauce programowania. <br>
+  Zawiera on wszystkie konieczne zgody i informacje. <br/>
+</p>
+
+<br/>
 <form class="form" id="contactForm" method="post">
-    <div class="form-row">
-        <label for="field-name">Imię i nazwisko</label>
-        <input type="text" name="name" required id="field-name" data-error="Wypełnij to pole" value="Jan Kowalski" readonly>
-    </div>
-		<br/>
-    <div class="form-row">
-        <label for="field-email">Email</label>
-        <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" value="jan.kowalski@email.com" readonly>
-    </div>
-		<br/>
-    <div class="form-row">
-        <label for="field-message">Kwota, którą chcesz przeznaczyć na naukę programowania</label>
-        <input name="message" required data-error="Musisz wypełnić pole" id="field-message" value="1000" readonly>
-    </div>
-	<br>
-	
-	<br/>Koszt jednej godziny konsultacji to:
-	<ul>
-  <li>Junior Mentor - 75 zl</li>
-  <li>Senior Mentor - 100 zl</li>
-  <li>Lead Mentor - 125 zl</li>
-</ul>
-	
-		<br/>
-		<br/>
-    <div class="form-row">
-        <label class="checkbox-cnt">
-            <input type="checkbox" required data-error="Musisz wypełnić pole" name="regulation">
-            <i class="state" aria-hidden="true"></i>
-		<span>Potwierdzam, że akceptuję <a href="https://docs.google.com/document/d/1VKS2Cc6A1NSX39RddMF0czKoT2RPpeHPoybc3W_sCpk/edit?usp=sharing">regulamin</a> usługi oraz <a href="https://docs.google.com/document/d/16wYDSoZAFlKrCWX-Bi0fI-021n06gnwcZS6ZRi0mwQ8/edit?usp=sharing">politykę prywatności<a/></span>
-        </label>
-    </div>
-    <br/>
-    <div class="form-row">
-        <label class="checkbox-cnt">
-            <input type="checkbox" required data-error="Musisz wypełnić pole" name="regulation">
-            <i class="state" aria-hidden="true"></i>
-    Usługobiorca Konsument  potwierdza żądanie rozpoczęcia wykonywania usługi programowania na godziny przed upływem 14dniowego terminu do odstąpienia od umowy. Jednakże, w przypadku wykonania prawa do odstąpienia od umowy po zgłoszeniu powyższego żądania Konsument jest świadomy istnienia obowiązku zapłaty za świadczenia spełnione do chwili odstąpienia od umowy.
-Kwotę zapłaty oblicza się proporcjonalnie do zakresu spełnionego świadczenia, z uwzględnieniem uzgodnionej w umowie ceny lub wynagrodzenia. Jeżeli cena lub wynagrodzenie są nadmierne, podstawą obliczenia tej kwoty jest wartość rynkowa spełnionego świadczenia.
-	    </label>
-    </div>
-    <br/>
-    
-    <div class="form-row">
-        <label class="checkbox-cnt">
-            <input type="checkbox" required data-error="Musisz wypełnić pole" name="regulation">
-            <i class="state" aria-hidden="true"></i>
-		<span>Usługobiorca Konsument składając niniejsze zamówienie  wyraża zgodę na wykonanie usługi programowania na godziny przed upływem 14dniowego terminu do odstąpienia od umowy oraz oświadcza, że został poinformowany przed rozpoczęciem świadczenia, że po spełnieniu świadczenia przez przedsiębiorcę utraci prawo odstąpienia od umowy</span>
-        </label>
-    </div>
-    
-    
-    
-		<br/>
-		<br/>
-    <div class="form-row">
-        <button type="submit" class="submit-btn">
-            Potwierdzam rozpoczecie nauki
-        </button>
-    </div>
+  <div class="form-row">
+    <label for="field-name">Imię i nazwisko</label>
+    <input type="text" name="name" required id="field-name" data-error="Wypełnij to pole"
+           value="Jan Kowalski" readonly>
+  </div>
+  <br/>
+  <div class="form-row">
+    <label for="field-email">Email</label>
+    <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email"
+           pattern="[^@\s]+@[^@\s]+\.[^@\s]+" value="jan.kowalski@email.com" readonly>
+  </div>
+  <br/>
+  <div class="form-row">
+    <label for="field-message">Kwota, którą chcesz przeznaczyć na naukę programowania</label>
+    <input name="message" required data-error="Musisz wypełnić pole" id="field-message" value="1000"
+           readonly>
+  </div>
+  <br>
+
+  <br/>Koszt jednej godziny konsultacji to:
+  <ul>
+    <li>Junior Mentor - 75 zl</li>
+    <li>Senior Mentor - 100 zl</li>
+    <li>Lead Mentor - 125 zl</li>
+  </ul>
+
+  <br/>
+  <br/>
+  <div class="form-row">
+    <label class="checkbox-cnt">
+      <input type="checkbox" required data-error="Musisz wypełnić pole" name="regulation">
+      <i class="state" aria-hidden="true"></i>
+      <span>Potwierdzam, że akceptuję <a
+          href="https://docs.google.com/document/d/1VKS2Cc6A1NSX39RddMF0czKoT2RPpeHPoybc3W_sCpk/edit?usp=sharing">regulamin</a> usługi oraz <a
+          href="https://docs.google.com/document/d/16wYDSoZAFlKrCWX-Bi0fI-021n06gnwcZS6ZRi0mwQ8/edit?usp=sharing">politykę prywatności<a/></span>
+    </label>
+  </div>
+  <br/>
+  <div class="form-row">
+    <label class="checkbox-cnt">
+      <input type="checkbox" required data-error="Musisz wypełnić pole" name="regulation">
+      <i class="state" aria-hidden="true"></i>
+      Usługobiorca Konsument potwierdza żądanie rozpoczęcia wykonywania usługi programowania na
+      godziny przed upływem 14dniowego terminu do odstąpienia od umowy. Jednakże, w przypadku
+      wykonania prawa do odstąpienia od umowy po zgłoszeniu powyższego żądania Konsument jest
+      świadomy istnienia obowiązku zapłaty za świadczenia spełnione do chwili odstąpienia od umowy.
+      Kwotę zapłaty oblicza się proporcjonalnie do zakresu spełnionego świadczenia, z uwzględnieniem
+      uzgodnionej w umowie ceny lub wynagrodzenia. Jeżeli cena lub wynagrodzenie są nadmierne,
+      podstawą obliczenia tej kwoty jest wartość rynkowa spełnionego świadczenia.
+    </label>
+  </div>
+  <br/>
+
+  <div class="form-row">
+    <label class="checkbox-cnt">
+      <input type="checkbox" required data-error="Musisz wypełnić pole" name="regulation">
+      <i class="state" aria-hidden="true"></i>
+      <span>Usługobiorca Konsument składając niniejsze zamówienie  wyraża zgodę na wykonanie usługi programowania na godziny przed upływem 14dniowego terminu do odstąpienia od umowy oraz oświadcza, że został poinformowany przed rozpoczęciem świadczenia, że po spełnieniu świadczenia przez przedsiębiorcę utraci prawo odstąpienia od umowy</span>
+    </label>
+  </div>
+
+
+  <br/>
+  <br/>
+  <div class="form-row">
+    <button type="submit" class="submit-btn">
+      Potwierdzam rozpoczecie nauki
+    </button>
+  </div>
 </form>
-	<div>
-		<p>
-			Po wypelnieniu formularza mozemy rozpoczac proces nauki.
-		</p>
-		<p>
-		
-Administratorem Pani/Pana danych osobowych jest Piotr Kolacz Development, ul. Nagietkowa 19, 32-005 Niepolomice
-Pani/Pana dane mogą być przetwarzane w celu: 
-zawarcia i wykonania umowy – podstawą prawną przetwarzania jest niezbędność przetwarzania danych do zawarcia i wykonywania umowy, obsługi płatności, kontaktowania się w celach związanych z wykonywaniem umowy.
+<div>
+  <p>
+    Po wypelnieniu formularza mozemy rozpoczac proces nauki.
+  </p>
+  <p>
 
-Każdej osobie przysługuje prawo do: dostępu do treści swoich danych, ich sprostowania, usunięcia lub wniesienia sprzeciwu wobec przetwarzania danych w celach marketingowych, oraz prawo do cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej cofnięciem. 
-Szczegółowe informacje na temat przetwarzania danych osobowych w poszczególnych celach, znajdą Państwo w <a href="https://docs.google.com/document/d/1VKS2Cc6A1NSX39RddMF0czKoT2RPpeHPoybc3W_sCpk/edit?usp=sharing">Regulaminie</a> oraz w <a href="https://docs.google.com/document/d/16wYDSoZAFlKrCWX-Bi0fI-021n06gnwcZS6ZRi0mwQ8/edit?usp=sharing">Polityce Prywatnosci<a/> 
+    Administratorem Pani/Pana danych osobowych jest Piotr Kolacz Development, ul. Nagietkowa 19,
+    32-005 Niepolomice
+    Pani/Pana dane mogą być przetwarzane w celu:
+    zawarcia i wykonania umowy – podstawą prawną przetwarzania jest niezbędność przetwarzania danych
+    do zawarcia i wykonywania umowy, obsługi płatności, kontaktowania się w celach związanych z
+    wykonywaniem umowy.
 
-		</p>
-	</div>
+    Każdej osobie przysługuje prawo do: dostępu do treści swoich danych, ich sprostowania, usunięcia
+    lub wniesienia sprzeciwu wobec przetwarzania danych w celach marketingowych, oraz prawo do
+    cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania, którego
+    dokonano na podstawie zgody przed jej cofnięciem.
+    Szczegółowe informacje na temat przetwarzania danych osobowych w poszczególnych celach, znajdą
+    Państwo w <a
+      href="https://docs.google.com/document/d/1VKS2Cc6A1NSX39RddMF0czKoT2RPpeHPoybc3W_sCpk/edit?usp=sharing">Regulaminie</a>
+    oraz w <a
+      href="https://docs.google.com/document/d/16wYDSoZAFlKrCWX-Bi0fI-021n06gnwcZS6ZRi0mwQ8/edit?usp=sharing">Polityce
+    Prywatnosci<a/>
+
+  </p>
+</div>
 </body>
 </html>
