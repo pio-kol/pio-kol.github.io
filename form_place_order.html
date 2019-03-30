@@ -28,9 +28,8 @@
       <legend>Cennik konsultacji</legend>
       Koszt jednej godziny zegarowej konsultacji to:
       <ul>
-        <li>Junior Mentor - 75 zl</li>
         <li>Senior Mentor - 100 zl</li>
-        <li>Lead Mentor - 125 zl</li>
+        <li>Lead Mentor - 150 zl</li>
       </ul>
     </fieldset>
   </div>
@@ -38,18 +37,14 @@
   <div class="form-row">
     <fieldset>
       <legend>Krok 1: Konsultacje zarezerwowane z gory</legend>
-      <input type="checkbox" name="favorite_pet"
-             value="Piotr - Lead Mentor - 01.04.2019 18:00-18:30">Piotr - Lead Mentor - 01.04.2019
-      18:00-18:30<br>
-      <input type="checkbox" name="favorite_pet"
-             value="Piotr - Lead Mentor - 01.04.2019 18:30-19:00">Piotr - Lead Mentor - 01.04.2019
-      18:30-19:00<br>
-      <input type="checkbox" name="favorite_pet"
-             value="Ania - Senior Mentor - 04.04.2019 17:00-17:30">Ania - Senior Mentor - 04.04.2019
-      17:00-17:30<br>
-      <input type="checkbox" name="favorite_pet"
-             value="Ania - Senior Mentor - 11.04.2019 19:00-19:30">Ania - Senior Mentor - 11.04.2019
-      19:00-19:30<br>
+      <input type="checkbox" name="reserved_hours" value="75" onclick="sumUpValues()">
+      Piotr - Lead Mentor - 01.04.2019 18:00-18:30 (75 zł)<br>
+      <input type="checkbox" name="reserved_hours" value="75" onclick="sumUpValues()">
+      Piotr - Lead Mentor - 01.04.2019 18:30-19:00 (75 zł)<br>
+      <input type="checkbox" name="reserved_hours" value="50" onclick="sumUpValues()">
+      Ania - Senior Mentor - 04.04.2019 17:00-17:30 (50 zł)<br>
+      <input type="checkbox" name="reserved_hours" value="50" onclick="sumUpValues()">
+      Ania - Senior Mentor - 11.04.2019 19:00-19:30 (50 zł)<br>
       <br>
     </fieldset>
   </div>
@@ -59,7 +54,9 @@
       <legend>Krok 2: Kwota ktora chcesz przeznaczyc na spotkania ustalane na biezaco lub
         konsultacje na czacie
       </legend>
-      <input name="message" required data-error="Musisz wypełnić pole" id="field-message">
+      <input id="additional_funds" name="message" type="number" min="0" max="1000" step="1"
+             onchange="sumUpValues()" required data-error="Musisz wypełnić pole" id="field-message"
+             value="0">
       <br>
     </fieldset>
   </div>
@@ -69,7 +66,7 @@
       <legend>Krok 3: Twoje dane kontaktowe</legend>
       <div class="form-row">
         <label for="field-name">Imię i nazwisko</label>
-        <input type="text" name="name" required id="field-name" data-error="Wypełnij to pole">
+        <input type="text" name="name" required id="field-name" data-error="Imie i nazwisko sa wymagane">
       </div>
       <br/>
       <div class="form-row">
@@ -80,8 +77,9 @@
       <br/>
       <div class="form-row">
         <label for="field-email">Telefon</label>
-        <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email"
-               pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+        <input type="tel" name="email" required id="field-mobile"
+               data-error="Wpisz poprawny email"
+               pattern="[0-9]{9}">
       </div>
     </fieldset>
   </div>
@@ -97,16 +95,46 @@
             href="https://docs.google.com/document/d/16wYDSoZAFlKrCWX-Bi0fI-021n06gnwcZS6ZRi0mwQ8/edit?usp=sharing">politykę prywatności</a>
       </span>
       </label>
+      <br/>
+      <p><b>W przypadku nie wyrażenia poniższych zgód naukę będziemy mogli rozpocząć dopiero po 14
+        dniach od otrzymania wpłaty, wcześniejsze terminy zostaną anulowane a kwotę będziesz mógł wykorzystać w później ustalonym terminie.
+        <br/>Pamiętaj, że niezależnie od poniższych zgód możesz zrezygnować w dowolnym momencie a niewykorzystana kwota zostanie Ci zwrócona.</b></p>
+      <label class="checkbox-cnt">
+        <input type="checkbox" data-error="Musisz wypełnić pole" name="regulation">
+        <i class="state" aria-hidden="true"></i>
+        <span>Potwierdzam żądanie rozpoczęcia wykonywania usługi programowania na
+      godziny przed upływem 14 dniowego terminu do odstąpienia od umowy.
+      Jednakże, w przypadku wykonania prawa do odstąpienia od umowy po
+      zgłoszeniu powyższego żądania jestem świadomy istnienia obowiązku zapłaty za
+      świadczenia spełnione do chwili odstąpienia od umowy. Przyjmuję do
+      wiadomości, że kwotę zapłaty oblicza się proporcjonalnie do zakresu
+      spełnionego świadczenia, z uwzględnieniem uzgodnionej w umowie ceny lub
+      wynagrodzenia.
+      </span>
+      </label>
+      <br/>
+      <label class="checkbox-cnt">
+        <input type="checkbox" data-error="Musisz wypełnić pole" name="regulation">
+        <i class="state" aria-hidden="true"></i>
+        <span>Wyrażam zgodę na wykonanie usługi programowania na godziny przed
+upływem 14 dniowego terminu do odstąpienia od umowy oraz oświadczam, że
+zostałem poinformowany przed rozpoczęciem świadczenia, że po spełnieniu
+świadczenia przez Usługodawcę utracę prawo odstąpienia od umowy.
+      </span>
+      </label>
+
     </fieldset>
   </div>
   <br/>
   <div class="form-row">
     <fieldset>
       <legend>Krok 5: Potwierdzenie zamowienia</legend>
-      Kwota do wplaty: <b>900 zl</b>
+      Kwota do wplaty: <b><span id="total_sum">0 zł</span></b>
       <ul>
-        <li>Konsultacje w z gory ustalonych terminach - <b>575 zl</b></li>
-        <li>Kwota przeznaczona na elastyczne konsultacje: <b>325 zl</b></li>
+        <li>Konsultacje w z gory ustalonych terminach - <b> <span
+            id="reserved_hours_sum">0 zł</span></b></li>
+        <li>Kwota przeznaczona na elastyczne konsultacje: <b> <span
+            id="additional_funds_sum">0 zł</span></b></li>
       </ul>
       <br/>
       <div class="form-row">
@@ -145,5 +173,7 @@
 
   </p>
 </div>
+
+<script type="text/javascript" src="js/order_forms.js"></script>
 </body>
 </html>
