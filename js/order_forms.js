@@ -8,7 +8,7 @@ function sumUpValues() {
   }
   document.getElementById("reserved_hours_sum").textContent = total.toFixed(0)
       + " zł";
-  document.getElementById("reserved_hours_sum_input").value = additional_funds;
+  document.getElementById("reserved_hours_sum_input").value = total;
 
   const additional_funds = document.getElementById("additional_funds").value;
   document.getElementById(
