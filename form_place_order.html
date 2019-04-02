@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pl">
 <head>
   <meta charset="utf-8">
 </head>
@@ -21,14 +21,14 @@
 </p>
 
 <br/>
-<form class="form" id="contactForm" method="post">
+<form class="form" id="gform" method="post" action="https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec">
 
   <div class="form-row">
     <fieldset>
       <legend>Cennik konsultacji</legend>
       Koszt jednej godziny zegarowej konsultacji to:
       <ul>
-        <li>Senior Mentor - 100 zl</li>
+        <li>Senior Mentor - 120 zl</li>
         <li>Lead Mentor - 150 zl</li>
       </ul>
     </fieldset>
@@ -37,14 +37,14 @@
   <div class="form-row">
     <fieldset>
       <legend>Krok 1: Konsultacje zarezerwowane z gory</legend>
-      <input type="checkbox" name="reserved_hours" value="75" onclick="sumUpValues()">
+      <input type="checkbox" name="reserved_hours" value="Piotr - Lead Mentor - 01.04.2019 18:00-18:30 (75 zł)" onclick="sumUpValues()" data-price="75">
       Piotr - Lead Mentor - 01.04.2019 18:00-18:30 (75 zł)<br>
-      <input type="checkbox" name="reserved_hours" value="75" onclick="sumUpValues()">
+      <input type="checkbox" name="reserved_hours" value="Piotr - Lead Mentor - 01.04.2019 18:30-19:00 (75 zł)" onclick="sumUpValues()" data-price="75">
       Piotr - Lead Mentor - 01.04.2019 18:30-19:00 (75 zł)<br>
-      <input type="checkbox" name="reserved_hours" value="50" onclick="sumUpValues()">
-      Ania - Senior Mentor - 04.04.2019 17:00-17:30 (50 zł)<br>
-      <input type="checkbox" name="reserved_hours" value="50" onclick="sumUpValues()">
-      Ania - Senior Mentor - 11.04.2019 19:00-19:30 (50 zł)<br>
+      <input type="checkbox" name="reserved_hours" value="Ania - Senior Mentor - 04.04.2019 17:00-17:30 (60 zł)" onclick="sumUpValues()" data-price="60">
+      Ania - Senior Mentor - 04.04.2019 17:00-17:30 (60 zł)<br>
+      <input type="checkbox" name="reserved_hours" value="Ania - Senior Mentor - 11.04.2019 19:00-19:30 (60 zł)" onclick="sumUpValues()" data-price="60">
+      Ania - Senior Mentor - 11.04.2019 19:00-19:30 (60 zł)<br>
       <br>
     </fieldset>
   </div>
@@ -54,7 +54,7 @@
       <legend>Krok 2: Kwota ktora chcesz przeznaczyc na spotkania ustalane na biezaco lub
         konsultacje na czacie
       </legend>
-      <input id="additional_funds" name="message" type="number" min="0" max="1000" step="1"
+      <input id="additional_funds" name="additional_funds" type="number" min="0" max="1000" step="1"
              onchange="sumUpValues()" required data-error="Musisz wypełnić pole" id="field-message"
              value="0">
       <br>
@@ -65,8 +65,13 @@
     <fieldset>
       <legend>Krok 3: Twoje dane kontaktowe</legend>
       <div class="form-row">
-        <label for="field-name">Imię i nazwisko</label>
-        <input type="text" name="name" required id="field-name" data-error="Imie i nazwisko sa wymagane">
+        <label for="field-name">Imię</label>
+        <input type="text" name="name" required id="field-name" data-error="Imie jest wymagane">
+      </div>
+      <br/>
+      <div class="form-row">
+        <label for="field-name">Nazwisko</label>
+        <input type="text" name="surname" required id="field-surname" data-error="Nazwisko jest wymagane">
       </div>
       <br/>
       <div class="form-row">
@@ -76,9 +81,9 @@
       </div>
       <br/>
       <div class="form-row">
-        <label for="field-email">Telefon</label>
-        <input type="tel" name="email" required id="field-mobile"
-               data-error="Wpisz poprawny email"
+        <label for="field-mobile">Telefon</label>
+        <input type="tel" name="mobile" required id="field-mobile"
+               data-error="Wpisz poprawny nr telefonu"
                pattern="[0-9]{9}">
       </div>
     </fieldset>
@@ -88,7 +93,7 @@
     <fieldset>
       <legend>Krok 4: Konieczne zgody</legend>
       <label class="checkbox-cnt">
-        <input type="checkbox" required data-error="Musisz wypełnić pole" name="regulation">
+        <input type="checkbox" required data-error="Musisz wypełnić pole" name="accept_mandatory_regulations">
         <i class="state" aria-hidden="true"></i>
         <span>Potwierdzam, że akceptuję <a
             href="https://docs.google.com/document/d/1VKS2Cc6A1NSX39RddMF0czKoT2RPpeHPoybc3W_sCpk/edit?usp=sharing">regulamin usługi </a> oraz <a
@@ -100,7 +105,7 @@
         dniach od otrzymania wpłaty, wcześniejsze terminy zostaną anulowane a kwotę będziesz mógł wykorzystać w później ustalonym terminie.
         <br/>Pamiętaj, że niezależnie od poniższych zgód możesz zrezygnować w dowolnym momencie a niewykorzystana kwota zostanie Ci zwrócona.</b></p>
       <label class="checkbox-cnt">
-        <input type="checkbox" data-error="Musisz wypełnić pole" name="regulation">
+        <input type="checkbox" data-error="Musisz wypełnić pole" name="confirm_start_service_before_14_days">
         <i class="state" aria-hidden="true"></i>
         <span>Potwierdzam żądanie rozpoczęcia wykonywania usługi programowania na
       godziny przed upływem 14 dniowego terminu do odstąpienia od umowy.
@@ -114,7 +119,7 @@
       </label>
       <br/>
       <label class="checkbox-cnt">
-        <input type="checkbox" data-error="Musisz wypełnić pole" name="regulation">
+        <input type="checkbox" data-error="Musisz wypełnić pole" name="confirm_finish_service_before_14_days">
         <i class="state" aria-hidden="true"></i>
         <span>Wyrażam zgodę na wykonanie usługi programowania na godziny przed
 upływem 14 dniowego terminu do odstąpienia od umowy oraz oświadczam, że
@@ -175,5 +180,6 @@ zostałem poinformowany przed rozpoczęciem świadczenia, że po spełnieniu
 </div>
 
 <script type="text/javascript" src="js/order_forms.js"></script>
+<script type="text/javascript" src="js/form-submission-handler.js"></script>
 </body>
 </html>

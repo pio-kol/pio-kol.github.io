@@ -3,7 +3,7 @@ function sumUpValues() {
   var total = 0;
   for (var i = 0; i < input.length; i++) {
     if (input[i].checked) {
-      total += parseFloat(input[i].value);
+      total += parseFloat(input[i].getAttribute("data-price"));
     }
   }
   document.getElementById("reserved_hours_sum").textContent = total.toFixed(0)
