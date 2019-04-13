@@ -29,7 +29,7 @@ function fillInputsFromGetParameters(){
   
   for (var key in inputParameters) {
     if (document.getElementById(key) != null) {
-       document.getElementById(key).textContent = inputParameters[key];
+       document.getElementById(key).value = inputParameters[key];
     }
   }
 }
