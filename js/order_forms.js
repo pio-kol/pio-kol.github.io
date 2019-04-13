@@ -29,9 +29,15 @@ function fillInputsFromGetParameters(){
   
   for (var key in inputParameters) {
     if (document.getElementById(key) != null) {
-       document.getElementById(key).value = inputParameters[key];
+       var element = document.getElementById(key)
+ 
+       if (element.type && element.type === 'checkbox') {
+         element.checked = inputParameters[key] === "true" ? true : false;   
+       } else {
+         element.value = inputParameters[key];
+       }
     }
   }
-  
+    
   sumUpValues();
 }
