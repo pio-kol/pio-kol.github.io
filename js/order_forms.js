@@ -24,5 +24,12 @@ function sumUpValues() {
 function fillInputsFromGetParameters(){
   var search = location.search.substring(1);
   inputParameters = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
-  console.print(inputParameters);
+
+  console.log(inputParameters);
+  
+  for (var key in inputParameters) {
+    if (document.getElementById(key) != null) {
+       document.getElementById(key).textContent = inputParameters[key];
+    }
+  }
 }
