@@ -32,4 +32,6 @@ function fillInputsFromGetParameters(){
        document.getElementById(key).value = inputParameters[key];
     }
   }
+  
+  sumUpValues();
 }
