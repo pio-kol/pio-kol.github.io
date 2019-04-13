@@ -67,23 +67,23 @@
       <legend>Krok 3: Twoje dane kontaktowe</legend>
       <div class="form-row">
         <label for="field-name">Imię</label>
-        <input type="text" name="name" required id="field-name" data-error="Imie jest wymagane">
+        <input type="text" name="name" required id="name" data-error="Imie jest wymagane">
       </div>
       <br/>
       <div class="form-row">
         <label for="field-name">Nazwisko</label>
-        <input type="text" name="surname" required id="field-surname" data-error="Nazwisko jest wymagane">
+        <input type="text" name="surname" required id="surname" data-error="Nazwisko jest wymagane">
       </div>
       <br/>
       <div class="form-row">
         <label for="field-email">Email</label>
-        <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email"
+        <input type="email" name="email" required id="email" data-error="Wpisz poprawny email"
                pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
       </div>
       <br/>
       <div class="form-row">
         <label for="field-mobile">Telefon</label>
-        <input type="tel" name="mobile" required id="field-mobile"
+        <input type="tel" name="mobile" required id="mobile"
                data-error="Wpisz poprawny nr telefonu"
                pattern="[0-9]{9}">
       </div>
@@ -94,7 +94,7 @@
     <fieldset>
       <legend>Krok 4: Konieczne zgody</legend>
       <label class="checkbox-cnt">
-        <input type="checkbox" required data-error="Musisz wypełnić pole" name="accept_mandatory_regulations">
+        <input type="checkbox" required data-error="Musisz wypełnić pole" name="accept_mandatory_regulations" id="accept_mandatory_regulations">
         <i class="state" aria-hidden="true"></i>
         <span>Potwierdzam, że akceptuję <a
             href="https://docs.google.com/document/d/1VKS2Cc6A1NSX39RddMF0czKoT2RPpeHPoybc3W_sCpk/edit?usp=sharing">regulamin usługi </a> oraz <a
@@ -106,7 +106,7 @@
         dniach od otrzymania wpłaty, wcześniejsze terminy zostaną anulowane a kwotę będziesz mógł wykorzystać w później ustalonym terminie.
         <br/>Pamiętaj, że niezależnie od poniższych zgód możesz zrezygnować w dowolnym momencie a niewykorzystana kwota zostanie Ci zwrócona.</b></p>
       <label class="checkbox-cnt">
-        <input type="checkbox" data-error="Musisz wypełnić pole" name="confirm_start_service_before_14_days">
+        <input type="checkbox" data-error="Musisz wypełnić pole" name="confirm_start_service_before_14_days" id="confirm_start_service_before_14_days">
         <i class="state" aria-hidden="true"></i>
         <span>Potwierdzam żądanie rozpoczęcia wykonywania usługi programowania na
       godziny przed upływem 14 dniowego terminu do odstąpienia od umowy.
@@ -120,7 +120,7 @@
       </label>
       <br/>
       <label class="checkbox-cnt">
-        <input type="checkbox" data-error="Musisz wypełnić pole" name="confirm_finish_service_before_14_days">
+        <input type="checkbox" data-error="Musisz wypełnić pole" name="confirm_finish_service_before_14_days" id="confirm_finish_service_before_14_days">
         <i class="state" aria-hidden="true"></i>
         <span>Wyrażam zgodę na wykonanie usługi programowania na godziny przed
 upływem 14 dniowego terminu do odstąpienia od umowy oraz oświadczam, że
