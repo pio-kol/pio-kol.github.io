@@ -38,13 +38,13 @@
   <div class="form-row">
     <fieldset>
       <legend>Krok 1: Konsultacje zarezerwowane z gory</legend>
-      <input type="checkbox" name="reserved_hours" id="Piotr - Lead Mentor - 01.04.2019 18:00-18:30 (75 zł)" value="Piotr - Lead Mentor - 01.04.2019 18:00-18:30 (75 zł)" onclick="sumUpValues()" data-price="75">
+      <input readonly type="checkbox" name="reserved_hours" id="Piotr - Lead Mentor - 01.04.2019 18:00-18:30 (75 zł)" value="Piotr - Lead Mentor - 01.04.2019 18:00-18:30 (75 zł)" onclick="sumUpValues()" data-price="75">
       Piotr - Lead Mentor - 01.04.2019 18:00-18:30 (75 zł)<br>
-      <input type="checkbox" name="reserved_hours" id="Piotr - Lead Mentor - 01.04.2019 18:30-19:00 (75 zł)" value="Piotr - Lead Mentor - 01.04.2019 18:30-19:00 (75 zł)" onclick="sumUpValues()" data-price="75">
+      <input readonly type="checkbox" name="reserved_hours" id="Piotr - Lead Mentor - 01.04.2019 18:30-19:00 (75 zł)" value="Piotr - Lead Mentor - 01.04.2019 18:30-19:00 (75 zł)" onclick="sumUpValues()" data-price="75">
       Piotr - Lead Mentor - 01.04.2019 18:30-19:00 (75 zł)<br>
-      <input type="checkbox" name="reserved_hours" id="Ania - Senior Mentor - 04.04.2019 17:00-17:30 (60 zł)" value="Ania - Senior Mentor - 04.04.2019 17:00-17:30 (60 zł)" onclick="sumUpValues()" data-price="60">
+      <input readonly type="checkbox" name="reserved_hours" id="Ania - Senior Mentor - 04.04.2019 17:00-17:30 (60 zł)" value="Ania - Senior Mentor - 04.04.2019 17:00-17:30 (60 zł)" onclick="sumUpValues()" data-price="60">
       Ania - Senior Mentor - 04.04.2019 17:00-17:30 (60 zł)<br>
-      <input type="checkbox" name="reserved_hours" id="Ania - Senior Mentor - 11.04.2019 19:00-19:30 (60 zł)" value="Ania - Senior Mentor - 11.04.2019 19:00-19:30 (60 zł)" onclick="sumUpValues()" data-price="60">
+      <input readonly type="checkbox" name="reserved_hours" id="Ania - Senior Mentor - 11.04.2019 19:00-19:30 (60 zł)" value="Ania - Senior Mentor - 11.04.2019 19:00-19:30 (60 zł)" onclick="sumUpValues()" data-price="60">
       Ania - Senior Mentor - 11.04.2019 19:00-19:30 (60 zł)<br>
       <br>
     </fieldset>
@@ -55,7 +55,7 @@
       <legend>Krok 2: Kwota ktora chcesz przeznaczyc na spotkania ustalane na biezaco lub
         konsultacje na czacie
       </legend>
-      <input id="additional_funds" name="additional_funds" type="number" min="0" max="1000" step="1"
+      <input readonly id="additional_funds" name="additional_funds" type="number" min="0" max="1000" step="1"
              onchange="sumUpValues()" required data-error="Musisz wypełnić pole" id="field-message"
              value="0">
       <br>
@@ -67,23 +67,23 @@
       <legend>Krok 3: Twoje dane kontaktowe</legend>
       <div class="form-row">
         <label for="field-name">Imię</label>
-        <input type="text" name="name" required id="name" data-error="Imie jest wymagane">
+        <input readonly type="text" name="name" required id="name" data-error="Imie jest wymagane">
       </div>
       <br/>
       <div class="form-row">
         <label for="field-name">Nazwisko</label>
-        <input type="text" name="surname" required id="surname" data-error="Nazwisko jest wymagane">
+        <input readonly type="text" name="surname" required id="surname" data-error="Nazwisko jest wymagane">
       </div>
       <br/>
       <div class="form-row">
         <label for="field-email">Email</label>
-        <input type="email" name="email" required id="email" data-error="Wpisz poprawny email"
+        <input readonly type="email" name="email" required id="email" data-error="Wpisz poprawny email"
                pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
       </div>
       <br/>
       <div class="form-row">
         <label for="field-mobile">Telefon</label>
-        <input type="tel" name="mobile" required id="mobile"
+        <input readonly type="tel" name="mobile" required id="mobile"
                data-error="Wpisz poprawny nr telefonu"
                pattern="[0-9]{9}">
       </div>
@@ -106,7 +106,7 @@
         dniach od otrzymania wpłaty, wcześniejsze terminy zostaną anulowane a kwotę będziesz mógł wykorzystać w później ustalonym terminie.
         <br/>Pamiętaj, że niezależnie od poniższych zgód możesz zrezygnować w dowolnym momencie a niewykorzystana kwota zostanie Ci zwrócona.</b></p>
       <label class="checkbox-cnt">
-        <input type="checkbox" data-error="Musisz wypełnić pole" name="confirm_start_service_before_14_days" id="confirm_start_service_before_14_days">
+        <input readonly type="checkbox" data-error="Musisz wypełnić pole" name="confirm_start_service_before_14_days" id="confirm_start_service_before_14_days">
         <i class="state" aria-hidden="true"></i>
         <span>Potwierdzam żądanie rozpoczęcia wykonywania usługi programowania na
       godziny przed upływem 14 dniowego terminu do odstąpienia od umowy.
@@ -120,7 +120,7 @@
       </label>
       <br/>
       <label class="checkbox-cnt">
-        <input type="checkbox" data-error="Musisz wypełnić pole" name="confirm_finish_service_before_14_days" id="confirm_finish_service_before_14_days">
+        <input readonly type="checkbox" data-error="Musisz wypełnić pole" name="confirm_finish_service_before_14_days" id="confirm_finish_service_before_14_days">
         <i class="state" aria-hidden="true"></i>
         <span>Wyrażam zgodę na wykonanie usługi programowania na godziny przed
 upływem 14 dniowego terminu do odstąpienia od umowy oraz oświadczam, że
@@ -142,49 +142,22 @@ zostałem poinformowany przed rozpoczęciem świadczenia, że po spełnieniu
         <li>Kwota przeznaczona na elastyczne konsultacje: <b> <span
             id="additional_funds_sum">0 zł</span></b></li>
       </ul>
-      <input type="hidden" id="reserved_hours_sum_input" name="reserved_hours_sum_input" value="0">
-      <input type="hidden" id="total_sum_input" name="total_sum_input" value="0">
+      <input readonly type="hidden" id="reserved_hours_sum_input" name="reserved_hours_sum_input" value="0">
+      <input readonly type="hidden" id="total_sum_input" name="total_sum_input" value="0">
       <br/>
       <div class="form-row">
         <button type="submit" class="submit-btn">
-          Zamawiam z obowiazkiem zaplaty.
+          Potwierdzam zamowienie.
         </button>
       </div>
     </fieldset>
   </div>
   
-   <p>
-    Po wypelnieniu formularza otrzymasz potwierdzenie zamowienia wraz z numerem konta na ktore
-    nalezy dokonac wplaty. Nauke mozemy rozpoczac niezwlocznie po zaksiegowaniu wplaty.
-  </p>
-  
-  <p>
-
-    Administratorem Pani/Pana danych osobowych jest Piotr Kolacz Development, ul. Nagietkowa 19,
-    32-005 Niepolomice
-    Pani/Pana dane mogą być przetwarzane w celu:
-    zawarcia i wykonania umowy – podstawą prawną przetwarzania jest niezbędność przetwarzania danych
-    do zawarcia i wykonywania umowy, obsługi płatności, kontaktowania się w celach związanych z
-    wykonywaniem umowy.
-
-    Każdej osobie przysługuje prawo do: dostępu do treści swoich danych, ich sprostowania, usunięcia
-    lub wniesienia sprzeciwu wobec przetwarzania danych w celach marketingowych, oraz prawo do
-    cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania, którego
-    dokonano na podstawie zgody przed jej cofnięciem.
-    Szczegółowe informacje na temat przetwarzania danych osobowych w poszczególnych celach, znajdą
-    Państwo w <a
-      href="https://docs.google.com/document/d/1VKS2Cc6A1NSX39RddMF0czKoT2RPpeHPoybc3W_sCpk/edit?usp=sharing">Regulaminie</a>
-    oraz w <a
-      href="https://docs.google.com/document/d/16wYDSoZAFlKrCWX-Bi0fI-021n06gnwcZS6ZRi0mwQ8/edit?usp=sharing">Polityce
-    Prywatnosci</a>
-
-  </p>
 </div>
 </form>
 <div class="answer" id="thankyou_message">
-                        <h3>Zamówienie zostało wysłane.</h3>
+                        <h3>Zamówienie zostało potwierdzone.</h3>
                         <h4>Dziękujemy za kontakt. Za moment otrzymasz email z potwierdzeniem zamówienia. </h4>
-                        <h4>Odpowiemy na Twoje zamówienie tak szybko jak to tylko możliwe.</h4>
                         <h5>Kliknij <a href="javascript:void(0)" onclick="showFormAgain()">tutaj</a> aby wysłać kolejne zamówienie</h5>
                     </div>
 <div>
