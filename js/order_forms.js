@@ -36,6 +36,13 @@ function fillInputsFromGetParameters(){
          element.value = parameterValue;
        }
     }
+    
+    if (key == "reserved_hours") {
+      reserved_hours = decodeURIComponent(inputParameters[key]).split(',');
+      for (var reserved_hour in reserved_hours){
+        document.getElementById(reserved_hour).checked = true;
+      }
+    }
   }
     
   sumUpValues();
