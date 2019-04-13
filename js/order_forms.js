@@ -16,8 +16,10 @@ function sumUpValues() {
 
   const total_sum = total + parseFloat(additional_funds);
   document.getElementById(
-      "total_sum").textContent = total_sum.toFixed(0)
-      + " zł";
+      "total_sum").textContent = total_sum.toFixed(0) + " zł";
+  if (document.getElementById("total_sum_transfer")){
+    document.getElementById("total_sum_transfer").textContent = total_sum.toFixed(0) + " zł";
+  }
   document.getElementById("total_sum_input").value = total_sum;
 }
 
