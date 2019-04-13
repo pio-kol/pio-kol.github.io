@@ -20,3 +20,9 @@ function sumUpValues() {
       + " zł";
   document.getElementById("total_sum_input").value = total_sum;
 }
+
+function fillInputsFromGetParameters(){
+  var search = location.search.substring(1);
+  inputParameters = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
+  console.print(inputParameters);
+}
