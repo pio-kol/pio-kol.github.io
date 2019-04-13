@@ -24,17 +24,16 @@ function sumUpValues() {
 function fillInputsFromGetParameters(){
   var search = location.search.substring(1);
   inputParameters = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
-
-  console.log(inputParameters);
   
   for (var key in inputParameters) {
     if (document.getElementById(key) != null) {
        var element = document.getElementById(key)
+       parameterValue = decodeURIComponent(inputParameters[key]);
  
        if (element.type && element.type === 'checkbox') {
-         element.checked = inputParameters[key] === "true" ? true : false;   
+         element.checked = parameterValue === "true" ? true : false;   
        } else {
-         element.value = inputParameters[key];
+         element.value = parameterValue;
        }
     }
   }
