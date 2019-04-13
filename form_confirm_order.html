@@ -1,57 +1,197 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pl">
 <head>
   <meta charset="utf-8">
+   <link rel="stylesheet" href="css/forms_to_unify.css">
 </head>
 <body>
 
+
+<form class="form" id="gform" method="post" action="https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec">
+<p>
+  Poniższy formularz ułatwi Ci zamówienie wsparcia w nauce programowania. <br>
+  Zawiera on wszystkie konieczne zgody i informacje. <br/>
+</p>
+
+<p>
+  Terminy konsultacji mozesz zarezerwowac z gory do konca miesiaca kalendarzowego lub po prostu
+  wplacic kwote i korzystac z niej umawiajac sie na spotkania na biezaco zgodnie z dostepymi
+  terminami.
+  Niewykorzystane srodki zostana Ci zwrocone na koniec miesiaca wiec nic nie ryzukujesz.
+
+  Wplacona kwote mozesz wykorzystac na dowolny cel - wspolne lekcje, code review, przygotowanie do
+  interview, wsparcie na czacie i inne indywidualnie ustalone metody wsparcia.
+</p>
+
 <br/>
-<form class="form" id="contactForm" method="post">
-
-
   <div class="form-row">
-    <label for="field-name">Imię i nazwisko</label>
-    <input type="text" name="name" required id="field-name" data-error="Wypełnij to pole"
-           value="Jan Kowalski" readonly>
+    <fieldset>
+      <legend>Cennik konsultacji</legend>
+      Koszt jednej godziny zegarowej konsultacji to:
+      <ul>
+        <li>Senior Mentor - 120 zl</li>
+        <li>Lead Mentor - 150 zl</li>
+      </ul>
+    </fieldset>
   </div>
   <br/>
   <div class="form-row">
-    <label for="field-email">Email</label>
-    <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email"
-           pattern="[^@\s]+@[^@\s]+\.[^@\s]+" value="jan.kowalski@email.com" readonly>
+    <fieldset>
+      <legend>Krok 1: Konsultacje zarezerwowane z gory</legend>
+      <input type="checkbox" name="reserved_hours" value="Piotr - Lead Mentor - 01.04.2019 18:00-18:30 (75 zł)" onclick="sumUpValues()" data-price="75">
+      Piotr - Lead Mentor - 01.04.2019 18:00-18:30 (75 zł)<br>
+      <input type="checkbox" name="reserved_hours" value="Piotr - Lead Mentor - 01.04.2019 18:30-19:00 (75 zł)" onclick="sumUpValues()" data-price="75">
+      Piotr - Lead Mentor - 01.04.2019 18:30-19:00 (75 zł)<br>
+      <input type="checkbox" name="reserved_hours" value="Ania - Senior Mentor - 04.04.2019 17:00-17:30 (60 zł)" onclick="sumUpValues()" data-price="60">
+      Ania - Senior Mentor - 04.04.2019 17:00-17:30 (60 zł)<br>
+      <input type="checkbox" name="reserved_hours" value="Ania - Senior Mentor - 11.04.2019 19:00-19:30 (60 zł)" onclick="sumUpValues()" data-price="60">
+      Ania - Senior Mentor - 11.04.2019 19:00-19:30 (60 zł)<br>
+      <br>
+    </fieldset>
   </div>
   <br/>
   <div class="form-row">
-    <label for="field-message">Kwota, którą chcesz przeznaczyć na naukę programowania</label>
-    <input name="message" required data-error="Musisz wypełnić pole" id="field-message" value="1000"
-           readonly>
+    <fieldset>
+      <legend>Krok 2: Kwota ktora chcesz przeznaczyc na spotkania ustalane na biezaco lub
+        konsultacje na czacie
+      </legend>
+      <input id="additional_funds" name="additional_funds" type="number" min="0" max="1000" step="1"
+             onchange="sumUpValues()" required data-error="Musisz wypełnić pole" id="field-message"
+             value="0">
+      <br>
+    </fieldset>
   </div>
-  <br>
-
-  <br/>Koszt jednej godziny konsultacji to:
-  <ul>
-    <li>Junior Mentor - 75 zl</li>
-    <li>Senior Mentor - 100 zl</li>
-    <li>Lead Mentor - 125 zl</li>
-  </ul>
-
   <br/>
-  <p> Dane do wplaty:
-    <br/>Idea Bank: 11 1950 0001 2006 8574 1959 0002
-    <br/> Piotr Kolacz Development
-    <br/> 32-005 Niepolomice, ul Nagietkowa 19
-    <br/>
-    <br/>Kwota do wplaty: 1000 zl
+  <div class="form-row">
+    <fieldset>
+      <legend>Krok 3: Twoje dane kontaktowe</legend>
+      <div class="form-row">
+        <label for="field-name">Imię</label>
+        <input type="text" name="name" required id="field-name" data-error="Imie jest wymagane">
+      </div>
+      <br/>
+      <div class="form-row">
+        <label for="field-name">Nazwisko</label>
+        <input type="text" name="surname" required id="field-surname" data-error="Nazwisko jest wymagane">
+      </div>
+      <br/>
+      <div class="form-row">
+        <label for="field-email">Email</label>
+        <input type="email" name="email" required id="field-email" data-error="Wpisz poprawny email"
+               pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+      </div>
+      <br/>
+      <div class="form-row">
+        <label for="field-mobile">Telefon</label>
+        <input type="tel" name="mobile" required id="field-mobile"
+               data-error="Wpisz poprawny nr telefonu"
+               pattern="[0-9]{9}">
+      </div>
+    </fieldset>
+  </div>
+  <br/>
+  <div class="form-row">
+    <fieldset>
+      <legend>Krok 4: Konieczne zgody</legend>
+      <label class="checkbox-cnt">
+        <input type="checkbox" required data-error="Musisz wypełnić pole" name="accept_mandatory_regulations">
+        <i class="state" aria-hidden="true"></i>
+        <span>Potwierdzam, że akceptuję <a
+            href="https://docs.google.com/document/d/1VKS2Cc6A1NSX39RddMF0czKoT2RPpeHPoybc3W_sCpk/edit?usp=sharing">regulamin usługi </a> oraz <a
+            href="https://docs.google.com/document/d/16wYDSoZAFlKrCWX-Bi0fI-021n06gnwcZS6ZRi0mwQ8/edit?usp=sharing">politykę prywatności</a>
+      </span>
+      </label>
+      <br/>
+      <p><b>W przypadku nie wyrażenia poniższych zgód naukę będziemy mogli rozpocząć dopiero po 14
+        dniach od otrzymania wpłaty, wcześniejsze terminy zostaną anulowane a kwotę będziesz mógł wykorzystać w później ustalonym terminie.
+        <br/>Pamiętaj, że niezależnie od poniższych zgód możesz zrezygnować w dowolnym momencie a niewykorzystana kwota zostanie Ci zwrócona.</b></p>
+      <label class="checkbox-cnt">
+        <input type="checkbox" data-error="Musisz wypełnić pole" name="confirm_start_service_before_14_days">
+        <i class="state" aria-hidden="true"></i>
+        <span>Potwierdzam żądanie rozpoczęcia wykonywania usługi programowania na
+      godziny przed upływem 14 dniowego terminu do odstąpienia od umowy.
+      Jednakże, w przypadku wykonania prawa do odstąpienia od umowy po
+      zgłoszeniu powyższego żądania jestem świadomy istnienia obowiązku zapłaty za
+      świadczenia spełnione do chwili odstąpienia od umowy. Przyjmuję do
+      wiadomości, że kwotę zapłaty oblicza się proporcjonalnie do zakresu
+      spełnionego świadczenia, z uwzględnieniem uzgodnionej w umowie ceny lub
+      wynagrodzenia.
+      </span>
+      </label>
+      <br/>
+      <label class="checkbox-cnt">
+        <input type="checkbox" data-error="Musisz wypełnić pole" name="confirm_finish_service_before_14_days">
+        <i class="state" aria-hidden="true"></i>
+        <span>Wyrażam zgodę na wykonanie usługi programowania na godziny przed
+upływem 14 dniowego terminu do odstąpienia od umowy oraz oświadczam, że
+zostałem poinformowany przed rozpoczęciem świadczenia, że po spełnieniu
+świadczenia przez Usługodawcę utracę prawo odstąpienia od umowy.
+      </span>
+      </label>
+
+    </fieldset>
+  </div>
+  <br/>
+  <div class="form-row">
+    <fieldset>
+      <legend>Krok 5: Potwierdzenie zamowienia</legend>
+      Kwota do wplaty: <b><span id="total_sum">0 zł</span></b>
+      <ul>
+        <li>Konsultacje w z gory ustalonych terminach - <b> <span
+            id="reserved_hours_sum">0 zł</span></b></li>
+        <li>Kwota przeznaczona na elastyczne konsultacje: <b> <span
+            id="additional_funds_sum">0 zł</span></b></li>
+      </ul>
+      <input type="hidden" id="reserved_hours_sum_input" name="reserved_hours_sum_input" value="0">
+      <input type="hidden" id="total_sum_input" name="total_sum_input" value="0">
+      <br/>
+      <div class="form-row">
+        <button type="submit" class="submit-btn">
+          Zamawiam z obowiazkiem zaplaty.
+        </button>
+      </div>
+    </fieldset>
+  </div>
+  
+   <p>
+    Po wypelnieniu formularza otrzymasz potwierdzenie zamowienia wraz z numerem konta na ktore
+    nalezy dokonac wplaty. Nauke mozemy rozpoczac niezwlocznie po zaksiegowaniu wplaty.
   </p>
+  
+  <p>
 
-  <br/>
-  <br/>
-  <div class="form-row">
-    <button type="submit" class="submit-btn">
-      Potwierdzam zamowienie
-    </button>
-  </div>
+    Administratorem Pani/Pana danych osobowych jest Piotr Kolacz Development, ul. Nagietkowa 19,
+    32-005 Niepolomice
+    Pani/Pana dane mogą być przetwarzane w celu:
+    zawarcia i wykonania umowy – podstawą prawną przetwarzania jest niezbędność przetwarzania danych
+    do zawarcia i wykonywania umowy, obsługi płatności, kontaktowania się w celach związanych z
+    wykonywaniem umowy.
+
+    Każdej osobie przysługuje prawo do: dostępu do treści swoich danych, ich sprostowania, usunięcia
+    lub wniesienia sprzeciwu wobec przetwarzania danych w celach marketingowych, oraz prawo do
+    cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania, którego
+    dokonano na podstawie zgody przed jej cofnięciem.
+    Szczegółowe informacje na temat przetwarzania danych osobowych w poszczególnych celach, znajdą
+    Państwo w <a
+      href="https://docs.google.com/document/d/1VKS2Cc6A1NSX39RddMF0czKoT2RPpeHPoybc3W_sCpk/edit?usp=sharing">Regulaminie</a>
+    oraz w <a
+      href="https://docs.google.com/document/d/16wYDSoZAFlKrCWX-Bi0fI-021n06gnwcZS6ZRi0mwQ8/edit?usp=sharing">Polityce
+    Prywatnosci</a>
+
+  </p>
+</div>
 </form>
+<div class="answer" id="thankyou_message">
+                        <h3>Zamówienie zostało wysłane.</h3>
+                        <h4>Dziękujemy za kontakt. Za moment otrzymasz email z potwierdzeniem zamówienia. </h4>
+                        <h4>Odpowiemy na Twoje zamówienie tak szybko jak to tylko możliwe.</h4>
+                        <h5>Kliknij <a href="javascript:void(0)" onclick="showFormAgain()">tutaj</a> aby wysłać kolejne zamówienie</h5>
+                    </div>
+<div>
+ 
+  
 
+<script type="text/javascript" src="js/order_forms.js"></script>
+<script type="text/javascript" src="js/form-submission-handler.js"></script>
 </body>
 </html>
