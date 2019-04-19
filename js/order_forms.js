@@ -14,13 +14,19 @@ function sumUpValues() {
   document.getElementById(
       "additional_funds_sum").textContent = additional_funds + " zł";
 
-  const total_sum = total + parseFloat(additional_funds);
+  const amount_to_return = parseFloat(document.getElementById("amount_to_return").value);
+  
+  const total_sum = total + parseFloat(additional_funds) + amount_to_return;
   document.getElementById(
       "total_sum").textContent = total_sum.toFixed(0) + " zł";
   if (document.getElementById("total_sum_transfer")){
     document.getElementById("total_sum_transfer").textContent = total_sum.toFixed(0) + " zł";
   }
   document.getElementById("total_sum_input").value = total_sum;
+  
+  document.getElementById("amount_to_return_sum").textContent = amount_to_return.toFixed(0)
+      + " zł";
+  
 }
 
 function fillInputsFromGetParameters(){
