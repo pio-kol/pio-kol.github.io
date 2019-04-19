@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+   <link rel="stylesheet" href="css/forms_to_unify.css">
+</head>
+<body onload="fillInputsFromGetParameters();">
+
+
+<form class="form" id="gform" method="post" action="https://script.google.com/a/passionatesoftwareengineer.com/macros/s/AKfycbyqBOfFusA2QDpBmpNJPCQMvz5L6uvpLtwL60fJ/exec">
+<p>
+  Poniższy formularz pozwala na potwierdzenie zamówienia. <br>
+  Numer zamowienia: <input disabled type="text" id="order_number" name="order_number" ></input>
+</p>
+
+<br/>
+  <div class="form-row">
+    <fieldset>
+      <legend>Cennik konsultacji</legend>
+      Koszt jednej godziny zegarowej konsultacji to:
+      <ul>
+        <li>Senior Mentor - 120 zl</li>
+        <li>Lead Mentor - 150 zl</li>
+      </ul>
+    </fieldset>
+  </div>
+  <br/>
+  <div class="form-row">
+    <fieldset>
+      <legend>Konsultacje zarezerwowane z gory</legend>
+      <input disabled type="checkbox" name="reserved_hours" id="Piotr - Lead Mentor - 01.04.2019 18:00-18:30 (75 zł)" value="Piotr - Lead Mentor - 01.04.2019 18:00-18:30 (75 zł)" onclick="sumUpValues()" data-price="75">
+      Piotr - Lead Mentor - 01.04.2019 18:00-18:30 (75 zł)<br>
+      <input disabled type="checkbox" name="reserved_hours" id="Piotr - Lead Mentor - 01.04.2019 18:30-19:00 (75 zł)" value="Piotr - Lead Mentor - 01.04.2019 18:30-19:00 (75 zł)" onclick="sumUpValues()" data-price="75">
+      Piotr - Lead Mentor - 01.04.2019 18:30-19:00 (75 zł)<br>
+      <input disabled type="checkbox" name="reserved_hours" id="Ania - Senior Mentor - 04.04.2019 17:00-17:30 (60 zł)" value="Ania - Senior Mentor - 04.04.2019 17:00-17:30 (60 zł)" onclick="sumUpValues()" data-price="60">
+      Ania - Senior Mentor - 04.04.2019 17:00-17:30 (60 zł)<br>
+      <input disabled type="checkbox" name="reserved_hours" id="Ania - Senior Mentor - 11.04.2019 19:00-19:30 (60 zł)" value="Ania - Senior Mentor - 11.04.2019 19:00-19:30 (60 zł)" onclick="sumUpValues()" data-price="60">
+      Ania - Senior Mentor - 11.04.2019 19:00-19:30 (60 zł)<br>
+      <br>
+    </fieldset>
+  </div>
+  <br/>
+  <div class="form-row">
+    <fieldset>
+      <legend>Kwota ktora uczestnik chce przeznaczyc na spotkania ustalane na biezaco lub
+        konsultacje na czacie
+      </legend>
+      <input disabled id="additional_funds" name="additional_funds" type="number" min="0" max="1000" step="1"
+             onchange="sumUpValues()" required data-error="Musisz wypełnić pole" id="field-message"
+             value="0">
+      <br>
+    </fieldset>
+  </div>
+  <br/>
+  <div class="form-row">
+    <fieldset>
+      <legend>Dane kontaktowe uczestnika</legend>
+      <div class="form-row">
+        <label for="field-name">Imię</label>
+        <input disabled type="text" name="name" required id="name" data-error="Imie jest wymagane">
+      </div>
+      <br/>
+      <div class="form-row">
+        <label for="field-name">Nazwisko</label>
+        <input disabled type="text" name="surname" required id="surname" data-error="Nazwisko jest wymagane">
+      </div>
+      <br/>
+      <div class="form-row">
+        <label for="field-email">Email</label>
+        <input disabled type="email" name="email" required id="email" data-error="Wpisz poprawny email"
+               pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+      </div>
+      <br/>
+      <div class="form-row">
+        <label for="field-mobile">Telefon</label>
+        <input disabled type="tel" name="mobile" required id="mobile"
+               data-error="Wpisz poprawny nr telefonu"
+               pattern="[0-9]{9}">
+      </div>
+    </fieldset>
+  </div>
+  <br/>
+  <div class="form-row">
+    <fieldset>
+      <legend>Zgody Uczestnika</legend>
+      <label class="checkbox-cnt">
+        <input disabled type="checkbox" required data-error="Musisz wypełnić pole" name="accept_mandatory_regulations" id="accept_mandatory_regulations">
+        <i class="state" aria-hidden="true"></i>
+        <span>Potwierdzam, że akceptuję <a
+            href="https://docs.google.com/document/d/1VKS2Cc6A1NSX39RddMF0czKoT2RPpeHPoybc3W_sCpk/edit?usp=sharing">regulamin usługi </a> oraz <a
+            href="https://docs.google.com/document/d/16wYDSoZAFlKrCWX-Bi0fI-021n06gnwcZS6ZRi0mwQ8/edit?usp=sharing">politykę prywatności</a>
+      </span>
+      </label>
+      <br/>
+ 
+      <label class="checkbox-cnt">
+        <input disabled type="checkbox" data-error="Musisz wypełnić pole" name="confirm_start_service_before_14_days" id="confirm_start_service_before_14_days">
+        <i class="state" aria-hidden="true"></i>
+        <span>Potwierdzam żądanie rozpoczęcia wykonywania usługi programowania na
+      godziny przed upływem 14 dniowego terminu do odstąpienia od umowy.
+      Jednakże, w przypadku wykonania prawa do odstąpienia od umowy po
+      zgłoszeniu powyższego żądania jestem świadomy istnienia obowiązku zapłaty za
+      świadczenia spełnione do chwili odstąpienia od umowy. Przyjmuję do
+      wiadomości, że kwotę zapłaty oblicza się proporcjonalnie do zakresu
+      spełnionego świadczenia, z uwzględnieniem uzgodnionej w umowie ceny lub
+      wynagrodzenia.
+      </span>
+      </label>
+      <br/>
+      <label class="checkbox-cnt">
+        <input disabled type="checkbox" data-error="Musisz wypełnić pole" name="confirm_finish_service_before_14_days" id="confirm_finish_service_before_14_days">
+        <i class="state" aria-hidden="true"></i>
+        <span>Wyrażam zgodę na wykonanie usługi programowania na godziny przed
+upływem 14 dniowego terminu do odstąpienia od umowy oraz oświadczam, że
+zostałem poinformowany przed rozpoczęciem świadczenia, że po spełnieniu
+świadczenia przez Usługodawcę utracę prawo odstąpienia od umowy.
+      </span>
+      </label>
+
+    </fieldset>
+  </div>
+  <br/>
+  <div class="form-row">
+    <fieldset>
+      <legend>Podsumowanie zamowienia</legend>
+      Kwota do wplaty: <b><span id="total_sum">0 zł</span></b>
+      <ul>
+        <li>Konsultacje w z gory ustalonych terminach - <b> <span
+            id="reserved_hours_sum">0 zł</span></b></li>
+        <li>Kwota przeznaczona na elastyczne konsultacje: <b> <span
+            id="additional_funds_sum">0 zł</span></b></li>
+      </ul>
+      <input disabled type="hidden" id="reserved_hours_sum_input" name="reserved_hours_sum_input" value="0">
+      <input disabled type="hidden" id="total_sum_input" name="total_sum_input" value="0">
+    
+      <br/>
+      <p> Komentarz do zamówienia: <br/>
+      <textarea name="additional_comment" id="additional_comment" cols="120" rows="10"></textarea>  
+      </p> 
+    
+      <br/>
+      
+      <div class="form-row">
+        <label for="field-name">Id faktury</label>
+        <input type="text" name="invoice_id" required id="invoice_id" data-error="Id faktury jest wymagane">
+      </div>
+      
+      <br/>
+      <div class="form-row">
+        <button type="submit" class="submit-btn">
+          Potwierdzam otrzymanie płatności za zamówienie.
+        </button>
+      </div>
+    </fieldset>
+  </div>
+  
+</div>
+</form>
+<div class="answer" id="thankyou_message">
+                        <h3>Opłacenie zamówienia zostało potwierdzone.</h3>
+                        <h4>Uczestnik otrzyma email z potwierdzeniem zamowienia i danymi do wplaty </h4>
+                        <h5>Kliknij <a href="javascript:void(0)" onclick="showFormAgain()">tutaj</a> aby powrócic do zamowienia</h5>
+                    </div>
+<div>
+ 
+  
+
+<script type="text/javascript" src="js/order_forms.js"></script>
+<script type="text/javascript" src="js/form-submission-handler.js"></script>
+</body>
+</html>
