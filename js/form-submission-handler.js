@@ -52,7 +52,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   xhr.onreadystatechange = function () {
     // console.log(xhr.status, xhr.statusText)
     
-    if (xhr.responseText.indexOf('error') >= 0)
+    if (xhr.responseText.indexOf('error') >= 0){
       console.log(xhr.responseText);
     }
 
