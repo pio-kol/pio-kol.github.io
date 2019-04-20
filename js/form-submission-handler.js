@@ -54,6 +54,16 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     
     if (xhr.responseText.indexOf('error') >= 0){
       console.log(xhr.responseText);
+  
+      const error_message = document.getElementById("error_message");
+      if (error_message) {
+        error_message.style.display = "block";
+      }
+      
+      const error_message = document.getElementById("error_message_content");
+      if (error_message_content) {
+        error_message_content.textContent = xhr.responseText;
+      }
     }
 
     hideFormAndShowMessageOnSuccessfulSubmit();
@@ -89,5 +99,10 @@ function showFormAgain() {
   const thankYouMessage = document.getElementById("thankyou_message");
   if (thankYouMessage) {
     thankYouMessage.style.display = "none";
+  }
+  
+  const error_message = document.getElementById("error_message");
+  if (error_message) {
+    error_message.style.display = "none";
   }
 }
