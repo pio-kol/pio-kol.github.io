@@ -60,7 +60,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
         error_message.style.display = "block";
       }
       
-      const error_message = document.getElementById("error_message_content");
+      const error_message_content = document.getElementById("error_message_content");
       if (error_message_content) {
         error_message_content.textContent = xhr.responseText;
       }
