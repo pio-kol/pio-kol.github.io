@@ -52,8 +52,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   xhr.onreadystatechange = function () {
     // console.log(xhr.status, xhr.statusText)
     
-    var parsedResponse = JSON.parse(xhr.responseText);
-    if (parsedResponse.result != "success"){
+    if (xhr.responseText.indexOf('error') >= 0)
       console.log(xhr.responseText);
     }
 
