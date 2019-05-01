@@ -6,7 +6,7 @@ function sumUpValues() {
       total += parseFloat(input[i].getAttribute("data-price"));
     }
   }
-  document.getElementById("reserved_hours_sum").textContent = total.toFixed(0)
+  document.getElementById("reserved_hours_sum").textContent = total.toFixed(2)
       + " zł";
   document.getElementById("reserved_hours_sum_input").value = total;
 
@@ -18,13 +18,13 @@ function sumUpValues() {
   
   const total_sum = total + parseFloat(additional_funds) + amount_to_return;
   document.getElementById(
-      "total_sum").textContent = total_sum.toFixed(0) + " zł";
+      "total_sum").textContent = total_sum.toFixed(2) + " zł";
   if (document.getElementById("total_sum_transfer")){
-    document.getElementById("total_sum_transfer").textContent = total_sum.toFixed(0) + " zł";
+    document.getElementById("total_sum_transfer").textContent = total_sum.toFixed(2) + " zł";
   }
   document.getElementById("total_sum_input").value = total_sum;
   
-  document.getElementById("amount_to_return_sum").textContent = amount_to_return.toFixed(0)
+  document.getElementById("amount_to_return_sum").textContent = amount_to_return.toFixed(2)
       + " zł";
   
 }
