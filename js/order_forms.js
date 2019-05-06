@@ -75,16 +75,20 @@ function addAvailableMeetings(meetings){
     
     var price = 0;
     if (title.toLowerCase().indexOf("lead") > 0){
-      price = 150;
+      price = document.getElementById("lead_price");
     } else if (title.toLowerCase().indexOf("senior") > 0) {
-      price = 120;
+      price = document.getElementById("senior_price");
     } else {
       continue; // do not display - invalid meeting
     }
     
+    if (price == 0){
+      continue;
+    }
+    
     var meetingCost = (price / 60) * meetingDuration; 
     
-    title += "(" + meetingCost + " zł)";
+    title += " (" + meetingCost + " zł)";
          
     var checkbox = document.createElement('input');
         checkbox.type = "checkbox";
