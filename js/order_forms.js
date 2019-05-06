@@ -61,14 +61,31 @@ function fillInputsFromGetParameters(){
 function addAvailableMeetings(meetings){
   for (var i = 0; i < meetings.length; ++i){
     var meeting = meetings[i];
-    var fieldset = document.getElementById('available_meetings'); 
+   
     var startDate = new Date(meeting.startDate);
     var meetingDate = ("0" + startDate.getDay()).slice(-2) + "." + ("0" + (startDate.getMonth() + 1)).slice(-2) + "." + startDate.getFullYear();
     var startTime = ("0" + startDate.getHours()).slice(-2) + ":" + ("0" + startDate.getMinutes()).slice(-2);
     var endDate = new Date(meeting.endDate);
     var endTime = ("0" + endDate.getHours()).slice(-2) + ":" + ("0" + endDate.getMinutes()).slice(-2); 
     var title = meeting.title + " - " + meetingDate + " - " + startTime + "-" + endTime;
-  
+    
+    var today = new Date();
+    var Christmas = new Date("12-25-2012");
+    var diffMs = (Christmas - today); // milliseconds between now & Christmas
+    var diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); // minutes
+    var meetingDuration = diffMins;
+    
+    var price = 0;
+    if (title.toLowerCase().indexOf("lead") > 0){
+      price = 150;
+    } else if (title.toLowerCase().indexOf("senior") > 0) {
+      price = 120;
+    } else {
+      continue; // do not display - invalid meeting
+    }
+    
+    var meetingCost = price / 60 * meetingDuration; 
+         
     var checkbox = document.createElement('input');
         checkbox.type = "checkbox";
         checkbox.value = title;
@@ -77,7 +94,8 @@ function addAvailableMeetings(meetings){
         checkbox.addEventListener('click', function() {
              sumUpValues();
         }, false);
-        
+     
+    var fieldset = document.getElementById('available_meetings');
         fieldset.appendChild(checkbox);
         fieldset.appendChild(document.createTextNode(title));
         var br = document.createElement("br");
