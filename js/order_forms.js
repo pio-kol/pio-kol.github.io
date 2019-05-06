@@ -66,7 +66,7 @@ function readAvailableEvents(){
         checkbox.type = "checkbox";
         checkbox.value = "Extra konsultacje z Piotrem";
         checkbox.name = "reserved_hours";
-        checkbox.data-price = "75";
+        checkbox.setAttribute("data-price", "75");
         checkbox.onclick = "sumUpValues()";
 
     fieldset.appendChild(checkbox);
