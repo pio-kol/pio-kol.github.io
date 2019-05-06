@@ -72,6 +72,6 @@ function readAvailableEvents(){
     fieldset.appendChild(checkbox);
 
     //var text = document.getElementById('texto');
-    checkbox.appendChild(document.createTextNode("Extra konsultacje z Piotrem"));
+    fieldset.appendChild(document.createTextNode("Extra konsultacje z Piotrem<br/>"));
     //ul.appendChild(li); 
 }
