@@ -29,7 +29,7 @@ function sumUpValues() {
   
 }
 
-function fillInputsFromGetParameters(requestListOfMeetings = true){
+function fillInputsFromGetParameters(disabled = false, requestListOfMeetings = true){
   var search = location.search.substring(1);
   var parametersAsJson = '{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"').replace(/\n/g, ' ') + '"}';
   inputParameters = search.length > 0 ? JSON.parse(parametersAsJson) : [];
@@ -60,11 +60,11 @@ function fillInputsFromGetParameters(requestListOfMeetings = true){
   sumUpValues();
   
   if (requestListOfMeetings){
-      Get("https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec");
+      Get("https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec", disabled);
   }
 }
 
-function addAvailableMeetings(meetings){
+function addAvailableMeetings(meetings, disabled = false){
   for (var i = 0; i < meetings.length; ++i){
     var meeting = meetings[i];
    
@@ -99,6 +99,7 @@ function addAvailableMeetings(meetings){
         checkbox.value = title;
         checkbox.id = title;
         checkbox.name = "reserved_hours";
+        checkbox.disabled = disabled;
         checkbox.setAttribute("data-price", meetingCost);
         checkbox.addEventListener('click', function() {
              sumUpValues();
@@ -112,13 +113,13 @@ function addAvailableMeetings(meetings){
   }
 }
 
-function Get(url){
+function Get(url, disabled = false){
     var xhr = new XMLHttpRequest()
         xhr.open('GET', url, true)
         //xhr.withCredentials = true
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) { 
-            addAvailableMeetings(JSON.parse(xhr.responseText));
+            addAvailableMeetings(JSON.parse(xhr.responseText), disabled);
             fillInputsFromGetParameters(false);
           }
         }
