@@ -120,7 +120,7 @@ function Get(url, disabled = false){
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) { 
             addAvailableMeetings(JSON.parse(xhr.responseText), disabled);
-            fillInputsFromGetParameters(false);
+            fillInputsFromGetParameters(disabled, false);
           }
         }
         //xhr.setRequestHeader('Content-Type', 'application/json')
