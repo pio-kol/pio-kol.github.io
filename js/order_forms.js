@@ -63,7 +63,7 @@ function addAvailableMeetings(meetings){
     var meeting = meetings[i];
    
     var startDate = new Date(meeting.startDate);
-    var meetingDate = ("0" + startDate.getDay()).slice(-2) + "." + ("0" + (startDate.getMonth() + 1)).slice(-2) + "." + startDate.getFullYear();
+    var meetingDate = ("0" + startDate.getDate()).slice(-2) + "." + ("0" + (startDate.getMonth() + 1)).slice(-2) + "." + startDate.getFullYear();
     var startTime = ("0" + startDate.getHours()).slice(-2) + ":" + ("0" + startDate.getMinutes()).slice(-2);
     var endDate = new Date(meeting.endDate);
     var endTime = ("0" + endDate.getHours()).slice(-2) + ":" + ("0" + endDate.getMinutes()).slice(-2); 
