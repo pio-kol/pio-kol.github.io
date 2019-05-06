@@ -55,4 +55,21 @@ function fillInputsFromGetParameters(){
   }
     
   sumUpValues();
+  readAvailableEvents();
+}
+
+function readAvailableEvents(){
+  var fieldset = document.getElementById('available_meetings'); //ul
+    
+
+    var checkbox = document.createElement('input');
+        checkbox.type = "checkbox";
+        checkbox.value = 1;
+        checkbox.name = "todo[]";
+
+    fieldset.appendChild(checkbox);
+
+    //var text = document.getElementById('texto');
+    //li.appendChild(document.createTextNode(text.value));
+    //ul.appendChild(li); 
 }
