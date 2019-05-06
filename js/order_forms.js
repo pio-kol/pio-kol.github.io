@@ -75,9 +75,9 @@ function addAvailableMeetings(meetings){
     
     var price = 0;
     if (title.toLowerCase().indexOf("lead") > 0){
-      price = document.getElementById("lead_price");
+      price = document.getElementById("lead_price").value;
     } else if (title.toLowerCase().indexOf("senior") > 0) {
-      price = document.getElementById("senior_price");
+      price = document.getElementById("senior_price").value;
     } else {
       continue; // do not display - invalid meeting
     }
