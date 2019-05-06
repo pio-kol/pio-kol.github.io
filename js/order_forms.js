@@ -69,9 +69,7 @@ function addAvailableMeetings(meetings){
     var endTime = ("0" + endDate.getHours()).slice(-2) + ":" + ("0" + endDate.getMinutes()).slice(-2); 
     var title = meeting.title + " - " + meetingDate + " - " + startTime + "-" + endTime;
     
-    var diffMs = (endDate - startDate); // milliseconds between now & Christmas
-    var diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); // minutes
-    var meetingDuration = diffMins;
+    var meetingDurationInMinutes = (endDate - startDate) / 60000;
     
     var price = 0;
     if (title.toLowerCase().indexOf("lead") > 0){
@@ -86,7 +84,7 @@ function addAvailableMeetings(meetings){
       continue;
     }
     
-    var meetingCost = (price / 60) * meetingDuration; 
+    var meetingCost = (price / 60) * meetingDurationInMinutes; 
     
     title += " (" + meetingCost + " zł)";
          
