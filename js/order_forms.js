@@ -62,8 +62,9 @@ function addAvailableMeetings(meetings){
   for (var i = 0; i < meetings.length; ++i){
     var meeting = meetings[i];
     var fieldset = document.getElementById('available_meetings'); 
-
-    var title = meeting.title + " - " + meeting.startDate.getDay() + "." + meeting.startDate.getMonth() + "." + meeting.startDate.getFullYear() + " - " + meeting.endDate;
+    var startDate = new Date(meeting.startDate);
+    var meetingDate = startDate.getDay() + "." + startDate.getMonth() + "." + startDate.getFullYear();
+    var title = meeting.title + " - " + meetingDate + " - " + meeting.endDate;
     
     var checkbox = document.createElement('input');
         checkbox.type = "checkbox";
