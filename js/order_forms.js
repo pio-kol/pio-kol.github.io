@@ -63,9 +63,11 @@ function addAvailableMeetings(meetings){
     var meeting = meetings[i];
     var fieldset = document.getElementById('available_meetings'); 
 
+    var title = meeting.title + " " + meeting.startDate + " " + meeting.endDate;
+    
     var checkbox = document.createElement('input');
         checkbox.type = "checkbox";
-        checkbox.value = meeting.title;
+        checkbox.value = title;
         checkbox.name = "reserved_hours";
         checkbox.setAttribute("data-price", "75");
         checkbox.addEventListener('click', function() {
@@ -73,7 +75,7 @@ function addAvailableMeetings(meetings){
         }, false);
         
         fieldset.appendChild(checkbox);
-        fieldset.appendChild(document.createTextNode(meeting.title));
+        fieldset.appendChild(document.createTextNode(title));
   }
 }
 
