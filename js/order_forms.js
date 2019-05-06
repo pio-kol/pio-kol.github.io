@@ -63,12 +63,12 @@ function addAvailableMeetings(meetings){
     var meeting = meetings[i];
     var fieldset = document.getElementById('available_meetings'); 
     var startDate = new Date(meeting.startDate);
-    var meetingDate = startDate.getDay() + "." + (startDate.getMonth() + 1) + "." + startDate.getFullYear();
-    var startTime = startDate.getHours() + ":" + startDate.getMinutes();
+    var meetingDate = ("0" + startDate.getDay()).slice(-2) + "." + ("0" + (startDate.getMonth() + 1)).slice(-2) + "." + startDate.getFullYear();
+    var startTime = ("0" + startDate.getHours()).slice(-2) + ":" + ("0" + startDate.getMinutes()).slice(-2);
     var endDate = new Date(meeting.endDate);
-    var endTime = endDate.getHours() + ":" + endDate.getMinutes(); 
+    var endTime = ("0" + endDate.getHours()).slice(-2) + ":" + ("0" + endDate.getMinutes()).slice(-2); 
     var title = meeting.title + " - " + meetingDate + " - " + startTime + "-" + endTime;
-    
+  
     var checkbox = document.createElement('input');
         checkbox.type = "checkbox";
         checkbox.value = title;
