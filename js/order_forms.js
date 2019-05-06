@@ -66,7 +66,7 @@ function addAvailableMeetings(meetings){
     var meetingDate = startDate.getDay() + "." + (startDate.getMonth() + 1) + "." + startDate.getFullYear();
     var startTime = startDate.getHours() + ":" + startDate.getMinutes();
     var endDate = new Date(meeting.endDate);
-    var endTime = endDate.getHours() + ":" + endDate.getMinutes();
+    var endTime = endDate.getHours() + ":" + endDate.getMinutes(); 
     var title = meeting.title + " - " + meetingDate + " - " + startTime + "-" + endTime;
     
     var checkbox = document.createElement('input');
