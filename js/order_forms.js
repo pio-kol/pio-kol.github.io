@@ -29,7 +29,7 @@ function sumUpValues() {
   
 }
 
-function fillInputsFromGetParameters(){
+function fillInputsFromGetParameters(requestListOfMeetings = true){
   var search = location.search.substring(1);
   var parametersAsJson = '{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"').replace(/\n/g, ' ') + '"}';
   inputParameters = search.length > 0 ? JSON.parse(parametersAsJson) : [];
@@ -58,7 +58,10 @@ function fillInputsFromGetParameters(){
   }
     
   sumUpValues();
-  Get("https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec");
+  
+  if (requestListOfMeetings){
+      Get("https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec");
+  }
 }
 
 function addAvailableMeetings(meetings){
@@ -116,6 +119,7 @@ function Get(url){
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) { 
             addAvailableMeetings(JSON.parse(xhr.responseText));
+            fillInputsFromGetParameters(false);
           }
         }
         //xhr.setRequestHeader('Content-Type', 'application/json')
