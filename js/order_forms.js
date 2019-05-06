@@ -49,7 +49,10 @@ function fillInputsFromGetParameters(){
     if (key == "reserved_hours" && inputParameters[key] != "") {
       reserved_hours = decodeURIComponent(inputParameters[key]).split(',');
       for (var reserved_hour_index in reserved_hours) {
-        document.getElementById(reserved_hours[reserved_hour_index].trim()).checked = true;
+        var element = document.getElementById(reserved_hours[reserved_hour_index].trim());
+        if (element != null){
+          element.checked = true;
+        }
       }
     }
   }
