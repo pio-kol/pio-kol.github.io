@@ -59,7 +59,7 @@ function fillInputsFromGetParameters(){
 }
 
 function readAvailableEvents(){
-  var availableEvents = JSON.parse(Get("https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec"));
+  var availableEvents = Get("https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec");
   console.log(availableEvents);
   
   var fieldset = document.getElementById('available_meetings'); //ul
@@ -82,10 +82,13 @@ function readAvailableEvents(){
     //ul.appendChild(li); 
 }
 
-function Get(yourUrl){
-    var xhr = new XMLHttpRequest(); // a new request
-    xhr.withCredentials = true
-    xhr.open("GET",yourUrl,true);
-    xhr.send(null);
-    return xhr.responseText;          
+function Get(url){
+    var xhr = new XMLHttpRequest()
+        xhr.open('GET', url, true)
+        xhr.withCredentials = true
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 2) { alert(xhr.responseText);
+        }
+        xhr.setRequestHeader('Content-Type', 'application/json')
+        xhr.send(json)        
 }
