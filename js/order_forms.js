@@ -85,7 +85,7 @@ function readAvailableEvents(){
 function Get(url){
     var xhr = new XMLHttpRequest()
         xhr.open('GET', url, true)
-        xhr.withCredentials = true
+        //xhr.withCredentials = true
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 2) { 
             alert(xhr.responseText);
