@@ -59,6 +59,9 @@ function fillInputsFromGetParameters(){
 }
 
 function readAvailableEvents(){
+  var availableEvents = JSON.parse(Get("https://script.googleusercontent.com/a/macros/passionatesoftwareengineer.com/echo?user_content_key=gV-tEG66RQ4IBa_A7hGofe09tEP7jMYZHY9nt6jRUyUd1M7Ipj43PknUJA38dPkPO7P_AegFeGNrimgfeMOGnxOkOPxw8kM1m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_zryPdZgxfdDLh65TMQlLKZDSu0auC6zr292m5gY_4qtaiOv029MG4EuHIcJ3mEdrROP0qY_Fdh6VaUUIjLRV8qAe4hnEtf-SCqDs6NJr9NIyGB4pme4FR9ku0zz1WX7h&lib=MJvCzgFrdZOyAyMefIGJ1R-FzVoMrj77L"));
+  console.log(availableEvents);
+  
   var fieldset = document.getElementById('available_meetings'); //ul
     
 
@@ -77,4 +80,11 @@ function readAvailableEvents(){
     fieldset.appendChild(document.createTextNode("Extra konsultacje z Piotrem"));
    
     //ul.appendChild(li); 
+}
+
+function Get(yourUrl){
+    var Httpreq = new XMLHttpRequest(); // a new request
+    Httpreq.open("GET",yourUrl,false);
+    Httpreq.send(null);
+    return Httpreq.responseText;          
 }
