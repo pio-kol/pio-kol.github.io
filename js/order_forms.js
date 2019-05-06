@@ -64,12 +64,14 @@ function readAvailableEvents(){
 
     var checkbox = document.createElement('input');
         checkbox.type = "checkbox";
-        checkbox.value = 1;
-        checkbox.name = "todo[]";
+        checkbox.value = "Extra konsultacje z Piotrem";
+        checkbox.name = "reserved_hours";
+        checkbox.data-price = "75";
+        checkbox.onclick = "sumUpValues()";
 
     fieldset.appendChild(checkbox);
 
     //var text = document.getElementById('texto');
-    //li.appendChild(document.createTextNode(text.value));
+    checkbox.appendChild(document.createTextNode("Extra konsultacje z Piotrem"));
     //ul.appendChild(li); 
 }
