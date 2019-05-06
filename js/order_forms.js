@@ -55,12 +55,10 @@ function fillInputsFromGetParameters(){
   }
     
   sumUpValues();
-  readAvailableEvents();
+  Get("https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec");
 }
 
-function readAvailableEvents(){
-  var availableEvents = Get("https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec");
-  console.log(availableEvents);
+function addAvailableMeetings(meetings){
   
   var fieldset = document.getElementById('available_meetings'); //ul
     
@@ -88,7 +86,7 @@ function Get(url){
         //xhr.withCredentials = true
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) { 
-            alert(xhr.responseText);
+            addAvailableMeetings(JSON.parse(xhr.responseText));
           }
         }
         //xhr.setRequestHeader('Content-Type', 'application/json')
