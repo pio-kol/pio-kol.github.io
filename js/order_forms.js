@@ -87,7 +87,9 @@ function Get(url){
         xhr.open('GET', url, true)
         xhr.withCredentials = true
         xhr.onreadystatechange = function() {
-          if (xhr.readyState === 2) { alert(xhr.responseText);
+          if (xhr.readyState === 2) { 
+            alert(xhr.responseText);
+          }
         }
         xhr.setRequestHeader('Content-Type', 'application/json')
         xhr.send(json)        
