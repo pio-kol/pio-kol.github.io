@@ -76,7 +76,7 @@ function addAvailableMeetings(meetings){
         
         fieldset.appendChild(checkbox);
         fieldset.appendChild(document.createTextNode(title));
-        var br = document.createElement("br");
+        var br = document.createElement("<br>");
         fieldset.appendChild(br);
   }
 }
