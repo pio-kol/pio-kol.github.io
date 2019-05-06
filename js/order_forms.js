@@ -59,25 +59,22 @@ function fillInputsFromGetParameters(){
 }
 
 function addAvailableMeetings(meetings){
-  
-  var fieldset = document.getElementById('available_meetings'); //ul
-    
+  for (var i = 0; i < meetings.length; ++i){
+    var meeting = meetings[i];
+    var fieldset = document.getElementById('available_meetings'); 
 
     var checkbox = document.createElement('input');
         checkbox.type = "checkbox";
-        checkbox.value = "Extra konsultacje z Piotrem";
+        checkbox.value = meeting.title;
         checkbox.name = "reserved_hours";
         checkbox.setAttribute("data-price", "75");
         checkbox.addEventListener('click', function() {
-    sumUpValues();
-}, false);
+             sumUpValues();
+        }, false);
         
-    fieldset.appendChild(checkbox);
-
-    //var text = document.getElementById('texto');
-    fieldset.appendChild(document.createTextNode("Extra konsultacje z Piotrem"));
-   
-    //ul.appendChild(li); 
+        fieldset.appendChild(checkbox);
+        fieldset.appendChild(document.createTextNode(meeting.title));
+  }
 }
 
 function Get(url){
