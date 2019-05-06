@@ -31,7 +31,7 @@ function sumUpValues() {
 
 function fillInputsFromGetParameters(){
   var search = location.search.substring(1);
-  var parametersAsJson = '{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}';
+  var parametersAsJson = '{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"').replace(/\n/g, ' ') + '"}';
   inputParameters = JSON.parse(parametersAsJson)
   
   for (var key in inputParameters) {
