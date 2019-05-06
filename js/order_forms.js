@@ -69,9 +69,7 @@ function addAvailableMeetings(meetings){
     var endTime = ("0" + endDate.getHours()).slice(-2) + ":" + ("0" + endDate.getMinutes()).slice(-2); 
     var title = meeting.title + " - " + meetingDate + " - " + startTime + "-" + endTime;
     
-    var today = new Date();
-    var Christmas = new Date("12-25-2012");
-    var diffMs = (Christmas - today); // milliseconds between now & Christmas
+    var diffMs = (endDate - startDate); // milliseconds between now & Christmas
     var diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); // minutes
     var meetingDuration = diffMins;
     
@@ -84,9 +82,9 @@ function addAvailableMeetings(meetings){
       continue; // do not display - invalid meeting
     }
     
-    var meetingCost = price / 60 * meetingDuration; 
+    var meetingCost = (price / 60) * meetingDuration; 
     
-    title += "(" + meetingCost + ")";
+    title += "(" + meetingCost + " zł)";
          
     var checkbox = document.createElement('input');
         checkbox.type = "checkbox";
