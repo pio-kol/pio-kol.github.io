@@ -92,5 +92,5 @@ function Get(url){
           }
         }
         xhr.setRequestHeader('Content-Type', 'application/json')
-        xhr.send(json)        
+        xhr.send(null)        
 }
