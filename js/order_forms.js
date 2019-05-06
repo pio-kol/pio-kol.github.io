@@ -85,12 +85,14 @@ function addAvailableMeetings(meetings){
     }
     
     var meetingCost = price / 60 * meetingDuration; 
+    
+    title += "(" + meetingCost + ")";
          
     var checkbox = document.createElement('input');
         checkbox.type = "checkbox";
         checkbox.value = title;
         checkbox.name = "reserved_hours";
-        checkbox.setAttribute("data-price", "75");
+        checkbox.setAttribute("data-price", meetingCost);
         checkbox.addEventListener('click', function() {
              sumUpValues();
         }, false);
