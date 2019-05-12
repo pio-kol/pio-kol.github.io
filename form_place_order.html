@@ -81,10 +81,37 @@
       </div>
     </fieldset>
   </div>
+  
   <br/>
   <div class="form-row">
     <fieldset>
-      <legend>Krok 4: Konieczne zgody</legend>
+      <legend>Krok 4: Dane do faktury</legend>
+      <div class="form-row">
+        <label for="field-name">Imię i nazwisko (lub nazwa firmy)</label>
+        <input type="text" id="invoice_name" name="invoice_name" required data-error="Pole jest wymagane">
+      </div>
+      <br/>
+      <div class="form-row">
+        <label for="field-name">Ulica</label>
+        <input type="text" id="invoice_street" name="invoice_street" required id="field-surname" data-error="Pole jest wymagane">
+      </div>
+      <br/>
+      <div class="form-row">
+        <label for="field-email">Kod pocztowy</label>
+        <input type="text" id="invoice_postcode" name="invoice_postcode" required id="field-email" data-error="Pole jest wymagane">
+      </div>
+      <br/>
+      <div class="form-row">
+        <label for="field-mobile">Miasto</label>
+        <input type="text" id="invoice_city" name="invoice_city" required>
+      </div>
+    </fieldset>
+  </div>
+  
+  <br/>
+  <div class="form-row">
+    <fieldset>
+      <legend>Krok 5: Konieczne zgody</legend>
       <label class="checkbox-cnt">
         <input type="checkbox" required data-error="Musisz wypełnić pole" name="accept_mandatory_regulations">
         <i class="state" aria-hidden="true"></i>
@@ -137,7 +164,7 @@ zostałem poinformowany przed rozpoczęciem świadczenia, że po spełnieniu
   <br/>
   <div class="form-row">
     <fieldset>
-      <legend>Krok 5: Potwierdzenie zamowienia</legend>
+      <legend>Krok 6: Potwierdzenie zamowienia</legend>
       Kwota do wplaty: <b><span id="total_sum">0 zł</span></b>
       <ul>
         <li>Konsultacje w z gory ustalonych terminach: <b> <span
