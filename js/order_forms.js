@@ -60,7 +60,7 @@ function fillInputsFromGetParameters(disabled = false, requestListOfMeetings = t
   sumUpValues();
   
   if (requestListOfMeetings){
-      Get("https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec" + includeReserved ? "?all=true" : "", disabled);
+      Get("https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec" + (includeReserved ? "?all=true" : ""), disabled);
   }
 }
 
