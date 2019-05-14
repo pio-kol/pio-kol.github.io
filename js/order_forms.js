@@ -29,7 +29,7 @@ function sumUpValues() {
   
 }
 
-function fillInputsFromGetParameters(disabled = false, requestListOfMeetings = true){
+function fillInputsFromGetParameters(disabled = false, requestListOfMeetings = true, includeReserved=false){
   var search = location.search.substring(1);
   var parametersAsJson = '{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"').replace(/\n/g, ' ') + '"}';
   inputParameters = search.length > 0 ? JSON.parse(parametersAsJson) : [];
@@ -60,7 +60,7 @@ function fillInputsFromGetParameters(disabled = false, requestListOfMeetings = t
   sumUpValues();
   
   if (requestListOfMeetings){
-      Get("https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec", disabled);
+      Get("https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec" + includeReserved ? "?all=true" : "", disabled);
   }
 }
 
