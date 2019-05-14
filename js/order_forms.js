@@ -96,8 +96,8 @@ function addAvailableMeetings(meetings, disabled = false){
          
     var checkbox = document.createElement('input');
         checkbox.type = "checkbox";
-        checkbox.value = title;
-        checkbox.id = meeting.id + "###" + title;
+        checkbox.value = meeting.id + "###" + title;
+        checkbox.id = checkbox.value;
         checkbox.name = "reserved_hours";
         checkbox.disabled = disabled;
         checkbox.setAttribute("data-price", meetingCost);
