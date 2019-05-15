@@ -90,7 +90,7 @@ function addAvailableMeetings(meetings, disabled = false){
       continue;
     }
     
-    var meetingCost = (price / 60) * meetingDurationInMinutes; 
+    var meetingCost = Math.round((price / 60) * meetingDurationInMinutes, 2); 
     
     title += " (" + meetingCost + " zł)";
          
@@ -137,8 +137,13 @@ function applyDiscount(){
         //xhr.withCredentials = true
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) { 
-            document.getElementById("senior_price").value = Math.round(document.getElementById("senior_price").value * (1-parseFloat(xhr.responseText)/100));
-            document.getElementById("lead_price").value = Math.round(document.getElementById("lead_price").value * (1-parseFloat(xhr.responseText)/100));
+            document.getElementById("senior_price").value = Math.round(document.getElementById("senior_price").value * (1-parseFloat(xhr.responseText)/100), 2);
+            document.getElementById("lead_price").value = Math.round(document.getElementById("lead_price").value * (1-parseFloat(xhr.responseText)/100), 2);
+            var meetings = document.getElementById("available_meetings");
+            while (meetings.firstChild) {
+              meetings.removeChild(meetings.firstChild);
+            }
+            document.getElementById().
             getListOfMeeetings(false, false);
             alert("Zastosowano zniżkę " + xhr.responseText + "%");
           }
