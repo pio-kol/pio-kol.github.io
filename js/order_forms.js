@@ -60,7 +60,7 @@ function fillInputsFromGetParameters(disabled = false, requestListOfMeetings = t
   sumUpValues();
   
   if (requestListOfMeetings){
-      Get("https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec?type=meetings" + (includeReserved ? "&all=true" : ""), disabled);
+      getListOfMeeetings(includeReserved, disabled);
   }
 }
 
@@ -113,7 +113,8 @@ function addAvailableMeetings(meetings, disabled = false){
   }
 }
 
-function Get(url, disabled = false){
+function getListOfMeeetings(includeReserved, disabled = false){
+  var url = "https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec?type=meetings" + (includeReserved ? "&all=true" : "");
     var xhr = new XMLHttpRequest()
         xhr.open('GET', url, true)
         //xhr.withCredentials = true
@@ -138,6 +139,7 @@ function applyDiscount(){
           if (xhr.readyState === 4) { 
             document.getElementById("senior_price").value = Math.round(document.getElementById("senior_price").value * (1-parseFloat(xhr.responseText)/100));
             document.getElementById("lead_price").value = Math.round(document.getElementById("lead_price").value * (1-parseFloat(xhr.responseText)/100));
+            getListOfMeeetings(false, false);
             alert("Zastosowano zniżkę " + xhr.responseText + "%");
           }
         }
