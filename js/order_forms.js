@@ -141,13 +141,14 @@ function applyDiscount(){
             if (discount_percent > 0){
               document.getElementById("senior_price").value = Math.round(document.getElementById("senior_price_original").value * (1-discount_percent/100));
               document.getElementById("lead_price").value = Math.round(document.getElementById("lead_price_original").value * (1-discount_percent/100));
-              var meetings = document.getElementById("available_meetings").children;
-              for (var i = 0; i < meetings.length; i++) {
-                var meeting = meetings[i];
-                if (meeting.tagName != "LEGEND"){
-                  document.getElementById("available_meetings").removeChild(meeting);
-                }
-              }
+              var meetings = document.getElementById("available_meetings");
+              meetings.innerHTML = "<legend>Krok 1: Konsultacje zarezerwowane z gory</legend>";
+//               for (var i = 0; i < meetings.length; i++) {
+//                 var meeting = meetings[i];
+//                 if (meeting.tagName != "LEGEND"){
+//                   document.getElementById("available_meetings").removeChild(meeting);
+//                 }
+//               }
       
               getListOfMeeetings(false, false);
 
