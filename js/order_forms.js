@@ -139,8 +139,8 @@ function applyDiscount(){
           if (xhr.readyState === 4) { 
             var discount_percent = parseFloat(xhr.responseText);
             if (discount_percent > 0){
-              document.getElementById("senior_price").value = Math.round(document.getElementById("senior_price").value * (1-discount_percent/100));
-              document.getElementById("lead_price").value = Math.round(document.getElementById("lead_price").value * (1-discount_percent/100));
+              document.getElementById("senior_price").value = Math.round(document.getElementById("senior_price_original").value * (1-discount_percent/100));
+              document.getElementById("lead_price").value = Math.round(document.getElementById("lead_price_original").value * (1-discount_percent/100));
               var meetings = document.getElementById("available_meetings");
               while (meetings.firstChild) {
                 if (meetings.firstChild.type != "legend"){
