@@ -7,7 +7,7 @@
 <body onload="fillInputsFromGetParameters(true, true, true);">
 
 
-<form class="form" id="gform" method="post" action="https://script.google.com/a/passionatesoftwareengineer.com/macros/s/AKfycbyqBOfFusA2QDpBmpNJPCQMvz5L6uvpLtwL60fJ/exec">
+<form class="form" id="gform" method="post" action="https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec">
 <p>
   Poniższy formularz pozwala na potwierdzenie zamówienia. <br>
   Numer zamowienia: <input disabled type="text" id="order_number" name="order_number" ></input>
@@ -143,7 +143,7 @@ zostałem poinformowany przed rozpoczęciem świadczenia, że po spełnieniu
       
       <br/>
    <label class="checkbox-cnt">
-        <input type="checkbox" data-error="Musisz wypełnić pole" id="confirm_marketing" name="confirm_marketing">
+        <input disabled type="checkbox" data-error="Musisz wypełnić pole" id="confirm_marketing" name="confirm_marketing">
         <i class="state" aria-hidden="true"></i>
         <span>Wyrażam zgodę  na przesyłanie na podany adres e-mail informacji handlowych dotyczących firmy Piotr Kołacz Development w szczególności oferty zawarcia umowy środkami komunikacji elektronicznej.
       </span>
@@ -167,6 +167,8 @@ zostałem poinformowany przed rozpoczęciem świadczenia, że po spełnieniu
       <input disabled type="hidden" id="reserved_hours_sum_input" name="reserved_hours_sum_input" value="0">
       <input disabled type="hidden" id="total_sum_input" name="total_sum_input" value="0">
       <input type="hidden" id="amount_to_return" name="amount_to_return" value="0">
+      
+       <input type="hidden" id="form_identifier" name="form_identifier" value="CONFIRM_PAYMENT">
     
       <div class="form-row">
         <label for="field-name">Data otrzymania wpłaty</label>
