@@ -137,8 +137,8 @@ function applyDiscount(){
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) { 
             alert("Zastosowano zniżkę " + xhr.responseText + "%");
-            document.getElementById("senior_price").value = document.getElementById("senior_price").value * (1-parseFloat(xhr.responseText)/100);
-            document.getElementById("lead_price").value = document.getElementById("lead_price").value * (1-parseFloat(xhr.responseText)/100);
+            document.getElementById("senior_price").value = round(document.getElementById("senior_price").value * (1-parseFloat(xhr.responseText)/100));
+            document.getElementById("lead_price").value = round(document.getElementById("lead_price").value * (1-parseFloat(xhr.responseText)/100));
           }
         }
         //xhr.setRequestHeader('Content-Type', 'application/json')
