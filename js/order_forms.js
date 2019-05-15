@@ -143,6 +143,7 @@ function applyDiscount(){
               document.getElementById("lead_price").value = Math.round(document.getElementById("lead_price_original").value * (1-discount_percent/100));
               var meetings = document.getElementById("available_meetings");
               while (meetings.firstChild) {
+                alert(meetings.firstChild.type);
                 if (meetings.firstChild.type != "legend"){
                   meetings.removeChild(meetings.firstChild);
                 }
