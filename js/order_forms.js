@@ -126,3 +126,19 @@ function Get(url, disabled = false){
         //xhr.setRequestHeader('Content-Type', 'application/json')
         xhr.send()        
 }
+
+function applyDiscount(discountCode){
+    var url = "https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec?type=discounts&discount_code=";
+    var xhr = new XMLHttpRequest()
+        xhr.open('GET', url, true)
+        //xhr.withCredentials = true
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4) { 
+            //addAvailableMeetings(JSON.parse(xhr.responseText), disabled);
+            //fillInputsFromGetParameters(disabled, false);
+            alert(xhr.responseText);
+          }
+        }
+        //xhr.setRequestHeader('Content-Type', 'application/json')
+        xhr.send()        
+}
