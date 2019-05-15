@@ -145,7 +145,7 @@ function applyDiscount(){
               for (var i = 0; i < meetings.length; i++) {
                 var meeting = meetings[i];
                 if (meeting.tagName != "LEGEND"){
-                  meetings.removeChild(meeting);
+                  document.getElementById("available_meetings").removeChild(meeting);
                 }
               }
       
