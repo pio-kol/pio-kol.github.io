@@ -136,9 +136,9 @@ function applyDiscount(){
         //xhr.withCredentials = true
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) { 
-            //addAvailableMeetings(JSON.parse(xhr.responseText), disabled);
-            //fillInputsFromGetParameters(disabled, false);
-            alert(xhr.responseText);
+            alert("Zastosowano zniżkę " + xhr.responseText + "%");
+            document.getElementById("senior_price").value = document.getElementById("senior_price").value * (1-parseFloat(xhr.responseText)/100);
+            document.getElementById("lead_price").value = document.getElementById("lead_price").value * (1-parseFloat(xhr.responseText)/100);
           }
         }
         //xhr.setRequestHeader('Content-Type', 'application/json')
