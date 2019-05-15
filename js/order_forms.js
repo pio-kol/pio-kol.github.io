@@ -137,15 +137,20 @@ function applyDiscount(){
         //xhr.withCredentials = true
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) { 
-            document.getElementById("senior_price").value = Math.round(document.getElementById("senior_price").value * (1-parseFloat(xhr.responseText)/100), 2);
-            document.getElementById("lead_price").value = Math.round(document.getElementById("lead_price").value * (1-parseFloat(xhr.responseText)/100), 2);
-            var meetings = document.getElementById("available_meetings");
-            while (meetings.firstChild) {
-              meetings.removeChild(meetings.firstChild);
+            var discount_percent = parseFloat(xhr.responseText);
+            if (discount_percent > 0){
+              document.getElementById("senior_price").value = Math.round(document.getElementById("senior_price").value * (1-discount_percent/100), 2);
+              document.getElementById("lead_price").value = Math.round(document.getElementById("lead_price").value * (1-discount_percent/100), 2);
+              var meetings = document.getElementById("available_meetings");
+              while (meetings.firstChild) {
+                meetings.removeChild(meetings.firstChild);
+              }
+              document.getElementById().
+              getListOfMeeetings(false, false);
+              alert("Zastosowano zniżkę " + xhr.responseText + "%");
+            } else {
+              alert("Podany kod zniżkowy jest nieprawidłowy");
             }
-            document.getElementById().
-            getListOfMeeetings(false, false);
-            alert("Zastosowano zniżkę " + xhr.responseText + "%");
           }
         }
         //xhr.setRequestHeader('Content-Type', 'application/json')
