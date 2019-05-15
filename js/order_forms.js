@@ -141,12 +141,12 @@ function applyDiscount(){
             if (discount_percent > 0){
               document.getElementById("senior_price").value = Math.round(document.getElementById("senior_price_original").value * (1-discount_percent/100));
               document.getElementById("lead_price").value = Math.round(document.getElementById("lead_price_original").value * (1-discount_percent/100));
-              var meetings = document.getElementById("available_meetings");
-              while (meetings.childNodes.length > 1) {
-                //alert(meetings.firstChild.type);
-               // if (meetings.firstChild.tagName != "LEGEND"){
-                  meetings.removeChild(meetings.lastChild);
-               // }
+              var meetings = document.getElementById("available_meetings").children;
+              for (var i = 0; i < meetings.length; i++) {
+                var meeting = meetings[i];
+                if (meeting.tagName != "LEGEND"){
+                  meetings.removeChild(meeting);
+                }
               }
       
               getListOfMeeetings(false, false);
