@@ -128,7 +128,7 @@ function Get(url, disabled = false){
 }
 
 function applyDiscount(){
-   var discountCode = document.getElementById("discount_code").textContent; 
+   var discountCode = document.getElementById("discount_code").value; 
    var url = "https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec?type=discounts&discount_code=" + discountCode;
 
     var xhr = new XMLHttpRequest()
