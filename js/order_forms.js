@@ -136,9 +136,9 @@ function applyDiscount(){
         //xhr.withCredentials = true
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) { 
-            alert("Zastosowano zniżkę " + xhr.responseText + "%");
             document.getElementById("senior_price").value = round(document.getElementById("senior_price").value * (1-parseFloat(xhr.responseText)/100));
             document.getElementById("lead_price").value = round(document.getElementById("lead_price").value * (1-parseFloat(xhr.responseText)/100));
+            alert("Zastosowano zniżkę " + xhr.responseText + "%");
           }
         }
         //xhr.setRequestHeader('Content-Type', 'application/json')
