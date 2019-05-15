@@ -142,11 +142,11 @@ function applyDiscount(){
               document.getElementById("senior_price").value = Math.round(document.getElementById("senior_price_original").value * (1-discount_percent/100));
               document.getElementById("lead_price").value = Math.round(document.getElementById("lead_price_original").value * (1-discount_percent/100));
               var meetings = document.getElementById("available_meetings");
-              while (meetings.firstChild) {
+              while (meetings.childNodes.length > 1) {
                 //alert(meetings.firstChild.type);
-                if (meetings.firstChild.tagName != "LEGEND"){
-                  meetings.removeChild(meetings.firstChild);
-                }
+               // if (meetings.firstChild.tagName != "LEGEND"){
+                  meetings.removeChild(meetings.lastChild);
+               // }
               }
       
               getListOfMeeetings(false, false);
