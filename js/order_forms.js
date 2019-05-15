@@ -127,8 +127,10 @@ function Get(url, disabled = false){
         xhr.send()        
 }
 
-function applyDiscount(discountCode){
-    var url = "https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec?type=discounts&discount_code=";
+function applyDiscount(){
+   var discountCode = getElementById("discount_code").textContent; 
+   var url = "https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec?type=discounts&discount_code=" + discoutCode;
+
     var xhr = new XMLHttpRequest()
         xhr.open('GET', url, true)
         //xhr.withCredentials = true
