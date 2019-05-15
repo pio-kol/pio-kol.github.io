@@ -90,7 +90,7 @@ function addAvailableMeetings(meetings, disabled = false){
       continue;
     }
     
-    var meetingCost = Math.round((price / 60) * meetingDurationInMinutes, 2); 
+    var meetingCost = Math.round((price / 60) * meetingDurationInMinutes); 
     
     title += " (" + meetingCost + " zł)";
          
@@ -139,8 +139,8 @@ function applyDiscount(){
           if (xhr.readyState === 4) { 
             var discount_percent = parseFloat(xhr.responseText);
             if (discount_percent > 0){
-              document.getElementById("senior_price").value = Math.round(document.getElementById("senior_price").value * (1-discount_percent/100), 2);
-              document.getElementById("lead_price").value = Math.round(document.getElementById("lead_price").value * (1-discount_percent/100), 2);
+              document.getElementById("senior_price").value = Math.round(document.getElementById("senior_price").value * (1-discount_percent/100));
+              document.getElementById("lead_price").value = Math.round(document.getElementById("lead_price").value * (1-discount_percent/100));
               var meetings = document.getElementById("available_meetings");
               while (meetings.firstChild) {
                 if (meetings.firstChild.type != "legend"){
