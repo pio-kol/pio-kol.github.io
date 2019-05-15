@@ -143,13 +143,21 @@ function applyDiscount(){
               document.getElementById("lead_price").value = Math.round(document.getElementById("lead_price").value * (1-discount_percent/100), 2);
               var meetings = document.getElementById("available_meetings");
               while (meetings.firstChild) {
-                meetings.removeChild(meetings.firstChild);
+                if (meetings.firstChild.type != "legend"){
+                  meetings.removeChild(meetings.firstChild);
+                }
               }
-              document.getElementById().
+      
               getListOfMeeetings(false, false);
-              alert("Zastosowano zniżkę " + xhr.responseText + "%");
+
+              var discountDiv = document.getElementById("discountInformation")
+              discountDiv.removeChild(discountDiv.firstChild);
+              discountDiv.appendChild(document.createTextNode("Zastosowano zniżkę " + discount_percent + "%"));
+              
             } else {
-              alert("Podany kod zniżkowy jest nieprawidłowy");
+              var discountDiv = document.getElementById("discountInformation")
+              discountDiv.removeChild(discountDiv.firstChild);
+              discountDiv.appendChild(document.createTextNode("Podany kod zniżkowy jest nieprawidłowy."));
             }
           }
         }
