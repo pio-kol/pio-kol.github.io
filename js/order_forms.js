@@ -14,7 +14,7 @@ function sumUpValues() {
   document.getElementById(
       "additional_funds_sum").textContent = additional_funds + " zł";
 
-  const amount_to_return = parseFloat(document.getElementById("amount_to_return").value);
+  const amount_to_return = -1 * parseFloat(document.getElementById("amount_to_return").value);
   
   const total_sum = total + parseFloat(additional_funds) + amount_to_return;
   document.getElementById(
