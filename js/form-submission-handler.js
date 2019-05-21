@@ -34,7 +34,7 @@ function getFormData() {
   });
 
   // add form-specific values into the data
-  data.formDataNameOrder = JSON.stringify(fields);
+  //data.formDataNameOrder = JSON.stringify(fields);
 
   // console.log(data);
   return data;
