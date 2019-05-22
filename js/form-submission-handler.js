@@ -53,8 +53,9 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   var blackoutParent = document.getElementById("blackout").parentNode.nodeName;
   if (blackoutParent == "BODY") {
     window.scrollTo(0, 0);
+    document.body.style.overflow = 'hidden';
   }
-  document.body.style.overflow = 'hidden';
+  
   document.getElementById('blackout').style.display = 'block';
  
   
