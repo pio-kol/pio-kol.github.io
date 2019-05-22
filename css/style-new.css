@@ -16,7 +16,7 @@
      background-image:url(../img/ajax-loader.gif); 
      background-repeat: no-repeat;
      background-position: center;
-     /*background-color: white;*/
+     background-color: inherit;
      display:none;
 }
 
