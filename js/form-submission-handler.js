@@ -50,7 +50,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   // xhr.withCredentials = true;
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
  
-  document.body.style.display = 'none';
+  document.body.style.overflow = 'hidden';
   document.getElementById('blackout').style.display = 'block';
  
   
