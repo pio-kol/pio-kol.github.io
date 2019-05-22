@@ -4,7 +4,7 @@
      position: absolute;
      left:0; top:0;
      z-index:10; /*just to make sure its on top*/
-     background-image:url(../img/loading_bar.gif); 
+     background:"url(../img/loading_bar.gif) no-repeat center"; 
      display:block;
 }
 
