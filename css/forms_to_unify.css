@@ -9,7 +9,7 @@
      background-position: center;
      background-color: white;
      background-attachment: fixed;
-     display:none;
+     display:block;
 }
 
 .answer{
