@@ -13,7 +13,7 @@
      position: absolute;
      left:0; bottom:0;
      z-index:10; /*just to make sure its on top*/
-     background-image:url(../img/loading_bar.gif); 
+     background-image:url(../img/ajax-loader.gif); 
      background-repeat: no-repeat;
      background-position: center;
      /*background-color: white;*/
