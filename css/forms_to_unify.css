@@ -4,7 +4,7 @@
      position: absolute;
      left:0; top:0;
      z-index:10; /*just to make sure its on top*/
-     background-image:url(https://giphy.com/gifs/mashable-3oEjI6SIIHBdRxXI40); 
+     background-image:url(loading_bar.gif); 
      display:block;
 }
 
