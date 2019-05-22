@@ -5,7 +5,7 @@
      left:0; top:0;
      z-index:10; /*just to make sure its on top*/
      background-image:url(https://giphy.com/gifs/mashable-3oEjI6SIIHBdRxXI40); 
-     display:none;
+     display:block;
 }
 
 .answer{
