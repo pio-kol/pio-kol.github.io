@@ -106,3 +106,13 @@ function showFormAgain() {
     error_message.style.display = "none";
   }
 }
+
+function showPrivacyDisclaimerDetails() {
+  var x = document.getElementById('PrivacyDisclaimerDetails');
+  if (x.style.display === 'none') {
+    x.style.display = 'block';
+  } else {
+    x.style.display = 'none';
+  }
+}
+
