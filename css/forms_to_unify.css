@@ -8,11 +8,7 @@
      background-repeat: no-repeat;
      background-position: center;
      background-color: white;
-     display:block;
-}
-
-body {
-  overflow: hidden;
+     display:none;
 }
 
 .answer{
