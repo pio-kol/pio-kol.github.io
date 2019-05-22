@@ -11,6 +11,10 @@
      display:block;
 }
 
+body {
+  overflow: hidden;
+}
+
 .answer{
     text-align: center;
     padding-top: 50px;
