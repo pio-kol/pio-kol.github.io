@@ -49,8 +49,15 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   xhr.open('POST', url);
   // xhr.withCredentials = true;
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  
+  document.getElementById('blackout').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  
   xhr.onreadystatechange = function () {
     // console.log(xhr.status, xhr.statusText)
+    
+    document.getElementById('blackout').style.display = 'none';
+    document.body.style.overflow = 'auto';
     
     if (xhr.responseText.indexOf('error') >= 0){
       console.log(xhr.responseText);
