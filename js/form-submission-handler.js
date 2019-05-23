@@ -73,7 +73,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
         error_message.style.display = "block";
       }
       
-      const error_message_content = document.getElementById("error_message_content");
+      const error_message_content = document.getElementById("error_message_details");
       if (error_message_content) {
         error_message_content.textContent = xhr.responseText;
       }
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", loaded, false);
 
 function hideFormAndShowMessageOnSuccessfulSubmit() {
   document.getElementById("gform").style.display = "none"; // hide form
-  const thankYouMessage = document.getElementById("thankyou_message");
+  const thankYouMessage = document.getElementById("success_message");
   if (thankYouMessage) {
     thankYouMessage.style.display = "block";
   }
@@ -109,7 +109,7 @@ function hideFormAndShowMessageOnSuccessfulSubmit() {
 
 function showFormAgain() {
   document.getElementById("gform").style.display = "block";
-  const thankYouMessage = document.getElementById("thankyou_message");
+  const thankYouMessage = document.getElementById("success_message");
   if (thankYouMessage) {
     thankYouMessage.style.display = "none";
   }
