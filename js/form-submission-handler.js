@@ -60,21 +60,27 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
  
   
   xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) { 
-      document.getElementById('blackout').style.display = 'none';
-      document.body.style.overflow = 'auto';
-
-      hideForm();
-
-      if (xhr.responseText.indexOf('error') >= 0) {
-        showErrorMessage(xhr.responseText);
-      } else {
-        showSuccessMessage();
+    // console.log(xhr.status, xhr.statusText)
+    
+    document.getElementById('blackout').style.display = 'none';
+    document.body.style.overflow = 'auto';
+    
+    if (xhr.responseText.indexOf('error') >= 0){
+      console.log(xhr.responseText);
+  
+      const error_message = document.getElementById("error_message");
+      if (error_message) {
+        error_message.style.display = "block";
       }
-
+      
+      const error_message_content = document.getElementById("error_message_content");
+      if (error_message_content) {
+        error_message_content.textContent = xhr.responseText;
+      }
     }
 
-    //return;
+    hideFormAndShowMessageOnSuccessfulSubmit();
+    return;
   };
 
   // url encode form data for sending as post data
@@ -93,32 +99,17 @@ function loaded() {
 };
 document.addEventListener("DOMContentLoaded", loaded, false);
 
-function hideForm() {
+function hideFormAndShowMessageOnSuccessfulSubmit() {
   document.getElementById("gform").style.display = "none"; // hide form
-}
-
-function showSuccessMessage() {
-  const thankYouMessage = document.getElementById("success_message");
+  const thankYouMessage = document.getElementById("thankyou_message");
   if (thankYouMessage) {
     thankYouMessage.style.display = "block";
   }
 }
 
-function showErrorMessage(responseText) {
-  const error_message = document.getElementById("error_message");
-      if (error_message) {
-        error_message.style.display = "block";
-      }
-      
-      const error_message_content = document.getElementById("error_message_details");
-      if (error_message_content) {
-        error_message_content.textContent = responseText;
-      }
-}
-
 function showFormAgain() {
   document.getElementById("gform").style.display = "block";
-  const thankYouMessage = document.getElementById("success_message");
+  const thankYouMessage = document.getElementById("thankyou_message");
   if (thankYouMessage) {
     thankYouMessage.style.display = "none";
   }
@@ -127,11 +118,6 @@ function showFormAgain() {
   if (error_message) {
     error_message.style.display = "none";
   }
-  
-  const error_message_content = document.getElementById("error_message_details");
-      if (error_message_content) {
-        error_message_content.textContent = "";
-      }
 }
 
 function showPrivacyDisclaimerDetails() {
@@ -142,4 +128,3 @@ function showPrivacyDisclaimerDetails() {
     x.style.display = 'none';
   }
 }
-
