@@ -74,7 +74,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
 
     }
 
-    return;
+    //return;
   };
 
   // url encode form data for sending as post data
