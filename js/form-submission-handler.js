@@ -68,8 +68,10 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
 
       if (xhr.responseText.indexOf('error') >= 0) {
         showErrorMessage(xhr.responseText);
-      } else {
+      } else if (xhr.responseText.indexOf('success') >= 0) {
         showSuccessMessage();
+      } else {
+        showErrorMessage("No response was received from server, please check developer console");
       }
 
     }
