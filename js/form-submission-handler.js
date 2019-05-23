@@ -67,7 +67,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     
     hideForm();
     
-    if (xhr.responseText.indexOf('error') >= 0){
+    if (xhr.responseText.indexOf('error') >= 0) {
       showErrorMessage(xhr.responseText);
     } else {
       showSuccessMessage();
@@ -127,6 +127,11 @@ function showFormAgain() {
   if (error_message) {
     error_message.style.display = "none";
   }
+  
+  const error_message_content = document.getElementById("error_message_details");
+      if (error_message_content) {
+        error_message_content.textContent = "";
+      }
 }
 
 function showPrivacyDisclaimerDetails() {
