@@ -60,20 +60,20 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
  
   
   xhr.onreadystatechange = function () {
-    // console.log(xhr.status, xhr.statusText)
-    
-    document.getElementById('blackout').style.display = 'none';
-    document.body.style.overflow = 'auto';
-    
-    hideForm();
-    
-    if (xhr.responseText.indexOf('error') >= 0) {
-      showErrorMessage(xhr.responseText);
-    } else {
-      showSuccessMessage();
+    if (xhr.readyState === 4) { 
+      document.getElementById('blackout').style.display = 'none';
+      document.body.style.overflow = 'auto';
+
+      hideForm();
+
+      if (xhr.responseText.indexOf('error') >= 0) {
+        showErrorMessage(xhr.responseText);
+      } else {
+        showSuccessMessage();
+      }
+
     }
 
-    //hideFormAndShowMessageOnSuccessfulSubmit();
     return;
   };
 
