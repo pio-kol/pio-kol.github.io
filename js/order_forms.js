@@ -1,3 +1,10 @@
+function acceptAllAgreements() {
+  document.getElementById("accept_mandatory_regulations").checked = true;
+  document.getElementById("confirm_marketing").checked = true;
+  document.getElementById("confirm_start_service_before_14_days").checked = true;
+  document.getElementById("confirm_finish_service_before_14_days").checked = true;
+}
+
 function sumUpValues() {
   var input = document.getElementsByName("reserved_hours");
   var total = 0;
