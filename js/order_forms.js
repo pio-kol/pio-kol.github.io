@@ -1,8 +1,9 @@
 function acceptAllAgreements() {
-  document.getElementById("accept_mandatory_regulations").checked = true;
-  document.getElementById("confirm_marketing").checked = true;
-  document.getElementById("confirm_start_service_before_14_days").checked = true;
-  document.getElementById("confirm_finish_service_before_14_days").checked = true;
+  var value = document.getElementById("acceptAllAgreementsCheckbox").checked;
+  document.getElementById("accept_mandatory_regulations").checked = value;
+  document.getElementById("confirm_marketing").checked = value;
+  document.getElementById("confirm_start_service_before_14_days").checked = value;
+  document.getElementById("confirm_finish_service_before_14_days").checked = value;
 }
 
 function sumUpValues() {
