@@ -6,6 +6,10 @@ function acceptAllAgreements() {
   document.getElementById("confirm_finish_service_before_14_days").checked = value;
 }
 
+function deselectAcceptAllAgreementsCheckbox() {
+  document.getElementById("acceptAllAgreementsCheckbox").checked = false;
+}
+
 function sumUpValues() {
   var input = document.getElementsByName("reserved_hours");
   var total = 0;
