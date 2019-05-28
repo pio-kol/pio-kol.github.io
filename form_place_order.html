@@ -10,21 +10,22 @@
   <script> 
     $(function(){
       $("#DivContent").load("order_form.html", function() {
-          $.getScript("js/form-submission-handler.js", function() {
+        
+        $.getScript("js/form-submission-handler.js", function() {
           loaded();
+        });
         
-});
-        $.getScript("js/order_forms.js");
-        
-}); 
+        $.getScript("js/order_forms.js", function() {
+          fillInputsFromGetParameters();
+        });
+      }); 
     });
-    
     </script> 
 <!--   <script type="text/javascript" src="js/form-submission-handler.js"></script> -->
 </head>
 <!-- <body onload="fillInputsFromGetParameters();"> -->
 <body>
-
+<div id="blackout"></div>
 
   <div id="DivContent"></div>
   
