@@ -10,7 +10,10 @@
   <script> 
     $(function(){
       $("#DivContent").load("order_form.html", function() {
-          $.getScript("js/form-submission-handler.js");
+          $.getScript("js/form-submission-handler.js", function() {
+          loaded();
+        
+});
         $.getScript("js/order_forms.js");
         
 }); 
