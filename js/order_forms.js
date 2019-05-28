@@ -178,3 +178,5 @@ function applyDiscount(){
         //xhr.setRequestHeader('Content-Type', 'application/json')
         xhr.send()        
 }
+
+//# sourceURL=/js/order_forms.js
