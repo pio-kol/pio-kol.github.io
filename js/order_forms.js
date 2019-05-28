@@ -165,12 +165,16 @@ function applyDiscount(){
               getListOfMeeetings(false, false);
 
               var discountDiv = document.getElementById("discountInformation")
-              discountDiv.removeChild(discountDiv.firstChild);
+              if (discountDiv.firstChild){
+                discountDiv.removeChild(discountDiv.firstChild);
+              }
               discountDiv.appendChild(document.createTextNode("Zastosowano zniżkę " + discount_percent + "%"));
               
             } else {
               var discountDiv = document.getElementById("discountInformation")
-              discountDiv.removeChild(discountDiv.firstChild);
+              if (discountDiv.firstChild){
+                discountDiv.removeChild(discountDiv.firstChild);
+              }
               discountDiv.appendChild(document.createTextNode("Podany kod zniżkowy jest nieprawidłowy."));
             }
           }
