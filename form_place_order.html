@@ -3,13 +3,23 @@
 <head>
   <meta charset="utf-8">
    <link rel="stylesheet" href="css/forms_to_unify.css">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script> 
+    $(function(){
+      $("#DivContent").load("order_form.html"); 
+    });
+    </script> 
 </head>
 <body onload="fillInputsFromGetParameters();">
 
   <div id="blackout"></div>
 
-  <object name="orderForm" type="text/html" data="order_form.html"></object>
+<!--   <object name="orderForm" type="text/html" data="order_form.html"></object> -->
 
+  <div id="DivContent"></div>
   
 <form class="form" id="gform" method="post" action="https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec">
 <p>
