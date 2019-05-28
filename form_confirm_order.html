@@ -19,6 +19,10 @@
         $.getScript("js/order_forms.js", function() {
           fillInputsFromGetParameters(true, true, true);
         });
+        
+        $("#form_identifier").prop('value', 'CONFIRM_ORDER');
+        $("#submit_btn").prop('value', 'Potwierdź zamówienie');
+        
       }); 
     });
     </script> 
