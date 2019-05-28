@@ -9,7 +9,9 @@
   crossorigin="anonymous"></script>
   <script> 
     $(function(){
-      $("#DivContent").load("order_form.html"); 
+      $("#DivContent").load("order_form.html", function() {
+  alert( "Load was performed." );
+}); 
     });
     
     </script> 
