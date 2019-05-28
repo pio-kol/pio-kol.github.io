@@ -144,3 +144,5 @@ function showPrivacyDisclaimerDetails() {
     x.style.display = 'none';
   }
 }
+
+//#sourceURL=/js/form-submission-handler.js
