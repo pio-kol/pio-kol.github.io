@@ -19,12 +19,12 @@ function getFormData() {
     data[k] = elements[k].value;
     var str = "";
     // TODO - that's causing list of meetings not to work when only one is available
-//     if (elements[k].type === "checkbox") { // special case for Edge's html collection
-//       str += elements[k].checked + ", ";
-//       data[k] = str.slice(0, -2); // remove the last comma and space 
-//                                   // from the  string to make the output 
-//                                   // prettier in the spreadsheet
-//    } else 
+    if (elements[k].type === "checkbox") { // special case for Edge's html collection
+      str += elements[k].checked + ", ";
+      data[k] = str.slice(0, -2); // remove the last comma and space 
+                                  // from the  string to make the output 
+                                  // prettier in the spreadsheet
+   } else 
                  if (elements[k].length) {
       for (var i = 0; i < elements[k].length; i++) {
         if (elements[k].item(i).checked) {
