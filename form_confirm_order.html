@@ -21,6 +21,9 @@
         });
         
         $("#form_content :input").prop("disabled", true);
+        $("#additional_comment").prop("disabled", false);
+        $("#submit_btn").prop("disabled", false);
+        
         $("#form_identifier").prop('value', 'CONFIRM_ORDER');
         $("#submit_btn").html('Potwierdź zamówienie');
         $("#success_message_main").html('Zamówienie zostało potwierdzone.');
