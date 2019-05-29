@@ -201,6 +201,11 @@ zostałem poinformowany przed rozpoczęciem świadczenia, że po spełnieniu
         <input type="date" name="payment_date" id="payment_date" data-error="Data otrzymania wpłaty jest wymagana">
       </div>
       
+      <div class="form-row" id="amount_to_return_div" style="display:none;">
+        <label for="field-name">Kwota pozostała do rozliczenia</label>
+        <input type="number" min="0" step="0.01" name="amount_to_return" id="amount_to_return" data-error="Kwota zwrotu jest wymagana">
+      </div>
+      
       <br/>
       <div class="form-row">
         <button type="submit" class="submit-btn" id="submit_btn">
