@@ -196,7 +196,7 @@ zostałem poinformowany przed rozpoczęciem świadczenia, że po spełnieniu
       
       <br/>
       
-      <div class="form-row" id="payment_date" style="display:none;">
+      <div class="form-row" id="payment_date_div" style="display:none;">
         <label for="field-name">Data otrzymania wpłaty</label>
         <input type="date" name="payment_date" id="payment_date" data-error="Data otrzymania wpłaty jest wymagana">
       </div>
@@ -219,5 +219,17 @@ zostałem poinformowany przed rozpoczęciem świadczenia, że po spełnieniu
 </div>
 </form>
 
-
+  <div class="answer" id="success_message">
+                        <h3 id="success_message_main">Zamówienie zostało wysłane.</h3>
+                        <h4 id="success_message_additional">Dziękujemy za kontakt. Za moment otrzymasz email z potwierdzeniem zamówienia. <br/>Odpowiemy na Twoje zamówienie tak szybko jak to tylko możliwe.</h4>
+                        <br/>
+                        <h5>Kliknij <a href="javascript:void(0)" onclick="showFormAgain()">tutaj</a> aby powrócić do zamówienia</h5>
+                    </div>
+  
+  <div class="answer" id="error_message">
+                        <h3>Wystąpił błąd w trakcie przetwarzania zamówienia</h3>
+                        <h4>Prosimy o bezpośredni kontakt telefoniczny (<a href="tel:531840545">531-840-545</a>) lub e-mailowy (<a href="tel:piotr@passionatesoftwareengineer.com">piotr@passionatesoftwareengineer.com</a>)</h4>
+                        <h5>Kliknij <a href="javascript:void(0)" onclick="showFormAgain()">tutaj</a> aby powrócić do zamówienia</h5>
+                        <h5 id="error_message_details" style="display:none;"></h5>
+                    </div>
 
