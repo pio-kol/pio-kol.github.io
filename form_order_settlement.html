@@ -3,196 +3,40 @@
 <head>
   <meta charset="utf-8">
    <link rel="stylesheet" href="css/forms_to_unify.css">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script> 
+    $(function(){
+      $("#DivContent").load("order_form.html", function() {
+        
+        $.getScript("js/form-submission-handler.js", function() {
+          loaded();
+        });
+        
+        $.getScript("js/order_forms.js", function() {
+          fillInputsFromGetParameters(true, true, true);
+        });
+        
+        $("#form_identifier").prop('value', 'ORDER_SETTLEMENT');
+        $("#submit_btn").html('Wyślij email z rozliczeniem zamówienia');
+        $("#amount_to_return_div").show();
+        $("#amount_to_return").prop('required',true);
+      }); 
+    });
+    </script> 
 </head>
-<body onload="fillInputsFromGetParameters(true, true, true);">
+<body>
 
 <div id="blackout"></div>
 
-<form class="form" id="gform" method="post" action="https://script.google.com/macros/s/AKfycbzMukfN2nW6VxC44B6JboZz8ORsb4mQM3BE9BR2PsG4XqAPMKsu/exec">
-<p>
+  <p>
   Poniższy formularz pozwala na rozliczenie zamówienia. <br>
   Numer zamowienia: <input disabled type="text" id="order_number" name="order_number" ></input>
 </p>
 
-<br/>
-  <div class="form-row">
-    <fieldset>
-      <legend>Cennik konsultacji</legend>
-      Koszt jednej godziny zegarowej konsultacji to:
-      <ul>
-        <li>Senior Mentor: <input disabled type="number" value="120" id="senior_price" name="senior_price"/> zł</li>
-        <li>Lead Mentor: <input disabled type="number" value="150" id="lead_price" name="lead_price"/> zł</li>
-      </ul>
-    </fieldset>
-  </div>
-  <br/>
-  <div class="form-row">
-    <fieldset id="available_meetings">
-      <legend>Konsultacje zarezerwowane z gory</legend>
-      
-    </fieldset>
-  </div>
-  <br/>
-  <div class="form-row">
-    <fieldset>
-      <legend>Kwota ktora uczestnik chce przeznaczyc na spotkania ustalane na biezaco lub
-        konsultacje na czacie
-      </legend>
-      <input disabled id="additional_funds" name="additional_funds" type="number" min="0" max="1000" step="1"
-             onchange="sumUpValues()" required data-error="Musisz wypełnić pole" id="field-message"
-             value="0">
-      <br>
-    </fieldset>
-  </div>
-  <br/>
-  <div class="form-row">
-    <fieldset>
-      <legend>Dane kontaktowe uczestnika</legend>
-      <div class="form-row">
-        <label for="field-name">Imię</label>
-        <input disabled type="text" name="name" required id="name" data-error="Imie jest wymagane">
-      </div>
-      <br/>
-      <div class="form-row">
-        <label for="field-name">Nazwisko</label>
-        <input disabled type="text" name="surname" required id="surname" data-error="Nazwisko jest wymagane">
-      </div>
-      <br/>
-      <div class="form-row">
-        <label for="field-email">Email</label>
-        <input disabled type="email" name="email" required id="email" data-error="Wpisz poprawny email"
-               pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
-      </div>
-      <br/>
-      <div class="form-row">
-        <label for="field-mobile">Telefon</label>
-        <input disabled type="tel" name="mobile" required id="mobile"
-               data-error="Wpisz poprawny nr telefonu"
-               pattern="[0-9]{9}">
-      </div>
-    </fieldset>
-  </div>
-  
-   <br/>
-  <div class="form-row">
-    <fieldset>
-      <legend>Dane do faktury</legend>
-      <div class="form-row">
-        <label for="field-name">Nazwa firmy (lub Imię i nazwisko) *</label>
-        <input disabled type="text" id="invoice_name" name="invoice_name" required data-error="Pole jest wymagane">
-      </div>
-      <br/>
-      <div class="form-row">
-        <label for="field-mobile">NIP</label>
-        <input disabled type="text" id="invoice_tax_identifier" name="invoice_tax_identifier">
-      </div>
-      <br/>
-      <div class="form-row">
-        <label for="field-name">Ulica *</label>
-        <input disabled type="text" id="invoice_street" name="invoice_street" required id="field-surname" data-error="Pole jest wymagane">
-      </div>
-      <br/>
-      <div class="form-row">
-        <label for="field-email">Kod pocztowy *</label>
-        <input disabled type="text" id="invoice_postcode" name="invoice_postcode" required id="field-email" data-error="Pole jest wymagane">
-      </div>
-      <br/>
-      <div class="form-row">
-        <label for="field-mobile">Miasto *</label>
-        <input disabled type="text" id="invoice_city" name="invoice_city" required>
-      </div>
-    </fieldset>
-  </div>
-  
-  <br/>
-  <div class="form-row">
-    <fieldset>
-      <legend>Zgody Uczestnika</legend>
-      <label class="checkbox-cnt">
-        <input disabled type="checkbox" required data-error="Musisz wypełnić pole" name="accept_mandatory_regulations" id="accept_mandatory_regulations">
-        <i class="state" aria-hidden="true"></i>
-        <span>Potwierdzam, że akceptuję <a
-            href="https://docs.google.com/document/d/1VKS2Cc6A1NSX39RddMF0czKoT2RPpeHPoybc3W_sCpk/edit?usp=sharing">regulamin usługi </a> oraz <a
-            href="https://docs.google.com/document/d/16wYDSoZAFlKrCWX-Bi0fI-021n06gnwcZS6ZRi0mwQ8/edit?usp=sharing">politykę prywatności</a>
-      </span>
-      </label>
-      <br/>
- 
-      <label class="checkbox-cnt">
-        <input disabled type="checkbox" data-error="Musisz wypełnić pole" name="confirm_start_service_before_14_days" id="confirm_start_service_before_14_days">
-        <i class="state" aria-hidden="true"></i>
-        <span>Potwierdzam żądanie rozpoczęcia wykonywania usługi programowania na
-      godziny przed upływem 14 dniowego terminu do odstąpienia od umowy.
-      Jednakże, w przypadku wykonania prawa do odstąpienia od umowy po
-      zgłoszeniu powyższego żądania jestem świadomy istnienia obowiązku zapłaty za
-      świadczenia spełnione do chwili odstąpienia od umowy. Przyjmuję do
-      wiadomości, że kwotę zapłaty oblicza się proporcjonalnie do zakresu
-      spełnionego świadczenia, z uwzględnieniem uzgodnionej w umowie ceny lub
-      wynagrodzenia.
-      </span>
-      </label>
-      <br/>
-      <label class="checkbox-cnt">
-        <input disabled type="checkbox" data-error="Musisz wypełnić pole" name="confirm_finish_service_before_14_days" id="confirm_finish_service_before_14_days">
-        <i class="state" aria-hidden="true"></i>
-        <span>Wyrażam zgodę na wykonanie usługi programowania na godziny przed
-upływem 14 dniowego terminu do odstąpienia od umowy oraz oświadczam, że
-zostałem poinformowany przed rozpoczęciem świadczenia, że po spełnieniu
-świadczenia przez Usługodawcę utracę prawo odstąpienia od umowy.
-      </span>
-      </label>
-
-      <br/>
-<label class="checkbox-cnt">
-        <input disabled type="checkbox" data-error="Musisz wypełnić pole" id="confirm_marketing" name="confirm_marketing">
-        <i class="state" aria-hidden="true"></i>
-        <span>Wyrażam zgodę  na przesyłanie na podany adres e-mail informacji handlowych dotyczących firmy Piotr Kołacz Development w szczególności oferty zawarcia umowy środkami komunikacji elektronicznej.
-      </span>
-      </label>
-      
-    </fieldset>
-  </div>
-  <br/>
-  <div class="form-row">
-    <fieldset>
-      <legend>Podsumowanie zamowienia</legend>
-      Kwota do wplaty: <b><span id="total_sum">0 zł</span></b>
-      <ul>
-        <li>Konsultacje w z gory ustalonych terminach: <b> <span
-            id="reserved_hours_sum">0 zł</span></b></li>
-        <li>Kwota przeznaczona na elastyczne konsultacje: <b> <span
-            id="additional_funds_sum">0 zł</span></b></li>
-            <li>Rozliczenie poprzedniej umowy: <b> <span
-            id="amount_to_return_sum">0 zł</span></b></li>
-      </ul>
-      <input disabled type="hidden" id="reserved_hours_sum_input" name="reserved_hours_sum_input" value="0">
-      <input disabled type="hidden" id="total_sum_input" name="total_sum_input" value="0">
-      
-      <input type="hidden" id="form_identifier" name="form_identifier" value="ORDER_SETTLEMENT">
-      
-      <br/>
-      <p> Komentarz do zamówienia: <br/>
-      <textarea name="additional_comment" id="additional_comment" cols="120" rows="10"></textarea>  
-      </p> 
-    
-      <br/>
-      
-      <div class="form-row">
-        <label for="field-name">Kwota pozostała do rozliczenia</label>
-        <input type="number" min="0" step="0.01" name="amount_to_return" required id="amount_to_return" data-error="Kwota zwrotu jest wymagana">
-      </div>
-      
-      <br/>
-      <div class="form-row">
-        <button type="submit" class="submit-btn">
-          Wyslij prosbe o rozliczenie zamowienia.
-        </button>
-      </div>
-    </fieldset>
-  </div>
-  
-</div>
-</form>
+ <div id="DivContent"></div>
   
    <div class="answer" id="success_message">
   <h3>Rozliczenie zamowienia zostalo wyslane.</h3>
@@ -209,8 +53,5 @@ zostałem poinformowany przed rozpoczęciem świadczenia, że po spełnieniu
                     </div>
  
   
-
-<script type="text/javascript" src="js/order_forms.js"></script>
-<script type="text/javascript" src="js/form-submission-handler.js"></script>
 </body>
 </html>
