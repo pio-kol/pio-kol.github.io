@@ -24,7 +24,7 @@ function sumUpValues() {
 
   const additional_funds = document.getElementById("additional_funds").value;
   document.getElementById(
-      "additional_funds_sum").textContent = additional_funds + " zł";
+      "additional_funds_sum").textContent = additional_funds.toFixed(2) + " zł";
 
   const amount_to_return = -1 * parseFloat(document.getElementById("amount_to_return").value);
   
@@ -34,7 +34,7 @@ function sumUpValues() {
   if (document.getElementById("total_sum_transfer")){
     document.getElementById("total_sum_transfer").textContent = total_sum.toFixed(2) + " zł";
   }
-  document.getElementById("total_sum_input").value = total_sum;
+  document.getElementById("total_sum_input").value = total_sum.toFixed(2);
   
   document.getElementById("amount_to_return_sum").textContent = amount_to_return.toFixed(2)
       + " zł";
