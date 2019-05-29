@@ -34,7 +34,7 @@ function sumUpValues() {
   if (document.getElementById("total_sum_transfer")){
     document.getElementById("total_sum_transfer").textContent = total_sum.toFixed(2) + " zł";
   }
-  document.getElementById("total_sum_input").value = total_sum.toFixed(2);
+  document.getElementById("total_sum_input").value = total_sum;
   
   document.getElementById("amount_to_return_sum").textContent = amount_to_return.toFixed(2)
       + " zł";
