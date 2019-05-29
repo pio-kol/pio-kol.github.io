@@ -22,7 +22,7 @@ function sumUpValues() {
       + " zł";
   document.getElementById("reserved_hours_sum_input").value = total;
 
-  const additional_funds = document.getElementById("additional_funds").value;
+  const additional_funds = parseFloat(document.getElementById("additional_funds").value);
   document.getElementById(
       "additional_funds_sum").textContent = additional_funds.toFixed(2) + " zł";
 
