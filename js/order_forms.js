@@ -52,7 +52,7 @@ function fillInputsFromGetParameters(disabled = false, requestListOfMeetings = t
        parameterValue = decodeURIComponent(inputParameters[key]);
  
        if (element.type && element.type === 'checkbox') {
-         element.checked = parameterValue === "on" ? true : false;   
+         element.checked = parameterValue === "true" ? true : false;   
        } else {
          element.value = parameterValue;
        }
