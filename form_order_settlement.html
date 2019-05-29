@@ -9,7 +9,7 @@
   crossorigin="anonymous"></script>
   <script> 
     $(function(){
-      $("#DivContent").load("order_form.html", function() {
+      $("#form_content").load("order_form.html", function() {
         
         $.getScript("js/form-submission-handler.js", function() {
           loaded();
@@ -19,10 +19,20 @@
           fillInputsFromGetParameters(true, true, true);
         });
         
+        $("#form_content :input").prop("disabled", true);
+        $("#additional_comment").prop("disabled", false);
+        $("#amount_to_return").prop('disabled',false);
+        $("#submit_btn").prop("disabled", false);
+        
         $("#form_identifier").prop('value', 'ORDER_SETTLEMENT');
         $("#submit_btn").html('Wyślij email z rozliczeniem zamówienia');
         $("#amount_to_return_div").show();
         $("#amount_to_return").prop('required',true);
+        
+        $("#success_message_main").html('Rozliczenie zamówienia zostało wysłane.');
+        $("#success_message_additional").html('Uczestnik otrzyma email z rozliczeniem zamówienia');
+        $("#error_message_details").show();
+        $("#order_number").show();
       }); 
     });
     </script> 
@@ -31,27 +41,13 @@
 
 <div id="blackout"></div>
 
-  <p>
-  Poniższy formularz pozwala na rozliczenie zamówienia. <br>
-  Numer zamowienia: <input disabled type="text" id="order_number" name="order_number" ></input>
-</p>
+  <div id="form_header">
+  Poniższy formularz pozwala na rozliczenie zamówienia. 
+  </div>
 
- <div id="DivContent"></div>
-  
-   <div class="answer" id="success_message">
-  <h3>Rozliczenie zamowienia zostalo wyslane.</h3>
-                        <h4>Uczestnik otrzyma email z rozliczeniem zamowienia </h4>
-                                <h5>Kliknij <a href="javascript:void(0)" onclick="showFormAgain()">tutaj</a> aby powrócić do zamówienia</h5>
-                    </div>
-<div>
-  
-  <div class="answer" id="error_message">
-                        <h3>Wystąpił błąd w trakcie przetwarzania zamówienia</h3>
-    <h4>Prosimy o bezpośredni kontakt telefoniczny (<a href="tel:531840545">531-840-545</a>) lub e-mailowy (<a href="tel:piotr@passionatesoftwareengineer.com">piotr@passionatesoftwareengineer.com</a>)</h4>
-                        <h5>Kliknij <a href="javascript:void(0)" onclick="showFormAgain()">tutaj</a> aby powrócić do zamówienia</h5>
-                        <h5 id="error_message_details"></h5>
-                    </div>
+ <div id="form_content"></div>
  
+  <div id="form_footer"></div>
   
 </body>
 </html>
