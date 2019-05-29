@@ -96,7 +96,9 @@ function loaded() {
 document.addEventListener("DOMContentLoaded", loaded, false);
 
 function hideForm() {
-  document.getElementById("gform").style.display = "none"; // hide form
+  document.getElementById("gform").style.display = "none";
+  document.getElementById("form_header").style.display = "none";
+  document.getElementById("form_footer").style.display = "none";
 }
 
 function showSuccessMessage() {
@@ -120,9 +122,12 @@ function showErrorMessage(responseText) {
 
 function showFormAgain() {
   document.getElementById("gform").style.display = "block";
-  const thankYouMessage = document.getElementById("success_message");
-  if (thankYouMessage) {
-    thankYouMessage.style.display = "none";
+  document.getElementById("form_header").style.display = "block";
+  document.getElementById("form_footer").style.display = "block";
+  
+  const successMessage = document.getElementById("success_message");
+  if (successMessage) {
+    successMessage.style.display = "none";
   }
   
   const error_message = document.getElementById("error_message");
