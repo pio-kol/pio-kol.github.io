@@ -10,7 +10,7 @@
   crossorigin="anonymous"></script>
   <script> 
     $(function(){
-      $("#DivContent").load("order_form.html", function() {
+      $("#form_content").load("order_form.html", function() {
         
         $.getScript("js/form-submission-handler.js", function() {
           loaded();
@@ -20,6 +20,7 @@
           fillInputsFromGetParameters(true, true, true);
         });
         
+        $("#form_content :input").prop("disabled", true);
         $("#form_identifier").prop('value', 'CONFIRM_ORDER');
         $("#submit_btn").html('Potwierdź zamówienie');
         $("#success_message_main").html('Zamówienie zostało potwierdzone.');
@@ -36,7 +37,7 @@
   
   <div id="form_header">Formularz umożliwiający potwierdzenie zamówienia.</div>
   
-  <div id="DivContent"></div>
+  <div id="form_content"></div>
  
   <div id="form_footer"></div>
 </body>
