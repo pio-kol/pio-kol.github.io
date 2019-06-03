@@ -133,7 +133,9 @@ function getListOfMeeetings(includeReserved, disabled = false){
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) { 
             addAvailableMeetings(JSON.parse(xhr.responseText), disabled);
-            fillInputsFromGetParameters(disabled, false);
+             sumUpValues();
+  
+            //fillInputsFromGetParameters(disabled, false);
           }
         }
         //xhr.setRequestHeader('Content-Type', 'application/json')
