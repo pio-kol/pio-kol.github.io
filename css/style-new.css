@@ -1194,3 +1194,115 @@ footer h3{
 }
 
 
+/*  ---  ZAMÓWIENIE  ---  */
+
+#order-form{
+    margin-top: 75px;     
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+
+#order-form a{
+
+}
+
+#order-form form{
+    margin-top: 75px;     
+    max-width: 80%;
+}
+
+#order-form input{
+    border: 1px solid grey;
+    background-color: #f8f9fa;
+}
+
+#order-form ul{
+    padding: 10px 30px;   
+
+}
+
+#order-form ul li{
+    line-height: 40px;
+}
+
+#order-form ul li input{
+    margin-left: 20px;
+    max-height: 30px;
+    padding: 10px 20px;
+    max-width: 150px;
+    border-radius: 3px;
+}
+
+#discount_code{
+    margin: 10px 0;    
+}
+
+#additional_funds{    
+    max-height: 30px;
+    padding: 10px 20px;
+    max-width: 150px;
+    border-radius: 3px;
+}
+
+#order-form #mobile{
+    margin-left: 20px;
+    max-height: 30px;
+    padding: 10px 20px;
+    max-width: 200px;
+    border-radius: 3px;
+}
+
+#order-form fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 1px;
+    border-style: groove;
+    border-color: threedface;
+    border-image: initial;
+    border-radius: 5px;
+    width: 100%;
+    padding: 30px;
+}
+
+#order-form legend {    
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    background: transparent;
+    width: 100%;
+    border: 1px solid threedface;    
+    border-radius: 3px;
+}
+
+#order-form label {
+    color: #138496;
+}
+
+#acceptAllAgreementsCheckbox{
+    border: 1px solid maroon;
+    background-color: transparent;
+    opacity: 1;
+}
+
+#additional_comment{
+    margin-top: 20px;
+    border: 1px solid grey;
+    background-color: #f8f9fa;   
+}
+
+.submit_btn_form{
+    min-width: 350px;
+}
+
+.checkbox-cnt-all{
+    /* background-color: pink; */
+}
